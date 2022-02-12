@@ -27,21 +27,21 @@ Partial Class Interfaz
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Panel_opciones = New Guna.UI2.WinForms.Guna2Panel()
         Me.Panel_menu = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
+        Me.Mostrar_opciones = New System.Windows.Forms.Timer(Me.components)
+        Me.Ocultar_opciones = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button3 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.btn_Registrar_paciente = New Guna.UI2.WinForms.Guna2Button()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.btn_opciones = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
-        Me.Mostrar_opciones = New System.Windows.Forms.Timer(Me.components)
-        Me.Ocultar_opciones = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2GroupBox2.SuspendLayout()
         Me.Panel_menu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,6 +98,70 @@ Partial Class Interfaz
         Me.Panel_menu.Name = "Panel_menu"
         Me.Panel_menu.Size = New System.Drawing.Size(250, 534)
         Me.Panel_menu.TabIndex = 14
+        '
+        'Panel7
+        '
+        Me.Panel7.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Panel7.BackColor = System.Drawing.Color.BlueViolet
+        Me.Panel7.Location = New System.Drawing.Point(1, 72)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(248, 3)
+        Me.Panel7.TabIndex = 21
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.Panel6.BackColor = System.Drawing.Color.BlueViolet
+        Me.Panel6.Location = New System.Drawing.Point(1, 130)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(248, 3)
+        Me.Panel6.TabIndex = 16
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(102, 72)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(106, 32)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Sistema"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(78, 95)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(157, 32)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "Hospitalario"
+        '
+        'btnCerrarInterfaz
+        '
+        Me.btnCerrarInterfaz.BackColor = System.Drawing.Color.Transparent
+        Me.btnCerrarInterfaz.BorderRadius = 2
+        Me.btnCerrarInterfaz.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnCerrarInterfaz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnCerrarInterfaz.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnCerrarInterfaz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnCerrarInterfaz.FillColor = System.Drawing.Color.Red
+        Me.btnCerrarInterfaz.FocusedColor = System.Drawing.Color.Maroon
+        Me.btnCerrarInterfaz.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnCerrarInterfaz.ForeColor = System.Drawing.Color.White
+        Me.btnCerrarInterfaz.Location = New System.Drawing.Point(1014, 3)
+        Me.btnCerrarInterfaz.Name = "btnCerrarInterfaz"
+        Me.btnCerrarInterfaz.Size = New System.Drawing.Size(38, 35)
+        Me.btnCerrarInterfaz.TabIndex = 13
+        Me.btnCerrarInterfaz.Text = "X"
+        '
+        'Mostrar_opciones
+        '
+        Me.Mostrar_opciones.Interval = 10
+        '
+        'Ocultar_opciones
+        '
+        Me.Ocultar_opciones.Interval = 10
         '
         'Guna2Button5
         '
@@ -219,44 +283,6 @@ Partial Class Interfaz
         Me.btn_Registrar_paciente.Text = "Registrar paciente"
         Me.btn_Registrar_paciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'Panel7
-        '
-        Me.Panel7.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Panel7.BackColor = System.Drawing.Color.BlueViolet
-        Me.Panel7.Location = New System.Drawing.Point(1, 72)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(248, 3)
-        Me.Panel7.TabIndex = 21
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Panel6.BackColor = System.Drawing.Color.BlueViolet
-        Me.Panel6.Location = New System.Drawing.Point(1, 130)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(248, 3)
-        Me.Panel6.TabIndex = 16
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(102, 72)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 32)
-        Me.Label1.TabIndex = 20
-        Me.Label1.Text = "Sistema"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(78, 95)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(158, 32)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Hospitalario"
-        '
         'Guna2PictureBox1
         '
         Me.Guna2PictureBox1.Image = CType(resources.GetObject("Guna2PictureBox1.Image"), System.Drawing.Image)
@@ -279,32 +305,6 @@ Partial Class Interfaz
         Me.btn_opciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.btn_opciones.TabIndex = 2
         Me.btn_opciones.TabStop = False
-        '
-        'btnCerrarInterfaz
-        '
-        Me.btnCerrarInterfaz.BackColor = System.Drawing.Color.Transparent
-        Me.btnCerrarInterfaz.BorderRadius = 2
-        Me.btnCerrarInterfaz.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnCerrarInterfaz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnCerrarInterfaz.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnCerrarInterfaz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnCerrarInterfaz.FillColor = System.Drawing.Color.Red
-        Me.btnCerrarInterfaz.FocusedColor = System.Drawing.Color.Maroon
-        Me.btnCerrarInterfaz.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnCerrarInterfaz.ForeColor = System.Drawing.Color.White
-        Me.btnCerrarInterfaz.Location = New System.Drawing.Point(1014, 3)
-        Me.btnCerrarInterfaz.Name = "btnCerrarInterfaz"
-        Me.btnCerrarInterfaz.Size = New System.Drawing.Size(38, 35)
-        Me.btnCerrarInterfaz.TabIndex = 13
-        Me.btnCerrarInterfaz.Text = "X"
-        '
-        'Mostrar_opciones
-        '
-        Me.Mostrar_opciones.Interval = 10
-        '
-        'Ocultar_opciones
-        '
-        Me.Ocultar_opciones.Interval = 10
         '
         'Interfaz
         '

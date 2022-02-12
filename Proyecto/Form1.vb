@@ -22,5 +22,6 @@
 
     Private Sub BTN_INICIAR_SECCION_Click(sender As Object, e As EventArgs) Handles BTN_INICIAR_SECCION.Click
         Interfaz.Show()
+        Me.Hide()
     End Sub
 End Class

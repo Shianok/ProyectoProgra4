@@ -2,6 +2,10 @@
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnCerrarInterfaz.Click
         Me.Close()
     End Sub
+    Private Sub Limpiar()
+        Registrar_paciente.Close()
+        REGISTRAR_CONSULTAS.Close()
+    End Sub
 
     Private Sub Ocultar_opciones_Tick(sender As Object, e As EventArgs) Handles Ocultar_opciones.Tick
         If Panel_menu.Width <= 77 Then
@@ -43,6 +47,12 @@
     End Sub
 
     Private Sub btn_Registrar_paciente_Click(sender As Object, e As EventArgs) Handles btn_Registrar_paciente.Click
+        Limpiar()
         MostrarOpcion(Registrar_paciente)
+    End Sub
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        Limpiar()
+        MostrarOpcion(REGISTRAR_CONSULTAS)
     End Sub
 End Class

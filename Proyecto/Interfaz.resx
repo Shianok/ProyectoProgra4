@@ -853,7 +853,7 @@
   <data name="Guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAN
-        1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADOGSURBVHhe7d17
+        1QAADdUBPdZY8QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADOGSURBVHhe7d17
         0HV3Wd5xwyERGiVFy6EMVTqUSRtpw8sbkMMkqbRKwtRwqDpQwXRgRo4mEAgJSUjIBIJjpgIdKkXF0HZa
         tHbAqdWJtPBaobR1mko7MtPWKRTrTLWjphwqIuTtfaU7mZ0713PYv73uvX7rt79/fEa83+fZa6+9r3Wv
         6012nucbTp8+DQAA9owdAgCAsdkhAAAYmx0CAICx2SEAABibHQIAgLHZIYBle+pTn/rQ8Pjw9PCC8Jrw
@@ -2068,7 +2068,7 @@
   <data name="btn_Registrar_paciente.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABkAAAAZACAYAAAAhDI6nAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAOa
-        vAADmrwB6BuYRwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAH+fSURBVHhe7N0L
+        ugADmroBaBjc3AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAH+fSURBVHhe7N0L
         tG5ZVR94b70hFKkqKCh5mAIJFBhAXgIq+MCEh7Qhje8GWyRGjdDEGCCCItqIgiIRGmkNoQlJY1BJBwOC
         MTExjRIcxPhA0QhtRCU+EIUggkCl/0vOFxdrz3PP437nnL2//fuP8RvDMam6de755p5rjT2993zcf//v
         /x0AAAAAAGCnlEUAAAAAAIAlK4sAAAAAAABLVhYBAAAAAACWrCwCAAAAAAAsWVkEAAAAAABYsrIIAAAA
@@ -2750,7 +2750,7 @@
   <data name="btn_opciones.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAX
-        SAAAF0gBit5MHQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABSmSURBVHhe7d1d
+        RgAAF0YBLlcA4wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAABSmSURBVHhe7d1d
         iKZnfcfxe3WbuA2+YVabKFshmBolST3SoLbVUvAgB0aRtFARPbD2IGIUDPjSUqGtsS3anlgItW2kxIoN
         SamQFjVNfCMg0lasiQVfUBAPqqLVKsZs/9f22XDNzG93Z2Znduf57+eCD2S+z/28zJ78bpLszHL8+HEA
         4AITIwDQW4wAQG8xAgC9xQgA9BYjANBbjABAbzECAL3FCAD0FiMA0FuMAEBvMQIAvcUIAPQWIwDQW4wA

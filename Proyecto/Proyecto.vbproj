@@ -110,6 +110,12 @@
     <Compile Include="Registrarse.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="REGISTRAR_CONSULTAS.Designer.vb">
+      <DependentUpon>REGISTRAR_CONSULTAS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRAR_CONSULTAS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registrar_paciente.Designer.vb">
       <DependentUpon>Registrar_paciente.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="Registrarse.resx">
       <DependentUpon>Registrarse.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REGISTRAR_CONSULTAS.resx">
+      <DependentUpon>REGISTRAR_CONSULTAS.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
@@ -145,9 +154,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\.com.png" />
   </ItemGroup>
   <ItemGroup>
