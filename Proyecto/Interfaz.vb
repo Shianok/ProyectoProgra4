@@ -55,4 +55,9 @@
         Limpiar()
         MostrarOpcion(REGISTRAR_CONSULTAS)
     End Sub
+
+    Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+        Form1.Show()
+        Me.Close()
+    End Sub
 End Class

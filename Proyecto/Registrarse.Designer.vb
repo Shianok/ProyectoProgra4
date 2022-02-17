@@ -34,6 +34,8 @@ Partial Class Registrarse
         Me.PASSWORD = New Guna.UI2.WinForms.Guna2TextBox()
         Me.USERNAME = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.CEDULA = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.IMG_USUARIO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,6 +43,8 @@ Partial Class Registrarse
         'Guna2GroupBox1
         '
         Me.Guna2GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GroupBox1.Controls.Add(Me.Label5)
+        Me.Guna2GroupBox1.Controls.Add(Me.CEDULA)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2Button2)
         Me.Guna2GroupBox1.Controls.Add(Me.Label4)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
@@ -138,7 +142,7 @@ Partial Class Registrarse
         Me.BTN_REGISTRARSE.FillColor = System.Drawing.Color.Teal
         Me.BTN_REGISTRARSE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BTN_REGISTRARSE.ForeColor = System.Drawing.Color.White
-        Me.BTN_REGISTRARSE.Location = New System.Drawing.Point(442, 285)
+        Me.BTN_REGISTRARSE.Location = New System.Drawing.Point(441, 345)
         Me.BTN_REGISTRARSE.Name = "BTN_REGISTRARSE"
         Me.BTN_REGISTRARSE.Size = New System.Drawing.Size(142, 38)
         Me.BTN_REGISTRARSE.TabIndex = 12
@@ -241,6 +245,41 @@ Partial Class Registrarse
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "CREA TU CUENTA"
         '
+        'CEDULA
+        '
+        Me.CEDULA.BackColor = System.Drawing.Color.Transparent
+        Me.CEDULA.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CEDULA.BorderRadius = 5
+        Me.CEDULA.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.CEDULA.DefaultText = ""
+        Me.CEDULA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.CEDULA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.CEDULA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CEDULA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CEDULA.FillColor = System.Drawing.Color.Cyan
+        Me.CEDULA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CEDULA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.CEDULA.ForeColor = System.Drawing.Color.Black
+        Me.CEDULA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CEDULA.Location = New System.Drawing.Point(395, 285)
+        Me.CEDULA.Name = "CEDULA"
+        Me.CEDULA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.CEDULA.PlaceholderText = ""
+        Me.CEDULA.SelectedText = ""
+        Me.CEDULA.Size = New System.Drawing.Size(232, 36)
+        Me.CEDULA.TabIndex = 18
+        Me.CEDULA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(256, 296)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 15)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "CEDULA:"
+        '
         'Registrarse
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -271,4 +310,6 @@ Partial Class Registrarse
     Friend WithEvents PASSWORD As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents USERNAME As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents CEDULA As Guna.UI2.WinForms.Guna2TextBox
 End Class
