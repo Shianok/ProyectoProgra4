@@ -23,7 +23,7 @@
         End If
     End Sub
 
-    Private Sub btn_opciones_Click(sender As Object, e As EventArgs) Handles btn_opciones.Click
+    Private Sub Btn_opciones_Click(sender As Object, e As EventArgs) Handles Btn_opciones.Click
         If Panel_menu.Width >= 250 Then
             Ocultar_opciones.Enabled = True
         ElseIf Panel_menu.Width <= 77 Then
@@ -46,7 +46,7 @@
 
     End Sub
 
-    Private Sub btn_Registrar_paciente_Click(sender As Object, e As EventArgs) Handles btn_Registrar_paciente.Click
+    Private Sub Btn_Registrar_paciente_Click(sender As Object, e As EventArgs) Handles Btn_paciente.Click
         Limpiar()
         MostrarOpcion(Registrar_paciente)
     End Sub

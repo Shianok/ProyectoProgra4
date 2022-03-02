@@ -39,7 +39,7 @@ Partial Class Form1
         '
         'Guna2GroupBox1
         '
-        Me.Guna2GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2GroupBox1.BorderColor = System.Drawing.Color.Transparent
         Me.Guna2GroupBox1.BorderThickness = 0
         Me.Guna2GroupBox1.Controls.Add(Me.BTN_CREAR)
