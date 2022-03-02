@@ -40,6 +40,8 @@ Partial Class Interfaz
         Me.Guna2Button4 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
         Me.Panel_menu = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2Button6 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button7 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox2.SuspendLayout()
         CType(Me.btn_opciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,7 +68,7 @@ Partial Class Interfaz
         '
         Me.Panel_opciones.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel_opciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Panel_opciones.BorderColor = System.Drawing.Color.Transparent
+        Me.Panel_opciones.BorderColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.Panel_opciones.BorderThickness = 2
         Me.Panel_opciones.Location = New System.Drawing.Point(259, 42)
         Me.Panel_opciones.Name = "Panel_opciones"
@@ -104,7 +106,7 @@ Partial Class Interfaz
         Me.btn_opciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btn_opciones.Image = CType(resources.GetObject("btn_opciones.Image"), System.Drawing.Image)
         Me.btn_opciones.ImageRotate = 0!
-        Me.btn_opciones.Location = New System.Drawing.Point(188, 4)
+        Me.btn_opciones.Location = New System.Drawing.Point(183, 4)
         Me.btn_opciones.Name = "btn_opciones"
         Me.btn_opciones.Size = New System.Drawing.Size(52, 53)
         Me.btn_opciones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -157,7 +159,7 @@ Partial Class Interfaz
         Me.btn_Registrar_paciente.ImageSize = New System.Drawing.Size(50, 50)
         Me.btn_Registrar_paciente.Location = New System.Drawing.Point(3, 150)
         Me.btn_Registrar_paciente.Name = "btn_Registrar_paciente"
-        Me.btn_Registrar_paciente.Size = New System.Drawing.Size(244, 55)
+        Me.btn_Registrar_paciente.Size = New System.Drawing.Size(239, 55)
         Me.btn_Registrar_paciente.TabIndex = 23
         Me.btn_Registrar_paciente.Text = "Registrar paciente"
         Me.btn_Registrar_paciente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -177,7 +179,7 @@ Partial Class Interfaz
         Me.Guna2Button1.ImageSize = New System.Drawing.Size(50, 50)
         Me.Guna2Button1.Location = New System.Drawing.Point(1, 271)
         Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(244, 55)
+        Me.Guna2Button1.Size = New System.Drawing.Size(241, 55)
         Me.Guna2Button1.TabIndex = 24
         Me.Guna2Button1.Text = "Registrar Empleado"
         Me.Guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -197,7 +199,7 @@ Partial Class Interfaz
         Me.Guna2Button2.ImageSize = New System.Drawing.Size(50, 50)
         Me.Guna2Button2.Location = New System.Drawing.Point(5, 208)
         Me.Guna2Button2.Name = "Guna2Button2"
-        Me.Guna2Button2.Size = New System.Drawing.Size(244, 55)
+        Me.Guna2Button2.Size = New System.Drawing.Size(237, 55)
         Me.Guna2Button2.TabIndex = 25
         Me.Guna2Button2.Text = "Registrar consultas"
         Me.Guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -217,7 +219,7 @@ Partial Class Interfaz
         Me.Guna2Button3.ImageSize = New System.Drawing.Size(50, 50)
         Me.Guna2Button3.Location = New System.Drawing.Point(1, 334)
         Me.Guna2Button3.Name = "Guna2Button3"
-        Me.Guna2Button3.Size = New System.Drawing.Size(244, 55)
+        Me.Guna2Button3.Size = New System.Drawing.Size(241, 55)
         Me.Guna2Button3.TabIndex = 26
         Me.Guna2Button3.Text = "Registrar areas"
         Me.Guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -237,7 +239,7 @@ Partial Class Interfaz
         Me.Guna2Button4.ImageSize = New System.Drawing.Size(50, 50)
         Me.Guna2Button4.Location = New System.Drawing.Point(3, 397)
         Me.Guna2Button4.Name = "Guna2Button4"
-        Me.Guna2Button4.Size = New System.Drawing.Size(244, 55)
+        Me.Guna2Button4.Size = New System.Drawing.Size(239, 55)
         Me.Guna2Button4.TabIndex = 27
         Me.Guna2Button4.Text = "Registrar facturas"
         Me.Guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -257,7 +259,7 @@ Partial Class Interfaz
         Me.Guna2Button5.ImageSize = New System.Drawing.Size(50, 50)
         Me.Guna2Button5.Location = New System.Drawing.Point(6, 621)
         Me.Guna2Button5.Name = "Guna2Button5"
-        Me.Guna2Button5.Size = New System.Drawing.Size(241, 57)
+        Me.Guna2Button5.Size = New System.Drawing.Size(236, 57)
         Me.Guna2Button5.TabIndex = 28
         Me.Guna2Button5.Text = "Cerrar sesion"
         Me.Guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
@@ -268,6 +270,8 @@ Partial Class Interfaz
         Me.Panel_menu.BorderColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.Panel_menu.BorderRadius = 5
         Me.Panel_menu.BorderThickness = 1
+        Me.Panel_menu.Controls.Add(Me.Guna2Button7)
+        Me.Panel_menu.Controls.Add(Me.Guna2Button6)
         Me.Panel_menu.Controls.Add(Me.Guna2Button5)
         Me.Panel_menu.Controls.Add(Me.Guna2Button4)
         Me.Panel_menu.Controls.Add(Me.Guna2Button3)
@@ -278,10 +282,50 @@ Partial Class Interfaz
         Me.Panel_menu.Controls.Add(Me.Label2)
         Me.Panel_menu.Controls.Add(Me.Guna2PictureBox1)
         Me.Panel_menu.Controls.Add(Me.btn_opciones)
-        Me.Panel_menu.Location = New System.Drawing.Point(3, 42)
+        Me.Panel_menu.Location = New System.Drawing.Point(8, 42)
         Me.Panel_menu.Name = "Panel_menu"
-        Me.Panel_menu.Size = New System.Drawing.Size(250, 684)
+        Me.Panel_menu.Size = New System.Drawing.Size(245, 684)
         Me.Panel_menu.TabIndex = 14
+        '
+        'Guna2Button6
+        '
+        Me.Guna2Button6.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button6.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button6.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button6.Image = CType(resources.GetObject("Guna2Button6.Image"), System.Drawing.Image)
+        Me.Guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2Button6.ImageSize = New System.Drawing.Size(50, 50)
+        Me.Guna2Button6.Location = New System.Drawing.Point(3, 458)
+        Me.Guna2Button6.Name = "Guna2Button6"
+        Me.Guna2Button6.Size = New System.Drawing.Size(239, 55)
+        Me.Guna2Button6.TabIndex = 29
+        Me.Guna2Button6.Text = "Registrar facturas"
+        Me.Guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'Guna2Button7
+        '
+        Me.Guna2Button7.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button7.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2Button7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2Button7.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button7.Image = CType(resources.GetObject("Guna2Button7.Image"), System.Drawing.Image)
+        Me.Guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.Guna2Button7.ImageSize = New System.Drawing.Size(50, 50)
+        Me.Guna2Button7.Location = New System.Drawing.Point(3, 519)
+        Me.Guna2Button7.Name = "Guna2Button7"
+        Me.Guna2Button7.Size = New System.Drawing.Size(239, 55)
+        Me.Guna2Button7.TabIndex = 30
+        Me.Guna2Button7.Text = "Registrar facturas"
+        Me.Guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Interfaz
         '
@@ -319,4 +363,6 @@ Partial Class Interfaz
     Friend WithEvents Label2 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents btn_opciones As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2Button7 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
 End Class
