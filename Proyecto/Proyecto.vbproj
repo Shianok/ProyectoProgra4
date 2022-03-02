@@ -142,6 +142,9 @@
     <EmbeddedResource Include="REGISTRAR_CONSULTAS.resx">
       <DependentUpon>REGISTRAR_CONSULTAS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registrar_paciente.resx">
+      <DependentUpon>Registrar_paciente.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
