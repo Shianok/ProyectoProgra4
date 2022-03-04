@@ -23,6 +23,8 @@ Partial Class Registrarse
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.CEDULA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -34,8 +36,6 @@ Partial Class Registrarse
         Me.PASSWORD = New Guna.UI2.WinForms.Guna2TextBox()
         Me.USERNAME = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.CEDULA = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.IMG_USUARIO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -56,8 +56,8 @@ Partial Class Registrarse
         Me.Guna2GroupBox1.Controls.Add(Me.PASSWORD)
         Me.Guna2GroupBox1.Controls.Add(Me.USERNAME)
         Me.Guna2GroupBox1.Controls.Add(Me.Label3)
-        Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(-1, 0)
@@ -65,6 +65,41 @@ Partial Class Registrarse
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(638, 417)
         Me.Guna2GroupBox1.TabIndex = 2
         Me.Guna2GroupBox1.Text = " Registrarse"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(256, 296)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 15)
+        Me.Label5.TabIndex = 19
+        Me.Label5.Text = "CEDULA:"
+        '
+        'CEDULA
+        '
+        Me.CEDULA.BackColor = System.Drawing.Color.Transparent
+        Me.CEDULA.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.CEDULA.BorderRadius = 5
+        Me.CEDULA.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.CEDULA.DefaultText = ""
+        Me.CEDULA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.CEDULA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.CEDULA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CEDULA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CEDULA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CEDULA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CEDULA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.CEDULA.ForeColor = System.Drawing.Color.Black
+        Me.CEDULA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CEDULA.Location = New System.Drawing.Point(395, 285)
+        Me.CEDULA.Name = "CEDULA"
+        Me.CEDULA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.CEDULA.PlaceholderText = ""
+        Me.CEDULA.SelectedText = ""
+        Me.CEDULA.Size = New System.Drawing.Size(232, 36)
+        Me.CEDULA.TabIndex = 18
+        Me.CEDULA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Guna2Button2
         '
@@ -74,9 +109,9 @@ Partial Class Registrarse
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button2.ForeColor = System.Drawing.Color.Black
+        Me.Guna2Button2.ForeColor = System.Drawing.Color.White
         Me.Guna2Button2.Location = New System.Drawing.Point(13, 44)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(111, 35)
@@ -139,7 +174,7 @@ Partial Class Registrarse
         Me.BTN_REGISTRARSE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.BTN_REGISTRARSE.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.BTN_REGISTRARSE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_REGISTRARSE.FillColor = System.Drawing.Color.Teal
+        Me.BTN_REGISTRARSE.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.BTN_REGISTRARSE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BTN_REGISTRARSE.ForeColor = System.Drawing.Color.White
         Me.BTN_REGISTRARSE.Location = New System.Drawing.Point(441, 345)
@@ -161,7 +196,7 @@ Partial Class Registrarse
         'Guna2TextBox1
         '
         Me.Guna2TextBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Guna2TextBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2TextBox1.BorderRadius = 5
         Me.Guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Guna2TextBox1.DefaultText = ""
@@ -169,7 +204,7 @@ Partial Class Registrarse
         Me.Guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.Guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.Guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Guna2TextBox1.FillColor = System.Drawing.Color.Cyan
+        Me.Guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.Guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Guna2TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2TextBox1.ForeColor = System.Drawing.Color.Black
@@ -186,7 +221,7 @@ Partial Class Registrarse
         'PASSWORD
         '
         Me.PASSWORD.BackColor = System.Drawing.Color.Transparent
-        Me.PASSWORD.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PASSWORD.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.PASSWORD.BorderRadius = 5
         Me.PASSWORD.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.PASSWORD.DefaultText = ""
@@ -194,7 +229,7 @@ Partial Class Registrarse
         Me.PASSWORD.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.PASSWORD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.PASSWORD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.PASSWORD.FillColor = System.Drawing.Color.Cyan
+        Me.PASSWORD.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.PASSWORD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.PASSWORD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.PASSWORD.ForeColor = System.Drawing.Color.Black
@@ -211,7 +246,7 @@ Partial Class Registrarse
         'USERNAME
         '
         Me.USERNAME.BackColor = System.Drawing.Color.Transparent
-        Me.USERNAME.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.USERNAME.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.USERNAME.BorderRadius = 5
         Me.USERNAME.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.USERNAME.DefaultText = ""
@@ -219,7 +254,7 @@ Partial Class Registrarse
         Me.USERNAME.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.USERNAME.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.USERNAME.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.USERNAME.FillColor = System.Drawing.Color.Cyan
+        Me.USERNAME.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.USERNAME.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.USERNAME.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.USERNAME.ForeColor = System.Drawing.Color.Black
@@ -238,47 +273,12 @@ Partial Class Registrarse
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Bernard MT Condensed", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Cyan
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(212, 65)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(225, 41)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "CREA TU CUENTA"
-        '
-        'CEDULA
-        '
-        Me.CEDULA.BackColor = System.Drawing.Color.Transparent
-        Me.CEDULA.BorderColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA.BorderRadius = 5
-        Me.CEDULA.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CEDULA.DefaultText = ""
-        Me.CEDULA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.CEDULA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.CEDULA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA.FillColor = System.Drawing.Color.Cyan
-        Me.CEDULA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CEDULA.ForeColor = System.Drawing.Color.Black
-        Me.CEDULA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA.Location = New System.Drawing.Point(395, 285)
-        Me.CEDULA.Name = "CEDULA"
-        Me.CEDULA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.CEDULA.PlaceholderText = ""
-        Me.CEDULA.SelectedText = ""
-        Me.CEDULA.Size = New System.Drawing.Size(232, 36)
-        Me.CEDULA.TabIndex = 18
-        Me.CEDULA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Consolas", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(256, 296)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 15)
-        Me.Label5.TabIndex = 19
-        Me.Label5.Text = "CEDULA:"
         '
         'Registrarse
         '

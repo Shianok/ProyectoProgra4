@@ -116,6 +116,12 @@
     <Compile Include="REGISTRAR_CONSULTAS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Registrar_facturas.Designer.vb">
+      <DependentUpon>Registrar_facturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar_facturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registrar_paciente.Designer.vb">
       <DependentUpon>Registrar_paciente.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REGISTRAR_CONSULTAS.resx">
       <DependentUpon>REGISTRAR_CONSULTAS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registrar_facturas.resx">
+      <DependentUpon>Registrar_facturas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registrar_paciente.resx">
       <DependentUpon>Registrar_paciente.vb</DependentUpon>
