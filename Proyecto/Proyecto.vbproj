@@ -88,6 +88,12 @@
     <Compile Include="Agregar_empleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultar_paciente.Designer.vb">
+      <DependentUpon>Consultar_paciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_paciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar_empleados.resx">
       <DependentUpon>Agregar_empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar_paciente.resx">
+      <DependentUpon>Consultar_paciente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

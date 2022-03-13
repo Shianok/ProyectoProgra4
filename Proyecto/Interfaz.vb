@@ -6,6 +6,7 @@
     Private Sub Limpiar()
         Registrar_paciente.Close()
         REGISTRAR_CONSULTAS.Close()
+        Registrar_facturas.Close()
     End Sub
 
     Private Sub Ocultar_opciones_Tick(sender As Object, e As EventArgs) Handles Ocultar_opciones.Tick
@@ -39,6 +40,7 @@
         End If
         Dim fh As Form = TryCast(Formhijo, Form)
         fh.TopLevel = False
+        fh.BackColor = Color.FromArgb(239, 206, 250)
         fh.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         fh.Dock = DockStyle.Fill
         Me.Panel_opciones.Controls.Add(fh)
@@ -47,22 +49,38 @@
 
     End Sub
 
+    'Abre form de registrar paciente
     Private Sub Btn_Registrar_paciente_Click(sender As Object, e As EventArgs) Handles Btn_paciente.Click
         Limpiar()
-        MostrarOpcion(Registrar_paciente)
+        MostrarOpcion(Consultar_paciente)
     End Sub
 
+    'Abre form de Agregar atencion
     Private Sub Btn_agregar_atencion_Click(sender As Object, e As EventArgs) Handles Btn_agregar_atencion.Click
         Limpiar()
         MostrarOpcion(REGISTRAR_CONSULTAS)
     End Sub
 
+    'Abre form de registrar facturas
+    Private Sub Btn_facturas_Click(sender As Object, e As EventArgs) Handles Btn_facturas.Click
+        Limpiar()
+        MostrarOpcion(Registrar_facturas)
+    End Sub
+
+    'Abre el form agregar area
+    Private Sub Btn_areas_Click(sender As Object, e As EventArgs) Handles Btn_areas.Click
+        Limpiar()
+        MostrarOpcion(Agregar_area)
+    End Sub
+
     Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
-        Form1.Show()
         Me.Close()
+        Form1.Show()
     End Sub
 
     Private Sub Btn_consultas_Click(sender As Object, e As EventArgs) Handles Btn_consultas.Click
 
     End Sub
+
+
 End Class
