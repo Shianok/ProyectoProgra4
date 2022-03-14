@@ -1,7 +1,7 @@
 ﻿Public Class Interfaz
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnCerrarInterfaz.Click
         Me.Close()
-        Form1.Hide()
+        Form1.Show()
     End Sub
     Private Sub Limpiar()
         Registrar_paciente.Close()
@@ -58,7 +58,7 @@
     'Abre form de Agregar atencion
     Private Sub Btn_agregar_atencion_Click(sender As Object, e As EventArgs) Handles Btn_agregar_atencion.Click
         Limpiar()
-        MostrarOpcion(REGISTRAR_CONSULTAS)
+        MostrarOpcion(Agregar_atencion)
     End Sub
 
     'Abre form de registrar facturas
@@ -79,8 +79,12 @@
     End Sub
 
     Private Sub Btn_consultas_Click(sender As Object, e As EventArgs) Handles Btn_consultas.Click
-
+        Limpiar()
+        MostrarOpcion(REGISTRAR_CONSULTAS)
     End Sub
 
-
+    Private Sub Btn_empleado_Click(sender As Object, e As EventArgs) Handles Btn_empleado.Click
+        Limpiar()
+        MostrarOpcion(Consultar_empleado)
+    End Sub
 End Class

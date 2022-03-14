@@ -93,6 +93,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Imagen_fondo() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Imagen_fondo", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property invoice_78456() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("invoice_78456", resourceCulture)
@@ -168,6 +178,16 @@ Namespace My.Resources
         Friend ReadOnly Property pngwing_com() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("pngwing_com", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Registro_consulta() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Registro_consulta", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

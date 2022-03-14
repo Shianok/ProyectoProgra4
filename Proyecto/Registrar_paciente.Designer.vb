@@ -23,12 +23,15 @@ Partial Class Registrar_paciente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
+        Me.TXT_PADECIMIENTOS = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_agregar_paciente = New Guna.UI2.WinForms.Guna2Button()
         Me.NACIMIENTO_PACIENTE = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.RESIDENCIA_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.NUMERO_CARNET = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.CORREO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CORREO_PACIENTE = New System.Windows.Forms.Label()
         Me.NUMERO_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -36,9 +39,6 @@ Partial Class Registrar_paciente
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CEDULA_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TXT_PADECIMIENTOS = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -56,7 +56,7 @@ Partial Class Registrar_paciente
         Me.Guna2GroupBox1.Controls.Add(Me.RESIDENCIA_PACIENTE)
         Me.Guna2GroupBox1.Controls.Add(Me.Label9)
         Me.Guna2GroupBox1.Controls.Add(Me.Label10)
-        Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_CARNET)
+        Me.Guna2GroupBox1.Controls.Add(Me.CORREO)
         Me.Guna2GroupBox1.Controls.Add(Me.CORREO_PACIENTE)
         Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_PACIENTE)
         Me.Guna2GroupBox1.Controls.Add(Me.Label6)
@@ -73,6 +73,56 @@ Partial Class Registrar_paciente
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(994, 527)
         Me.Guna2GroupBox1.TabIndex = 1
         Me.Guna2GroupBox1.Text = "Agregar paciente"
+        '
+        'btnCerrarInterfaz
+        '
+        Me.btnCerrarInterfaz.BackColor = System.Drawing.Color.Transparent
+        Me.btnCerrarInterfaz.BorderRadius = 2
+        Me.btnCerrarInterfaz.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.btnCerrarInterfaz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.btnCerrarInterfaz.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.btnCerrarInterfaz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.btnCerrarInterfaz.FillColor = System.Drawing.Color.Red
+        Me.btnCerrarInterfaz.FocusedColor = System.Drawing.Color.Maroon
+        Me.btnCerrarInterfaz.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.btnCerrarInterfaz.ForeColor = System.Drawing.Color.White
+        Me.btnCerrarInterfaz.Location = New System.Drawing.Point(951, 3)
+        Me.btnCerrarInterfaz.Name = "btnCerrarInterfaz"
+        Me.btnCerrarInterfaz.Size = New System.Drawing.Size(38, 35)
+        Me.btnCerrarInterfaz.TabIndex = 14
+        Me.btnCerrarInterfaz.Text = "X"
+        '
+        'TXT_PADECIMIENTOS
+        '
+        Me.TXT_PADECIMIENTOS.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.TXT_PADECIMIENTOS.DefaultText = ""
+        Me.TXT_PADECIMIENTOS.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.TXT_PADECIMIENTOS.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.TXT_PADECIMIENTOS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_PADECIMIENTOS.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.TXT_PADECIMIENTOS.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.TXT_PADECIMIENTOS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_PADECIMIENTOS.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.TXT_PADECIMIENTOS.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.TXT_PADECIMIENTOS.Location = New System.Drawing.Point(234, 322)
+        Me.TXT_PADECIMIENTOS.Name = "TXT_PADECIMIENTOS"
+        Me.TXT_PADECIMIENTOS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.TXT_PADECIMIENTOS.PlaceholderText = ""
+        Me.TXT_PADECIMIENTOS.SelectedText = ""
+        Me.TXT_PADECIMIENTOS.Size = New System.Drawing.Size(623, 59)
+        Me.TXT_PADECIMIENTOS.TabIndex = 26
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(115, 336)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(113, 21)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Padesimientos:"
         '
         'Btn_agregar_paciente
         '
@@ -147,25 +197,25 @@ Partial Class Registrar_paciente
         Me.Label10.TabIndex = 17
         Me.Label10.Text = "Fecha de nacimiento:"
         '
-        'NUMERO_CARNET
+        'CORREO
         '
-        Me.NUMERO_CARNET.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.NUMERO_CARNET.DefaultText = ""
-        Me.NUMERO_CARNET.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.NUMERO_CARNET.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.NUMERO_CARNET.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NUMERO_CARNET.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NUMERO_CARNET.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.NUMERO_CARNET.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NUMERO_CARNET.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.NUMERO_CARNET.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NUMERO_CARNET.Location = New System.Drawing.Point(676, 176)
-        Me.NUMERO_CARNET.Name = "NUMERO_CARNET"
-        Me.NUMERO_CARNET.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.NUMERO_CARNET.PlaceholderText = ""
-        Me.NUMERO_CARNET.SelectedText = ""
-        Me.NUMERO_CARNET.Size = New System.Drawing.Size(211, 33)
-        Me.NUMERO_CARNET.TabIndex = 12
+        Me.CORREO.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.CORREO.DefaultText = ""
+        Me.CORREO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.CORREO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.CORREO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CORREO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CORREO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CORREO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CORREO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.CORREO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CORREO.Location = New System.Drawing.Point(676, 176)
+        Me.CORREO.Name = "CORREO"
+        Me.CORREO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.CORREO.PlaceholderText = ""
+        Me.CORREO.SelectedText = ""
+        Me.CORREO.Size = New System.Drawing.Size(211, 33)
+        Me.CORREO.TabIndex = 12
         '
         'CORREO_PACIENTE
         '
@@ -275,56 +325,6 @@ Partial Class Registrar_paciente
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cédula:"
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(115, 336)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(113, 21)
-        Me.Label2.TabIndex = 25
-        Me.Label2.Text = "Padesimientos:"
-        '
-        'TXT_PADECIMIENTOS
-        '
-        Me.TXT_PADECIMIENTOS.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.TXT_PADECIMIENTOS.DefaultText = ""
-        Me.TXT_PADECIMIENTOS.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.TXT_PADECIMIENTOS.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.TXT_PADECIMIENTOS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_PADECIMIENTOS.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.TXT_PADECIMIENTOS.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.TXT_PADECIMIENTOS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_PADECIMIENTOS.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.TXT_PADECIMIENTOS.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TXT_PADECIMIENTOS.Location = New System.Drawing.Point(234, 322)
-        Me.TXT_PADECIMIENTOS.Name = "TXT_PADECIMIENTOS"
-        Me.TXT_PADECIMIENTOS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.TXT_PADECIMIENTOS.PlaceholderText = ""
-        Me.TXT_PADECIMIENTOS.SelectedText = ""
-        Me.TXT_PADECIMIENTOS.Size = New System.Drawing.Size(623, 59)
-        Me.TXT_PADECIMIENTOS.TabIndex = 26
-        '
-        'btnCerrarInterfaz
-        '
-        Me.btnCerrarInterfaz.BackColor = System.Drawing.Color.Transparent
-        Me.btnCerrarInterfaz.BorderRadius = 2
-        Me.btnCerrarInterfaz.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnCerrarInterfaz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnCerrarInterfaz.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnCerrarInterfaz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnCerrarInterfaz.FillColor = System.Drawing.Color.Red
-        Me.btnCerrarInterfaz.FocusedColor = System.Drawing.Color.Maroon
-        Me.btnCerrarInterfaz.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnCerrarInterfaz.ForeColor = System.Drawing.Color.White
-        Me.btnCerrarInterfaz.Location = New System.Drawing.Point(951, 3)
-        Me.btnCerrarInterfaz.Name = "btnCerrarInterfaz"
-        Me.btnCerrarInterfaz.Size = New System.Drawing.Size(38, 35)
-        Me.btnCerrarInterfaz.TabIndex = 14
-        Me.btnCerrarInterfaz.Text = "X"
-        '
         'Registrar_paciente
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -351,7 +351,7 @@ Partial Class Registrar_paciente
     Friend WithEvents RESIDENCIA_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents NUMERO_CARNET As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents CORREO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CORREO_PACIENTE As Label
     Friend WithEvents NUMERO_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label

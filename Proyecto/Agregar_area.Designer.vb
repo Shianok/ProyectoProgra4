@@ -35,15 +35,15 @@ Partial Class Agregar_area
         Me.NOMBRE_AREA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Informacion_area = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Info_areas = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.List_infoAreas = New System.Windows.Forms.ListView()
         Me.ColumnHeader0 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.List_infoAreas = New System.Windows.Forms.ListView()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Info_areas = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.AgregarArea.SuspendLayout()
         CType(Me.CANTIDAD_EMPLEADOS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Informacion_area.SuspendLayout()
@@ -52,6 +52,7 @@ Partial Class Agregar_area
         'AgregarArea
         '
         Me.AgregarArea.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.AgregarArea.BorderRadius = 4
         Me.AgregarArea.BorderThickness = 2
         Me.AgregarArea.Controls.Add(Me.CANTIDAD_EMPLEADOS)
         Me.AgregarArea.Controls.Add(Me.Btn_agregar_area)
@@ -68,9 +69,9 @@ Partial Class Agregar_area
         Me.AgregarArea.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.AgregarArea.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.AgregarArea.ForeColor = System.Drawing.Color.White
-        Me.AgregarArea.Location = New System.Drawing.Point(-1, 349)
+        Me.AgregarArea.Location = New System.Drawing.Point(3, 342)
         Me.AgregarArea.Name = "AgregarArea"
-        Me.AgregarArea.Size = New System.Drawing.Size(993, 337)
+        Me.AgregarArea.Size = New System.Drawing.Size(984, 341)
         Me.AgregarArea.TabIndex = 0
         Me.AgregarArea.Text = "Agregar área"
         '
@@ -233,6 +234,7 @@ Partial Class Agregar_area
         'Informacion_area
         '
         Me.Informacion_area.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Informacion_area.BorderRadius = 4
         Me.Informacion_area.BorderThickness = 2
         Me.Informacion_area.Controls.Add(Me.List_infoAreas)
         Me.Informacion_area.Controls.Add(Me.Guna2Button1)
@@ -242,11 +244,44 @@ Partial Class Agregar_area
         Me.Informacion_area.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Informacion_area.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Informacion_area.ForeColor = System.Drawing.Color.White
-        Me.Informacion_area.Location = New System.Drawing.Point(-1, 0)
+        Me.Informacion_area.Location = New System.Drawing.Point(3, 1)
         Me.Informacion_area.Name = "Informacion_area"
-        Me.Informacion_area.Size = New System.Drawing.Size(993, 337)
+        Me.Informacion_area.Size = New System.Drawing.Size(984, 337)
         Me.Informacion_area.TabIndex = 1
         Me.Informacion_area.Text = "Informacion de áreas"
+        '
+        'List_infoAreas
+        '
+        Me.List_infoAreas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.List_infoAreas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader0, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
+        Me.List_infoAreas.GridLines = True
+        Me.List_infoAreas.HideSelection = False
+        Me.List_infoAreas.Location = New System.Drawing.Point(32, 133)
+        Me.List_infoAreas.Name = "List_infoAreas"
+        Me.List_infoAreas.Size = New System.Drawing.Size(916, 171)
+        Me.List_infoAreas.TabIndex = 26
+        Me.List_infoAreas.UseCompatibleStateImageBehavior = False
+        '
+        'ColumnHeader0
+        '
+        Me.ColumnHeader0.Text = "ID"
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "AREA"
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "NIVEL"
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "CANTIDAD DE EMPLEADOS"
+        Me.ColumnHeader3.Width = 100
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "HORARIO"
         '
         'Guna2Button1
         '
@@ -294,39 +329,6 @@ Partial Class Agregar_area
         Me.Label10.Size = New System.Drawing.Size(93, 21)
         Me.Label10.TabIndex = 5
         Me.Label10.Text = "Buscar área:"
-        '
-        'ColumnHeader0
-        '
-        Me.ColumnHeader0.Text = "ID"
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "AREA"
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "NIVEL"
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "CANTIDAD DE EMPLEADOS"
-        Me.ColumnHeader3.Width = 100
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "HORARIO"
-        '
-        'List_infoAreas
-        '
-        Me.List_infoAreas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.List_infoAreas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader0, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.List_infoAreas.GridLines = True
-        Me.List_infoAreas.HideSelection = False
-        Me.List_infoAreas.Location = New System.Drawing.Point(37, 133)
-        Me.List_infoAreas.Name = "List_infoAreas"
-        Me.List_infoAreas.Size = New System.Drawing.Size(916, 171)
-        Me.List_infoAreas.TabIndex = 26
-        Me.List_infoAreas.UseCompatibleStateImageBehavior = False
         '
         'Agregar_area
         '

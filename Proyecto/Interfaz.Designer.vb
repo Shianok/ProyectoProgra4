@@ -26,6 +26,7 @@ Partial Class Interfaz
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Interfaz))
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Panel_opciones = New Guna.UI2.WinForms.Guna2Panel()
+        Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Panel_menu = New Guna.UI2.WinForms.Guna2Panel()
         Me.Btn_consultas = New Guna.UI2.WinForms.Guna2Button()
         Me.Btn_ver_facturas = New Guna.UI2.WinForms.Guna2Button()
@@ -43,6 +44,8 @@ Partial Class Interfaz
         Me.Mostrar_opciones = New System.Windows.Forms.Timer(Me.components)
         Me.Ocultar_opciones = New System.Windows.Forms.Timer(Me.components)
         Me.Guna2GroupBox2.SuspendLayout()
+        Me.Panel_opciones.SuspendLayout()
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_menu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btn_opciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,11 +72,24 @@ Partial Class Interfaz
         Me.Panel_opciones.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel_opciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.Panel_opciones.BorderColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Panel_opciones.BorderRadius = 5
         Me.Panel_opciones.BorderThickness = 2
-        Me.Panel_opciones.Location = New System.Drawing.Point(264, 42)
+        Me.Panel_opciones.Controls.Add(Me.Guna2PictureBox2)
+        Me.Panel_opciones.Location = New System.Drawing.Point(264, 44)
         Me.Panel_opciones.Name = "Panel_opciones"
         Me.Panel_opciones.Size = New System.Drawing.Size(989, 684)
         Me.Panel_opciones.TabIndex = 15
+        '
+        'Guna2PictureBox2
+        '
+        Me.Guna2PictureBox2.Image = Global.Proyecto.My.Resources.Resources.Imagen_fondo
+        Me.Guna2PictureBox2.ImageRotate = 0!
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(334, 203)
+        Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
+        Me.Guna2PictureBox2.Size = New System.Drawing.Size(328, 275)
+        Me.Guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.Guna2PictureBox2.TabIndex = 0
+        Me.Guna2PictureBox2.TabStop = False
         '
         'Panel_menu
         '
@@ -94,7 +110,7 @@ Partial Class Interfaz
         Me.Panel_menu.Controls.Add(Me.Guna2PictureBox1)
         Me.Panel_menu.Controls.Add(Me.Btn_opciones)
         Me.Panel_menu.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Panel_menu.Location = New System.Drawing.Point(8, 42)
+        Me.Panel_menu.Location = New System.Drawing.Point(8, 44)
         Me.Panel_menu.Name = "Panel_menu"
         Me.Panel_menu.Size = New System.Drawing.Size(250, 684)
         Me.Panel_menu.TabIndex = 14
@@ -116,7 +132,7 @@ Partial Class Interfaz
         Me.Btn_consultas.Name = "Btn_consultas"
         Me.Btn_consultas.Size = New System.Drawing.Size(244, 55)
         Me.Btn_consultas.TabIndex = 30
-        Me.Btn_consultas.Text = "Consultas"
+        Me.Btn_consultas.Text = "Crear una nueva consulta"
         Me.Btn_consultas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Btn_ver_facturas
@@ -216,7 +232,7 @@ Partial Class Interfaz
         Me.Btn_agregar_atencion.Name = "Btn_agregar_atencion"
         Me.Btn_agregar_atencion.Size = New System.Drawing.Size(244, 55)
         Me.Btn_agregar_atencion.TabIndex = 25
-        Me.Btn_agregar_atencion.Text = "Agregar atencion"
+        Me.Btn_agregar_atencion.Text = "Registro de consultas"
         Me.Btn_agregar_atencion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Btn_empleado
@@ -340,6 +356,8 @@ Partial Class Interfaz
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Interfaz"
         Me.Guna2GroupBox2.ResumeLayout(False)
+        Me.Panel_opciones.ResumeLayout(False)
+        CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_menu.ResumeLayout(False)
         Me.Panel_menu.PerformLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -366,4 +384,5 @@ Partial Class Interfaz
     Friend WithEvents Btn_consultas As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Btn_ver_facturas As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnCerrarInterfaz As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
 End Class

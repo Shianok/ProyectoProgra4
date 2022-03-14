@@ -82,10 +82,22 @@
     <Compile Include="Agregar_area.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Agregar_atencion.Designer.vb">
+      <DependentUpon>Agregar_atencion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_atencion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Agregar_empleados.Designer.vb">
       <DependentUpon>Agregar_empleados.vb</DependentUpon>
     </Compile>
     <Compile Include="Agregar_empleados.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultar_empleado.Designer.vb">
+      <DependentUpon>Consultar_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_empleado.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultar_paciente.Designer.vb">
@@ -151,8 +163,14 @@
     <EmbeddedResource Include="Agregar_area.resx">
       <DependentUpon>Agregar_area.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_atencion.resx">
+      <DependentUpon>Agregar_atencion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agregar_empleados.resx">
       <DependentUpon>Agregar_empleados.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultar_empleado.resx">
+      <DependentUpon>Consultar_empleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultar_paciente.resx">
       <DependentUpon>Consultar_paciente.vb</DependentUpon>
@@ -233,6 +251,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registro_consulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_fondo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
