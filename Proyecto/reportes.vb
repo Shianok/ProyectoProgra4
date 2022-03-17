@@ -185,11 +185,6 @@ Module reportes
         REPORTE_DIRECCION_PDF = DIRECCION & ".pdf"
 
 
-
-        If MsgBox("¿Desea enviar el documento a la impresora?", vbQuestion + vbYesNo, "Impresora") = vbYes Then
-            DOCUMENTO.PrintOut()
-        End If
-
     End Sub
 
     Friend Sub CERRAR_DOCUMENTO_WORD()
