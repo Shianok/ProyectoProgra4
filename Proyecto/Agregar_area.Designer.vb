@@ -27,7 +27,6 @@ Partial Class Agregar_area
         Me.Btn_agregar_area = New Guna.UI2.WinForms.Guna2Button()
         Me.HORA_SALIDA = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.HORA_ENTRADA = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.NIVEL = New Guna.UI2.WinForms.Guna2TextBox()
@@ -44,6 +43,7 @@ Partial Class Agregar_area
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Info_areas = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.HORA_ENTRADA = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.AgregarArea.SuspendLayout()
         CType(Me.CANTIDAD_EMPLEADOS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Informacion_area.SuspendLayout()
@@ -128,20 +128,6 @@ Partial Class Agregar_area
         Me.Label5.Size = New System.Drawing.Size(112, 21)
         Me.Label5.TabIndex = 23
         Me.Label5.Text = "Hora de salida:"
-        '
-        'HORA_ENTRADA
-        '
-        Me.HORA_ENTRADA.Checked = True
-        Me.HORA_ENTRADA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.HORA_ENTRADA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.HORA_ENTRADA.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.HORA_ENTRADA.Location = New System.Drawing.Point(634, 117)
-        Me.HORA_ENTRADA.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.HORA_ENTRADA.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.HORA_ENTRADA.Name = "HORA_ENTRADA"
-        Me.HORA_ENTRADA.Size = New System.Drawing.Size(211, 33)
-        Me.HORA_ENTRADA.TabIndex = 22
-        Me.HORA_ENTRADA.Value = New Date(2022, 3, 8, 18, 42, 13, 222)
         '
         'Label3
         '
@@ -330,6 +316,20 @@ Partial Class Agregar_area
         Me.Label10.TabIndex = 5
         Me.Label10.Text = "Buscar área:"
         '
+        'HORA_ENTRADA
+        '
+        Me.HORA_ENTRADA.Checked = True
+        Me.HORA_ENTRADA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.HORA_ENTRADA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.HORA_ENTRADA.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.HORA_ENTRADA.Location = New System.Drawing.Point(634, 117)
+        Me.HORA_ENTRADA.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
+        Me.HORA_ENTRADA.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
+        Me.HORA_ENTRADA.Name = "HORA_ENTRADA"
+        Me.HORA_ENTRADA.Size = New System.Drawing.Size(211, 33)
+        Me.HORA_ENTRADA.TabIndex = 22
+        Me.HORA_ENTRADA.Value = New Date(2022, 3, 8, 18, 42, 13, 222)
+        '
         'Agregar_area
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -360,7 +360,6 @@ Partial Class Agregar_area
     Friend WithEvents Label1 As Label
     Friend WithEvents HORA_SALIDA As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label5 As Label
-    Friend WithEvents HORA_ENTRADA As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Btn_agregar_area As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CANTIDAD_EMPLEADOS As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents Informacion_area As Guna.UI2.WinForms.Guna2GroupBox
@@ -373,4 +372,5 @@ Partial Class Agregar_area
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents HORA_ENTRADA As Guna.UI2.WinForms.Guna2DateTimePicker
 End Class

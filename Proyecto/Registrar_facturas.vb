@@ -3,7 +3,7 @@ Imports Microsoft.Office.Interop.Word
 Imports System.IO
 
 Public Class Registrar_facturas
-
+    Dim ID As Integer
     Dim TOTAL_NETO As Integer
 
     'Private Sub Registrar_facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -94,16 +94,26 @@ False, 0, False, T1, 0, False, False)
         L.Items(L.Items.Count - 1).SubItems.Add(MONTO.Text)
     End Sub
 
-    Private Sub Btn_realizar_factura_Click(sender As Object, e As EventArgs) Handles Btn_realizar_factura.Click
-        Dim directorioArchivo As String
+    Friend Sub Actualizar()
+        SQL = "UPDATE FACTURAS SET NOMBRE_PACIENTE='" & NOMBRE_PACIENTE.Text & "', CEDULA='" & Cedula.Text & "', MONTO='" & MONTO_TOTAL.Text & "', FECHA_PAGO='" & Fecha_de_pago.Value & "', NOMBRE_REMITENTE ='" & NOMBRE_PACIENTE.Text & "', AREA_ATENCION='" & COMBO_AREA.Text & "' WHERE ID=" & ID & ""
+        EJECUTAR(SQL)
+        LIMPIAR()
+        MsgBox("Informacion actualizada correctamente", vbInformation + vbOKOnly, "Guardando")
+    End Sub
 
-        'SQL = "INSERT INTO RECINTO (ID, NOMBRE_PACIENTE, CEDULA, MONTO, FECHA_PAGO, NOMBRE_REMITENTE, AREA_ATENCION) VALUES(" & PK("RECINTO", "ID") & ", " & NOMBRE_PACIENTE.Text & ", '" & Cedula.Text & "', '" & MONTO_TOTAL.Text & "', '" & Fecha_de_pago.Value & "', '" & Nombre_remitente.Text & "', '" & COMBO_AREA.Text & "')"
-        'EJECUTAR(SQL)
+    Friend Sub Borrar()
+        SQL = "DELETE FROM FACTURAS WHERE ID=" & ID & ""
+        EJECUTAR(SQL)
+        LIMPIAR()
+        MsgBox("Informacion eliminada correctamente", vbInformation + vbOKOnly, "Guardando")
+    End Sub
+
+    Private Sub Btn_realizar_factura_Click(sender As Object, e As EventArgs) Handles Btn_realizar_factura.Click
+        SQL = "INSERT INTO FACTURAS (ID, NOMBRE_PACIENTE, CEDULA, MONTO, FECHA_PAGO, NOMBRE_REMITENTE, AREA_ATENCION) VALUES(" & PK("FACTURAS", "ID") & ", '" & NOMBRE_PACIENTE.Text & "', '" & Cedula.Text & "', '" & MONTO_TOTAL.Text & "', '" & Fecha_de_pago.Value & "', '" & Nombre_remitente.Text & "', '" & COMBO_AREA.Text & "')"
+        EJECUTAR(SQL)
         IMPRIMIR()
         LIMPIAR()
-        'MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
-        'directorioArchivo = "C:\REPORTES\factura.pdf"
-        'My.Computer.FileSystem.DeleteFile(directorioArchivo)
+        MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
     End Sub
 
     Private Sub AGREGAR_LIST_Click(sender As Object, e As EventArgs) Handles AGREGAR_LIST.Click
