@@ -23,9 +23,16 @@ Partial Class Agregar_area
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.AgregarArea = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.MINUTOS_FINAL = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.HORA_FINAL = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.MINUTOS_INICIO = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.HORA_INICIO = New System.Windows.Forms.ComboBox()
         Me.CANTIDAD_EMPLEADOS = New Guna.UI2.WinForms.Guna2NumericUpDown()
         Me.Btn_agregar_area = New Guna.UI2.WinForms.Guna2Button()
-        Me.HORA_SALIDA = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -34,16 +41,18 @@ Partial Class Agregar_area
         Me.NOMBRE_AREA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Informacion_area = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.List_infoAreas = New System.Windows.Forms.ListView()
-        Me.ColumnHeader0 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Info_areas = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.L_AREAS = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Info_areas = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.HORA_ENTRADA = New Guna.UI2.WinForms.Guna2DateTimePicker()
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.BTN_ACTUALIZAR_AREA = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTN_BORRAR_AREA = New Guna.UI2.WinForms.Guna2Button()
         Me.AgregarArea.SuspendLayout()
         CType(Me.CANTIDAD_EMPLEADOS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Informacion_area.SuspendLayout()
@@ -54,11 +63,17 @@ Partial Class Agregar_area
         Me.AgregarArea.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.AgregarArea.BorderRadius = 4
         Me.AgregarArea.BorderThickness = 2
+        Me.AgregarArea.Controls.Add(Me.Label8)
+        Me.AgregarArea.Controls.Add(Me.MINUTOS_FINAL)
+        Me.AgregarArea.Controls.Add(Me.Label9)
+        Me.AgregarArea.Controls.Add(Me.HORA_FINAL)
+        Me.AgregarArea.Controls.Add(Me.Label7)
+        Me.AgregarArea.Controls.Add(Me.MINUTOS_INICIO)
+        Me.AgregarArea.Controls.Add(Me.Label6)
+        Me.AgregarArea.Controls.Add(Me.HORA_INICIO)
         Me.AgregarArea.Controls.Add(Me.CANTIDAD_EMPLEADOS)
         Me.AgregarArea.Controls.Add(Me.Btn_agregar_area)
-        Me.AgregarArea.Controls.Add(Me.HORA_SALIDA)
         Me.AgregarArea.Controls.Add(Me.Label5)
-        Me.AgregarArea.Controls.Add(Me.HORA_ENTRADA)
         Me.AgregarArea.Controls.Add(Me.Label3)
         Me.AgregarArea.Controls.Add(Me.Label4)
         Me.AgregarArea.Controls.Add(Me.NIVEL)
@@ -74,6 +89,90 @@ Partial Class Agregar_area
         Me.AgregarArea.Size = New System.Drawing.Size(984, 341)
         Me.AgregarArea.TabIndex = 0
         Me.AgregarArea.Text = "Agregar área"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(802, 195)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(70, 21)
+        Me.Label8.TabIndex = 34
+        Me.Label8.Text = ":Minutos"
+        '
+        'MINUTOS_FINAL
+        '
+        Me.MINUTOS_FINAL.FormattingEnabled = True
+        Me.MINUTOS_FINAL.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.MINUTOS_FINAL.Location = New System.Drawing.Point(748, 195)
+        Me.MINUTOS_FINAL.Name = "MINUTOS_FINAL"
+        Me.MINUTOS_FINAL.Size = New System.Drawing.Size(53, 23)
+        Me.MINUTOS_FINAL.TabIndex = 33
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(688, 194)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(54, 21)
+        Me.Label9.TabIndex = 32
+        Me.Label9.Text = ":Horas"
+        '
+        'HORA_FINAL
+        '
+        Me.HORA_FINAL.FormattingEnabled = True
+        Me.HORA_FINAL.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
+        Me.HORA_FINAL.Location = New System.Drawing.Point(634, 194)
+        Me.HORA_FINAL.Name = "HORA_FINAL"
+        Me.HORA_FINAL.Size = New System.Drawing.Size(53, 23)
+        Me.HORA_FINAL.TabIndex = 31
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(802, 131)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(70, 21)
+        Me.Label7.TabIndex = 30
+        Me.Label7.Text = ":Minutos"
+        '
+        'MINUTOS_INICIO
+        '
+        Me.MINUTOS_INICIO.FormattingEnabled = True
+        Me.MINUTOS_INICIO.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.MINUTOS_INICIO.Location = New System.Drawing.Point(748, 131)
+        Me.MINUTOS_INICIO.Name = "MINUTOS_INICIO"
+        Me.MINUTOS_INICIO.Size = New System.Drawing.Size(53, 23)
+        Me.MINUTOS_INICIO.TabIndex = 29
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Black
+        Me.Label6.Location = New System.Drawing.Point(688, 130)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(54, 21)
+        Me.Label6.TabIndex = 28
+        Me.Label6.Text = ":Horas"
+        '
+        'HORA_INICIO
+        '
+        Me.HORA_INICIO.FormattingEnabled = True
+        Me.HORA_INICIO.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
+        Me.HORA_INICIO.Location = New System.Drawing.Point(634, 130)
+        Me.HORA_INICIO.Name = "HORA_INICIO"
+        Me.HORA_INICIO.Size = New System.Drawing.Size(53, 23)
+        Me.HORA_INICIO.TabIndex = 27
         '
         'CANTIDAD_EMPLEADOS
         '
@@ -102,20 +201,6 @@ Partial Class Agregar_area
         Me.Btn_agregar_area.Size = New System.Drawing.Size(302, 63)
         Me.Btn_agregar_area.TabIndex = 25
         Me.Btn_agregar_area.Text = "Agregar área"
-        '
-        'HORA_SALIDA
-        '
-        Me.HORA_SALIDA.Checked = True
-        Me.HORA_SALIDA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.HORA_SALIDA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.HORA_SALIDA.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.HORA_SALIDA.Location = New System.Drawing.Point(634, 181)
-        Me.HORA_SALIDA.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.HORA_SALIDA.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.HORA_SALIDA.Name = "HORA_SALIDA"
-        Me.HORA_SALIDA.Size = New System.Drawing.Size(211, 33)
-        Me.HORA_SALIDA.TabIndex = 24
-        Me.HORA_SALIDA.Value = New Date(2022, 3, 8, 18, 42, 13, 222)
         '
         'Label5
         '
@@ -147,7 +232,7 @@ Partial Class Agregar_area
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(51, 141)
+        Me.Label4.Location = New System.Drawing.Point(51, 133)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(176, 21)
         Me.Label4.TabIndex = 9
@@ -179,7 +264,7 @@ Partial Class Agregar_area
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(579, 74)
+        Me.Label2.Location = New System.Drawing.Point(579, 66)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 21)
         Me.Label2.TabIndex = 7
@@ -211,7 +296,7 @@ Partial Class Agregar_area
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(101, 74)
+        Me.Label1.Location = New System.Drawing.Point(101, 66)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(126, 21)
         Me.Label1.TabIndex = 5
@@ -222,7 +307,9 @@ Partial Class Agregar_area
         Me.Informacion_area.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Informacion_area.BorderRadius = 4
         Me.Informacion_area.BorderThickness = 2
-        Me.Informacion_area.Controls.Add(Me.List_infoAreas)
+        Me.Informacion_area.Controls.Add(Me.BTN_BORRAR_AREA)
+        Me.Informacion_area.Controls.Add(Me.BTN_ACTUALIZAR_AREA)
+        Me.Informacion_area.Controls.Add(Me.L_AREAS)
         Me.Informacion_area.Controls.Add(Me.Guna2Button1)
         Me.Informacion_area.Controls.Add(Me.Info_areas)
         Me.Informacion_area.Controls.Add(Me.Label10)
@@ -235,39 +322,6 @@ Partial Class Agregar_area
         Me.Informacion_area.Size = New System.Drawing.Size(984, 337)
         Me.Informacion_area.TabIndex = 1
         Me.Informacion_area.Text = "Informacion de áreas"
-        '
-        'List_infoAreas
-        '
-        Me.List_infoAreas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.List_infoAreas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader0, Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4})
-        Me.List_infoAreas.GridLines = True
-        Me.List_infoAreas.HideSelection = False
-        Me.List_infoAreas.Location = New System.Drawing.Point(32, 133)
-        Me.List_infoAreas.Name = "List_infoAreas"
-        Me.List_infoAreas.Size = New System.Drawing.Size(916, 171)
-        Me.List_infoAreas.TabIndex = 26
-        Me.List_infoAreas.UseCompatibleStateImageBehavior = False
-        '
-        'ColumnHeader0
-        '
-        Me.ColumnHeader0.Text = "ID"
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "AREA"
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "NIVEL"
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "CANTIDAD DE EMPLEADOS"
-        Me.ColumnHeader3.Width = 100
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "HORARIO"
         '
         'Guna2Button1
         '
@@ -316,19 +370,79 @@ Partial Class Agregar_area
         Me.Label10.TabIndex = 5
         Me.Label10.Text = "Buscar área:"
         '
-        'HORA_ENTRADA
+        'L_AREAS
         '
-        Me.HORA_ENTRADA.Checked = True
-        Me.HORA_ENTRADA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.HORA_ENTRADA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.HORA_ENTRADA.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
-        Me.HORA_ENTRADA.Location = New System.Drawing.Point(634, 117)
-        Me.HORA_ENTRADA.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.HORA_ENTRADA.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.HORA_ENTRADA.Name = "HORA_ENTRADA"
-        Me.HORA_ENTRADA.Size = New System.Drawing.Size(211, 33)
-        Me.HORA_ENTRADA.TabIndex = 22
-        Me.HORA_ENTRADA.Value = New Date(2022, 3, 8, 18, 42, 13, 222)
+        Me.L_AREAS.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.L_AREAS.FullRowSelect = True
+        Me.L_AREAS.GridLines = True
+        Me.L_AREAS.HideSelection = False
+        Me.L_AREAS.Location = New System.Drawing.Point(260, 134)
+        Me.L_AREAS.MultiSelect = False
+        Me.L_AREAS.Name = "L_AREAS"
+        Me.L_AREAS.Size = New System.Drawing.Size(482, 180)
+        Me.L_AREAS.TabIndex = 26
+        Me.L_AREAS.UseCompatibleStateImageBehavior = False
+        Me.L_AREAS.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Nombre área"
+        Me.ColumnHeader2.Width = 92
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Nivel"
+        Me.ColumnHeader3.Width = 67
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Cantidad empleados"
+        Me.ColumnHeader4.Width = 129
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Hora entrada"
+        Me.ColumnHeader5.Width = 96
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Hora salida"
+        Me.ColumnHeader6.Width = 95
+        '
+        'BTN_ACTUALIZAR_AREA
+        '
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_ACTUALIZAR_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.BTN_ACTUALIZAR_AREA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTN_ACTUALIZAR_AREA.ForeColor = System.Drawing.Color.White
+        Me.BTN_ACTUALIZAR_AREA.Location = New System.Drawing.Point(776, 228)
+        Me.BTN_ACTUALIZAR_AREA.Name = "BTN_ACTUALIZAR_AREA"
+        Me.BTN_ACTUALIZAR_AREA.Size = New System.Drawing.Size(179, 38)
+        Me.BTN_ACTUALIZAR_AREA.TabIndex = 35
+        Me.BTN_ACTUALIZAR_AREA.Text = "Actualizar área"
+        '
+        'BTN_BORRAR_AREA
+        '
+        Me.BTN_BORRAR_AREA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_BORRAR_AREA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_BORRAR_AREA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_BORRAR_AREA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_BORRAR_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.BTN_BORRAR_AREA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTN_BORRAR_AREA.ForeColor = System.Drawing.Color.White
+        Me.BTN_BORRAR_AREA.Location = New System.Drawing.Point(776, 276)
+        Me.BTN_BORRAR_AREA.Name = "BTN_BORRAR_AREA"
+        Me.BTN_BORRAR_AREA.Size = New System.Drawing.Size(179, 38)
+        Me.BTN_BORRAR_AREA.TabIndex = 36
+        Me.BTN_BORRAR_AREA.Text = "Borrar área"
         '
         'Agregar_area
         '
@@ -358,7 +472,6 @@ Partial Class Agregar_area
     Friend WithEvents Label2 As Label
     Friend WithEvents NOMBRE_AREA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents HORA_SALIDA As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents Btn_agregar_area As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CANTIDAD_EMPLEADOS As Guna.UI2.WinForms.Guna2NumericUpDown
@@ -366,11 +479,21 @@ Partial Class Agregar_area
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Info_areas As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents List_infoAreas As ListView
-    Friend WithEvents ColumnHeader0 As ColumnHeader
+    Friend WithEvents Label8 As Label
+    Friend WithEvents MINUTOS_FINAL As ComboBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents HORA_FINAL As ComboBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents MINUTOS_INICIO As ComboBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents HORA_INICIO As ComboBox
+    Friend WithEvents L_AREAS As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents ColumnHeader4 As ColumnHeader
-    Friend WithEvents HORA_ENTRADA As Guna.UI2.WinForms.Guna2DateTimePicker
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents BTN_BORRAR_AREA As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTN_ACTUALIZAR_AREA As Guna.UI2.WinForms.Guna2Button
 End Class
