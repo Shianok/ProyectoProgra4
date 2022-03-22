@@ -16,7 +16,7 @@
         PASSWORD.Text = ""
     End Sub
 
-    Private Sub BTN_CREAR_Click(sender As Object, e As EventArgs) Handles BTN_CREAR.Click
+    Private Sub BTN_CREAR_Click(sender As Object, e As EventArgs)
         Me.Hide()
 
     End Sub

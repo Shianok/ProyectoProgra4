@@ -236,7 +236,7 @@ Partial Class Empleado_perfil
         Me.CONTRASENA_USUARIO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CONTRASENA_USUARIO.Location = New System.Drawing.Point(395, 243)
         Me.CONTRASENA_USUARIO.Name = "CONTRASENA_USUARIO"
-        Me.CONTRASENA_USUARIO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.CONTRASENA_USUARIO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.CONTRASENA_USUARIO.PlaceholderText = ""
         Me.CONTRASENA_USUARIO.SelectedText = ""
         Me.CONTRASENA_USUARIO.Size = New System.Drawing.Size(232, 36)
