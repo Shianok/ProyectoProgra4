@@ -137,7 +137,7 @@ Partial Class Form1
         Me.USERNAME.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.USERNAME.BorderRadius = 5
         Me.USERNAME.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.USERNAME.DefaultText = "NOMBRE DE USUARIO"
+        Me.USERNAME.DefaultText = "CÉDULA"
         Me.USERNAME.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
         Me.USERNAME.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.USERNAME.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))

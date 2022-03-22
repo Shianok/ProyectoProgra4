@@ -43,17 +43,22 @@ Partial Class Interfaz
         Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
         Me.Mostrar_opciones = New System.Windows.Forms.Timer(Me.components)
         Me.Ocultar_opciones = New System.Windows.Forms.Timer(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.FOTO_EMPLEADO = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Guna2GroupBox2.SuspendLayout()
         Me.Panel_opciones.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_menu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btn_opciones, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FOTO_EMPLEADO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2GroupBox2
         '
         Me.Guna2GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Guna2GroupBox2.Controls.Add(Me.FOTO_EMPLEADO)
+        Me.Guna2GroupBox2.Controls.Add(Me.Label3)
         Me.Guna2GroupBox2.Controls.Add(Me.Panel_opciones)
         Me.Guna2GroupBox2.Controls.Add(Me.Panel_menu)
         Me.Guna2GroupBox2.Controls.Add(Me.btnCerrarInterfaz)
@@ -72,7 +77,7 @@ Partial Class Interfaz
         Me.Panel_opciones.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Panel_opciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.Panel_opciones.BorderColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Panel_opciones.BorderRadius = 5
+        Me.Panel_opciones.BorderRadius = 10
         Me.Panel_opciones.BorderThickness = 2
         Me.Panel_opciones.Controls.Add(Me.Guna2PictureBox2)
         Me.Panel_opciones.Location = New System.Drawing.Point(264, 44)
@@ -281,7 +286,7 @@ Partial Class Interfaz
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(102, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(107, 32)
+        Me.Label1.Size = New System.Drawing.Size(106, 32)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Sistema"
         '
@@ -291,7 +296,7 @@ Partial Class Interfaz
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(78, 95)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(158, 32)
+        Me.Label2.Size = New System.Drawing.Size(157, 32)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Hospitalario"
         '
@@ -344,6 +349,27 @@ Partial Class Interfaz
         '
         Me.Ocultar_opciones.Interval = 10
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Perpetua Titling MT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(1074, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(57, 16)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Label3"
+        '
+        'FOTO_EMPLEADO
+        '
+        Me.FOTO_EMPLEADO.ImageRotate = 0!
+        Me.FOTO_EMPLEADO.Location = New System.Drawing.Point(1027, 1)
+        Me.FOTO_EMPLEADO.Name = "FOTO_EMPLEADO"
+        Me.FOTO_EMPLEADO.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.FOTO_EMPLEADO.Size = New System.Drawing.Size(40, 38)
+        Me.FOTO_EMPLEADO.TabIndex = 18
+        Me.FOTO_EMPLEADO.TabStop = False
+        '
         'Interfaz
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -356,12 +382,14 @@ Partial Class Interfaz
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Interfaz"
         Me.Guna2GroupBox2.ResumeLayout(False)
+        Me.Guna2GroupBox2.PerformLayout()
         Me.Panel_opciones.ResumeLayout(False)
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_menu.ResumeLayout(False)
         Me.Panel_menu.PerformLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Btn_opciones, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FOTO_EMPLEADO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -385,4 +413,6 @@ Partial Class Interfaz
     Friend WithEvents Btn_ver_facturas As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnCerrarInterfaz As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents FOTO_EMPLEADO As Guna.UI2.WinForms.Guna2CirclePictureBox
 End Class

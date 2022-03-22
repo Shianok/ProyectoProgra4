@@ -1,6 +1,7 @@
 ﻿Module Conexion
     Public Db As New OleDb.OleDbConnection
     Public SQL As String
+    Public NombreUsuario, correo, cedula, contrasena, foto_usuario As String
     Public T, T2, T3 As New DataSet
     Public VECTOR_COLUMNA_OCULTAR(100) As Integer
     Friend Sub CONECTAR()
@@ -10,7 +11,20 @@
         Db.Open()
     End Sub
 
+    Friend Sub LIMPIAR_UPDATE()
+        NombreUsuario = ""
+        correo = ""
+        cedula = ""
+        contrasena = ""
+        foto_usuario = ""
+    End Sub
 
+    Friend Sub ActualizarUsuario(ByRef Nombre_Usuario As String, ByRef Correo_Usuario As String, ByRef Cedula_Usuario As String, ByRef Contrasena_Usuario As String, ByRef Foto_Usuario As String)
+        SQL = "UPDATE EMPLEADO SET USUARIO='" & Nombre_Usuario & "', CORRREO=" & Correo_Usuario & ", CEDULA=" & Cedula_Usuario & ", CONTRASENA='" & Contrasena_Usuario & "', FOTO='" & Foto_Usuario & "' WHERE ID=" & Cedula_Usuario & ""
+        EJECUTAR(SQL)
+        LIMPIAR_UPDATE()
+        MsgBox("Informacion actualizada correctamente", vbInformation + vbOKOnly, "Guardando")
+    End Sub
 
     Friend Sub DESCONECTAR()
         Db.Close()

@@ -87,4 +87,9 @@
         Limpiar()
         MostrarOpcion(Consultar_empleado)
     End Sub
+
+    Private Sub Interfaz_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label3.Text = NombreUsuario
+        FOTO_EMPLEADO.Image = Image.FromFile(foto_usuario)
+    End Sub
 End Class
