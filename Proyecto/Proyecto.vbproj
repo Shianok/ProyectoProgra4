@@ -138,10 +138,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Registrarse.Designer.vb">
-      <DependentUpon>Registrarse.vb</DependentUpon>
+    <Compile Include="Empleado_perfil.Designer.vb">
+      <DependentUpon>Empleado_perfil.vb</DependentUpon>
     </Compile>
-    <Compile Include="Registrarse.vb">
+    <Compile Include="Empleado_perfil.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="REGISTRAR_CONSULTAS.Designer.vb">
@@ -192,8 +192,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registrarse.resx">
-      <DependentUpon>Registrarse.vb</DependentUpon>
+    <EmbeddedResource Include="Empleado_perfil.resx">
+      <DependentUpon>Empleado_perfil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REGISTRAR_CONSULTAS.resx">
       <DependentUpon>REGISTRAR_CONSULTAS.vb</DependentUpon>

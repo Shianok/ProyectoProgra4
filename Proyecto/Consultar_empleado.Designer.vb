@@ -31,6 +31,7 @@ Partial Class Consultar_empleado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CEDULA_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CONSULTA_INFO = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.IMG_CONSULTA_EMPLEADO = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.AREA_EMPLEADO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TIPO_EMPLEADO = New Guna.UI2.WinForms.Guna2TextBox()
@@ -43,7 +44,6 @@ Partial Class Consultar_empleado
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CONSULTA_NOMBRE_EMPLEADO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.IMG_CONSULTA_EMPLEADO = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.Guna2GroupBox2.SuspendLayout()
         Me.CUNSULTA_PACIENTE.SuspendLayout()
@@ -111,7 +111,7 @@ Partial Class Consultar_empleado
         Me.BTN_ABRIR_REGISTRAR_EMPLEADO.Name = "BTN_ABRIR_REGISTRAR_EMPLEADO"
         Me.BTN_ABRIR_REGISTRAR_EMPLEADO.Size = New System.Drawing.Size(163, 33)
         Me.BTN_ABRIR_REGISTRAR_EMPLEADO.TabIndex = 24
-        Me.BTN_ABRIR_REGISTRAR_EMPLEADO.Text = "Registrar paciente"
+        Me.BTN_ABRIR_REGISTRAR_EMPLEADO.Text = "Registrar "
         '
         'CUNSULTA_PACIENTE
         '
@@ -208,6 +208,21 @@ Partial Class Consultar_empleado
         Me.CONSULTA_INFO.Size = New System.Drawing.Size(934, 500)
         Me.CONSULTA_INFO.TabIndex = 25
         Me.CONSULTA_INFO.Text = "Informacion de paciente"
+        '
+        'IMG_CONSULTA_EMPLEADO
+        '
+        Me.IMG_CONSULTA_EMPLEADO.BackColor = System.Drawing.Color.Transparent
+        Me.IMG_CONSULTA_EMPLEADO.Image = Global.Proyecto.My.Resources.Resources.user
+        Me.IMG_CONSULTA_EMPLEADO.ImageRotate = 0!
+        Me.IMG_CONSULTA_EMPLEADO.Location = New System.Drawing.Point(391, 47)
+        Me.IMG_CONSULTA_EMPLEADO.Name = "IMG_CONSULTA_EMPLEADO"
+        Me.IMG_CONSULTA_EMPLEADO.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.IMG_CONSULTA_EMPLEADO.Size = New System.Drawing.Size(147, 144)
+        Me.IMG_CONSULTA_EMPLEADO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.IMG_CONSULTA_EMPLEADO.TabIndex = 67
+        Me.IMG_CONSULTA_EMPLEADO.TabStop = False
+        Me.IMG_CONSULTA_EMPLEADO.UseTransparentBackground = True
+        Me.IMG_CONSULTA_EMPLEADO.Visible = False
         '
         'AREA_EMPLEADO
         '
@@ -418,21 +433,6 @@ Partial Class Consultar_empleado
         Me.Label4.TabIndex = 51
         Me.Label4.Text = "Nombre completo:"
         Me.Label4.Visible = False
-        '
-        'IMG_CONSULTA_EMPLEADO
-        '
-        Me.IMG_CONSULTA_EMPLEADO.BackColor = System.Drawing.Color.Transparent
-        Me.IMG_CONSULTA_EMPLEADO.Image = Global.Proyecto.My.Resources.Resources.user
-        Me.IMG_CONSULTA_EMPLEADO.ImageRotate = 0!
-        Me.IMG_CONSULTA_EMPLEADO.Location = New System.Drawing.Point(391, 47)
-        Me.IMG_CONSULTA_EMPLEADO.Name = "IMG_CONSULTA_EMPLEADO"
-        Me.IMG_CONSULTA_EMPLEADO.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.IMG_CONSULTA_EMPLEADO.Size = New System.Drawing.Size(147, 144)
-        Me.IMG_CONSULTA_EMPLEADO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.IMG_CONSULTA_EMPLEADO.TabIndex = 67
-        Me.IMG_CONSULTA_EMPLEADO.TabStop = False
-        Me.IMG_CONSULTA_EMPLEADO.UseTransparentBackground = True
-        Me.IMG_CONSULTA_EMPLEADO.Visible = False
         '
         'Consultar_empleado
         '

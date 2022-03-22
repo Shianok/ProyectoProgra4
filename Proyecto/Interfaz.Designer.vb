@@ -25,6 +25,8 @@ Partial Class Interfaz
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Interfaz))
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.FOTO_EMPLEADO = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel_opciones = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Panel_menu = New Guna.UI2.WinForms.Guna2Panel()
@@ -43,15 +45,16 @@ Partial Class Interfaz
         Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
         Me.Mostrar_opciones = New System.Windows.Forms.Timer(Me.components)
         Me.Ocultar_opciones = New System.Windows.Forms.Timer(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.FOTO_EMPLEADO = New Guna.UI2.WinForms.Guna2CirclePictureBox()
+        Me.Context_Editar = New Guna.UI2.WinForms.Guna2ContextMenuStrip()
+        Me.PerfilToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2GroupBox2.SuspendLayout()
+        CType(Me.FOTO_EMPLEADO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_opciones.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel_menu.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btn_opciones, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.FOTO_EMPLEADO, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Context_Editar.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox2
@@ -71,6 +74,30 @@ Partial Class Interfaz
         Me.Guna2GroupBox2.Size = New System.Drawing.Size(1261, 735)
         Me.Guna2GroupBox2.TabIndex = 3
         Me.Guna2GroupBox2.Text = "Bienvenido"
+        '
+        'FOTO_EMPLEADO
+        '
+        Me.FOTO_EMPLEADO.ImageRotate = 0!
+        Me.FOTO_EMPLEADO.Location = New System.Drawing.Point(724, 1)
+        Me.FOTO_EMPLEADO.Name = "FOTO_EMPLEADO"
+        Me.FOTO_EMPLEADO.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.FOTO_EMPLEADO.Size = New System.Drawing.Size(40, 38)
+        Me.FOTO_EMPLEADO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.FOTO_EMPLEADO.TabIndex = 18
+        Me.FOTO_EMPLEADO.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Font = New System.Drawing.Font("Perpetua Titling MT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(775, 12)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(59, 18)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "Label3"
         '
         'Panel_opciones
         '
@@ -349,26 +376,27 @@ Partial Class Interfaz
         '
         Me.Ocultar_opciones.Interval = 10
         '
-        'Label3
+        'Context_Editar
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Perpetua Titling MT", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(1074, 12)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 16)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Label3"
+        Me.Context_Editar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PerfilToolStripMenuItem})
+        Me.Context_Editar.Name = "Context_Editar"
+        Me.Context_Editar.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(CType(CType(151, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Context_Editar.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro
+        Me.Context_Editar.RenderStyle.ColorTable = Nothing
+        Me.Context_Editar.RenderStyle.RoundedEdges = True
+        Me.Context_Editar.RenderStyle.SelectionArrowColor = System.Drawing.Color.White
+        Me.Context_Editar.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Context_Editar.RenderStyle.SelectionForeColor = System.Drawing.Color.White
+        Me.Context_Editar.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro
+        Me.Context_Editar.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault
+        Me.Context_Editar.Size = New System.Drawing.Size(102, 26)
+        Me.Context_Editar.Text = "Perfil"
         '
-        'FOTO_EMPLEADO
+        'PerfilToolStripMenuItem
         '
-        Me.FOTO_EMPLEADO.ImageRotate = 0!
-        Me.FOTO_EMPLEADO.Location = New System.Drawing.Point(1027, 1)
-        Me.FOTO_EMPLEADO.Name = "FOTO_EMPLEADO"
-        Me.FOTO_EMPLEADO.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.FOTO_EMPLEADO.Size = New System.Drawing.Size(40, 38)
-        Me.FOTO_EMPLEADO.TabIndex = 18
-        Me.FOTO_EMPLEADO.TabStop = False
+        Me.PerfilToolStripMenuItem.Name = "PerfilToolStripMenuItem"
+        Me.PerfilToolStripMenuItem.Size = New System.Drawing.Size(101, 22)
+        Me.PerfilToolStripMenuItem.Text = "Perfil"
         '
         'Interfaz
         '
@@ -383,13 +411,14 @@ Partial Class Interfaz
         Me.Text = "Interfaz"
         Me.Guna2GroupBox2.ResumeLayout(False)
         Me.Guna2GroupBox2.PerformLayout()
+        CType(Me.FOTO_EMPLEADO, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_opciones.ResumeLayout(False)
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel_menu.ResumeLayout(False)
         Me.Panel_menu.PerformLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Btn_opciones, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.FOTO_EMPLEADO, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Context_Editar.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -415,4 +444,6 @@ Partial Class Interfaz
     Friend WithEvents Guna2PictureBox2 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents FOTO_EMPLEADO As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents Context_Editar As Guna.UI2.WinForms.Guna2ContextMenuStrip
+    Friend WithEvents PerfilToolStripMenuItem As ToolStripMenuItem
 End Class

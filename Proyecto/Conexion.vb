@@ -1,7 +1,8 @@
 ﻿Module Conexion
     Public Db As New OleDb.OleDbConnection
     Public SQL As String
-    Public NombreUsuario, correo, cedula, contrasena, foto_usuario As String
+    Public NombreCompleto, correo, cedula, contrasena, foto_usuario, telefono As String
+    Public ID As Integer
     Public T, T2, T3 As New DataSet
     Public VECTOR_COLUMNA_OCULTAR(100) As Integer
     Friend Sub CONECTAR()
@@ -12,18 +13,19 @@
     End Sub
 
     Friend Sub LIMPIAR_UPDATE()
-        NombreUsuario = ""
+        NombreCompleto = ""
         correo = ""
         cedula = ""
         contrasena = ""
         foto_usuario = ""
+        telefono = ""
     End Sub
 
-    Friend Sub ActualizarUsuario(ByRef Nombre_Usuario As String, ByRef Correo_Usuario As String, ByRef Cedula_Usuario As String, ByRef Contrasena_Usuario As String, ByRef Foto_Usuario As String)
-        SQL = "UPDATE EMPLEADO SET USUARIO='" & Nombre_Usuario & "', CORRREO=" & Correo_Usuario & ", CEDULA=" & Cedula_Usuario & ", CONTRASENA='" & Contrasena_Usuario & "', FOTO='" & Foto_Usuario & "' WHERE ID=" & Cedula_Usuario & ""
+    Friend Sub ActualizarUsuario(ByRef Nombre_Completo As String, ByRef Correo_Usuario As String, ByRef Contrasena_Usuario As String, ByRef Foto_Usuario As String, ByRef Telefono_Usuario As String)
+        SQL = "UPDATE EMPLEADO SET NOMBRE_COMPLETO='" & Nombre_Completo & "', CORREO='" & Correo_Usuario & "', CONTRASENA='" & Contrasena_Usuario & "', FOTO='" & Foto_Usuario & "', NUMERO_TELEFONO='" & Telefono_Usuario & "' WHERE ID=" & ID & ""
         EJECUTAR(SQL)
-        LIMPIAR_UPDATE()
         MsgBox("Informacion actualizada correctamente", vbInformation + vbOKOnly, "Guardando")
+        LIMPIAR_UPDATE()
     End Sub
 
     Friend Sub DESCONECTAR()

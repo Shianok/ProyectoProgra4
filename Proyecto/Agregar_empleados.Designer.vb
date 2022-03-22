@@ -294,9 +294,9 @@ Partial Class Agregar_empleados
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(92, 534)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(136, 21)
+        Me.Label8.Size = New System.Drawing.Size(137, 21)
         Me.Label8.TabIndex = 13
-        Me.Label8.Text = "Tipe de empleado:"
+        Me.Label8.Text = "Tipo de empleado:"
         '
         'NUMERO_CARNET
         '

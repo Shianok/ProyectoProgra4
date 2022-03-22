@@ -89,7 +89,12 @@
     End Sub
 
     Private Sub Interfaz_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label3.Text = NombreUsuario
+        Label3.Text = NombreCompleto
         FOTO_EMPLEADO.Image = Image.FromFile(foto_usuario)
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        Me.Hide()
+        Empleado_perfil.Show()
     End Sub
 End Class
