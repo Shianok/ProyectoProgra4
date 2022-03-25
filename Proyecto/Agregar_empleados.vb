@@ -1,6 +1,10 @@
 ﻿Public Class Agregar_empleados
 
     Dim ID As Integer
+
+    Private Sub Agregar_empleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarComboArea()
+    End Sub
     Private Sub BtnCerrarInterfaz_Click(sender As Object, e As EventArgs) Handles BTN_CerrarInterfaz.Click
         Me.Close()
     End Sub
@@ -48,4 +52,19 @@
             IMG_EMPLEADO.Tag = Abrir.FileName 'Almacena la ruta de la imagen
         End If
     End Sub
+
+    Friend Sub cargarComboArea()
+        T4.Clear()
+        SQL = "SELECT ID FROM AREAS"
+        CARGAR_TABLA(T4, SQL)
+
+        If T4.Tables(0).Rows.Count > 0 Then
+            For FILA As Integer = 0 To T4.Tables(0).Rows.Count - 1 'se;ala el inicio de la tabla en 0,0
+                Dim Prueba As String
+                Prueba = T4.Tables(0).Rows(FILA).ItemArray(0)
+                TIPO_AREA.Items.Add(T4.Tables(0).Rows(FILA).ItemArray(0))
+            Next
+        End If
+    End Sub
+
 End Class

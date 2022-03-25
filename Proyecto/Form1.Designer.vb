@@ -23,6 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.BTN_INICIAR_SECCION = New Guna.UI2.WinForms.Guna2Button()
         Me.PASSWORD = New Guna.UI2.WinForms.Guna2TextBox()
         Me.USERNAME = New Guna.UI2.WinForms.Guna2TextBox()
@@ -31,8 +33,6 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FOTO = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.FOTO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -61,6 +61,24 @@ Partial Class Form1
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(626, 417)
         Me.Guna2GroupBox1.TabIndex = 2
         Me.Guna2GroupBox1.Text = "Área de registros"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(342, 252)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(86, 15)
+        Me.Label6.TabIndex = 13
+        Me.Label6.Text = "CONTRASEÑA:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(375, 208)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(54, 15)
+        Me.Label5.TabIndex = 12
+        Me.Label5.Text = "CÉDULA:"
         '
         'BTN_INICIAR_SECCION
         '
@@ -140,7 +158,7 @@ Partial Class Form1
         Me.Guna2Button1.FocusedColor = System.Drawing.Color.Maroon
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(588, 3)
+        Me.Guna2Button1.Location = New System.Drawing.Point(583, 3)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(38, 33)
         Me.Guna2Button1.TabIndex = 6
@@ -192,24 +210,6 @@ Partial Class Form1
         Me.FOTO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.FOTO.TabIndex = 0
         Me.FOTO.TabStop = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(375, 208)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(54, 15)
-        Me.Label5.TabIndex = 12
-        Me.Label5.Text = "CÉDULA:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(342, 252)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(86, 15)
-        Me.Label6.TabIndex = 13
-        Me.Label6.Text = "CONTRASEÑA:"
         '
         'Form1
         '

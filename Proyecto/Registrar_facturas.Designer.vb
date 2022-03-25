@@ -23,6 +23,8 @@ Partial Class Registrar_facturas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Telefono = New System.Windows.Forms.MaskedTextBox()
+        Me.Cedula = New System.Windows.Forms.MaskedTextBox()
         Me.BORRAR_FILA = New Guna.UI2.WinForms.Guna2Button()
         Me.AGREGAR_LIST = New Guna.UI2.WinForms.Guna2Button()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -46,15 +48,15 @@ Partial Class Registrar_facturas
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Correo = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Telefono = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Cedula = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Btn_realizar_factura = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.Telefono)
+        Me.Guna2GroupBox1.Controls.Add(Me.Cedula)
         Me.Guna2GroupBox1.Controls.Add(Me.BORRAR_FILA)
         Me.Guna2GroupBox1.Controls.Add(Me.AGREGAR_LIST)
         Me.Guna2GroupBox1.Controls.Add(Me.Label11)
@@ -76,9 +78,7 @@ Partial Class Registrar_facturas
         Me.Guna2GroupBox1.Controls.Add(Me.Label6)
         Me.Guna2GroupBox1.Controls.Add(Me.Correo)
         Me.Guna2GroupBox1.Controls.Add(Me.Label3)
-        Me.Guna2GroupBox1.Controls.Add(Me.Telefono)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
-        Me.Guna2GroupBox1.Controls.Add(Me.Cedula)
         Me.Guna2GroupBox1.Controls.Add(Me.Btn_realizar_factura)
         Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
@@ -88,6 +88,25 @@ Partial Class Registrar_facturas
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(1068, 709)
         Me.Guna2GroupBox1.TabIndex = 0
+        '
+        'Telefono
+        '
+        Me.Telefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Telefono.Location = New System.Drawing.Point(632, 79)
+        Me.Telefono.Mask = "99999"
+        Me.Telefono.Name = "Telefono"
+        Me.Telefono.Size = New System.Drawing.Size(201, 23)
+        Me.Telefono.TabIndex = 33
+        Me.Telefono.ValidatingType = GetType(Integer)
+        '
+        'Cedula
+        '
+        Me.Cedula.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Cedula.Location = New System.Drawing.Point(219, 75)
+        Me.Cedula.Mask = "00-0000-0000"
+        Me.Cedula.Name = "Cedula"
+        Me.Cedula.Size = New System.Drawing.Size(211, 23)
+        Me.Cedula.TabIndex = 32
         '
         'BORRAR_FILA
         '
@@ -219,7 +238,6 @@ Partial Class Registrar_facturas
         Me.COMBO_AREA.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.COMBO_AREA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.COMBO_AREA.ItemHeight = 30
-        Me.COMBO_AREA.Items.AddRange(New Object() {"AREA 1"})
         Me.COMBO_AREA.Location = New System.Drawing.Point(219, 371)
         Me.COMBO_AREA.Name = "COMBO_AREA"
         Me.COMBO_AREA.Size = New System.Drawing.Size(200, 36)
@@ -416,26 +434,6 @@ Partial Class Registrar_facturas
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Teléfono:"
         '
-        'Telefono
-        '
-        Me.Telefono.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Telefono.DefaultText = ""
-        Me.Telefono.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Telefono.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Telefono.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Telefono.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Telefono.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Telefono.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Telefono.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Telefono.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Telefono.Location = New System.Drawing.Point(633, 72)
-        Me.Telefono.Name = "Telefono"
-        Me.Telefono.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Telefono.PlaceholderText = ""
-        Me.Telefono.SelectedText = ""
-        Me.Telefono.Size = New System.Drawing.Size(200, 31)
-        Me.Telefono.TabIndex = 5
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -447,26 +445,6 @@ Partial Class Registrar_facturas
         Me.Label2.Size = New System.Drawing.Size(61, 21)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Cédula:"
-        '
-        'Cedula
-        '
-        Me.Cedula.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Cedula.DefaultText = ""
-        Me.Cedula.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Cedula.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Cedula.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Cedula.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Cedula.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Cedula.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Cedula.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Cedula.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Cedula.Location = New System.Drawing.Point(219, 72)
-        Me.Cedula.Name = "Cedula"
-        Me.Cedula.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Cedula.PlaceholderText = ""
-        Me.Cedula.SelectedText = ""
-        Me.Cedula.Size = New System.Drawing.Size(200, 31)
-        Me.Cedula.TabIndex = 3
         '
         'Btn_realizar_factura
         '
@@ -512,9 +490,7 @@ Partial Class Registrar_facturas
     Friend WithEvents Label6 As Label
     Friend WithEvents Correo As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Telefono As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Cedula As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Btn_realizar_factura As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
     Friend WithEvents NOMBRE_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
@@ -528,4 +504,6 @@ Partial Class Registrar_facturas
     Friend WithEvents Label10 As Label
     Friend WithEvents AGREGAR As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BORRAR_FILA As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Cedula As MaskedTextBox
+    Friend WithEvents Telefono As MaskedTextBox
 End Class

@@ -54,7 +54,11 @@
                     bandera = 1
                     cedula_parametro = T.Tables(0).Rows(FILA).ItemArray(0).ToString
                 Else
-                    bandera = 0
+
+                    If bandera <> 1 Then
+                        bandera = 0
+                    End If
+
                 End If
             Next
 

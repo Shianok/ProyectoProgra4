@@ -23,6 +23,9 @@ Partial Class Agregar_empleados
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.NUMERO_CARNET = New System.Windows.Forms.MaskedTextBox()
+        Me.NUMERO_TELEFONO = New System.Windows.Forms.MaskedTextBox()
+        Me.CEDULA = New System.Windows.Forms.MaskedTextBox()
         Me.RESIDENCIA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.BTN_CerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
@@ -37,9 +40,7 @@ Partial Class Agregar_empleados
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.NUMERO_CARNET = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.NUMERO_TELEFONO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CONTRASENA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -47,7 +48,6 @@ Partial Class Agregar_empleados
         Me.Label4 = New System.Windows.Forms.Label()
         Me.USUARIO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.CEDULA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Abrir = New System.Windows.Forms.OpenFileDialog()
         Me.Guna2GroupBox1.SuspendLayout()
@@ -56,6 +56,9 @@ Partial Class Agregar_empleados
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_CARNET)
+        Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_TELEFONO)
+        Me.Guna2GroupBox1.Controls.Add(Me.CEDULA)
         Me.Guna2GroupBox1.Controls.Add(Me.RESIDENCIA)
         Me.Guna2GroupBox1.Controls.Add(Me.Label12)
         Me.Guna2GroupBox1.Controls.Add(Me.BTN_CerrarInterfaz)
@@ -70,9 +73,7 @@ Partial Class Agregar_empleados
         Me.Guna2GroupBox1.Controls.Add(Me.Label10)
         Me.Guna2GroupBox1.Controls.Add(Me.Label7)
         Me.Guna2GroupBox1.Controls.Add(Me.Label8)
-        Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_CARNET)
         Me.Guna2GroupBox1.Controls.Add(Me.Label5)
-        Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_TELEFONO)
         Me.Guna2GroupBox1.Controls.Add(Me.Label6)
         Me.Guna2GroupBox1.Controls.Add(Me.CONTRASENA)
         Me.Guna2GroupBox1.Controls.Add(Me.Label3)
@@ -80,7 +81,6 @@ Partial Class Agregar_empleados
         Me.Guna2GroupBox1.Controls.Add(Me.Label4)
         Me.Guna2GroupBox1.Controls.Add(Me.USUARIO)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
-        Me.Guna2GroupBox1.Controls.Add(Me.CEDULA)
         Me.Guna2GroupBox1.Controls.Add(Me.Label1)
         Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
@@ -91,6 +91,35 @@ Partial Class Agregar_empleados
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(993, 687)
         Me.Guna2GroupBox1.TabIndex = 0
         Me.Guna2GroupBox1.Text = "Agregar empleados"
+        '
+        'NUMERO_CARNET
+        '
+        Me.NUMERO_CARNET.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.NUMERO_CARNET.Location = New System.Drawing.Point(675, 470)
+        Me.NUMERO_CARNET.Mask = "99999"
+        Me.NUMERO_CARNET.Name = "NUMERO_CARNET"
+        Me.NUMERO_CARNET.Size = New System.Drawing.Size(211, 23)
+        Me.NUMERO_CARNET.TabIndex = 33
+        Me.NUMERO_CARNET.ValidatingType = GetType(Integer)
+        '
+        'NUMERO_TELEFONO
+        '
+        Me.NUMERO_TELEFONO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.NUMERO_TELEFONO.Location = New System.Drawing.Point(234, 415)
+        Me.NUMERO_TELEFONO.Mask = "99999"
+        Me.NUMERO_TELEFONO.Name = "NUMERO_TELEFONO"
+        Me.NUMERO_TELEFONO.Size = New System.Drawing.Size(211, 23)
+        Me.NUMERO_TELEFONO.TabIndex = 32
+        Me.NUMERO_TELEFONO.ValidatingType = GetType(Integer)
+        '
+        'CEDULA
+        '
+        Me.CEDULA.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CEDULA.Location = New System.Drawing.Point(234, 313)
+        Me.CEDULA.Mask = "00-0000-0000"
+        Me.CEDULA.Name = "CEDULA"
+        Me.CEDULA.Size = New System.Drawing.Size(211, 23)
+        Me.CEDULA.TabIndex = 31
         '
         'RESIDENCIA
         '
@@ -242,7 +271,7 @@ Partial Class Agregar_empleados
         Me.TIPO_AREA.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.TIPO_AREA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.TIPO_AREA.ItemHeight = 30
-        Me.TIPO_AREA.Items.AddRange(New Object() {"AREA 51"})
+        Me.TIPO_AREA.Items.AddRange(New Object() {""})
         Me.TIPO_AREA.Location = New System.Drawing.Point(675, 526)
         Me.TIPO_AREA.Name = "TIPO_AREA"
         Me.TIPO_AREA.Size = New System.Drawing.Size(211, 36)
@@ -298,26 +327,6 @@ Partial Class Agregar_empleados
         Me.Label8.TabIndex = 13
         Me.Label8.Text = "Tipo de empleado:"
         '
-        'NUMERO_CARNET
-        '
-        Me.NUMERO_CARNET.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.NUMERO_CARNET.DefaultText = ""
-        Me.NUMERO_CARNET.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.NUMERO_CARNET.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.NUMERO_CARNET.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NUMERO_CARNET.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NUMERO_CARNET.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.NUMERO_CARNET.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NUMERO_CARNET.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.NUMERO_CARNET.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NUMERO_CARNET.Location = New System.Drawing.Point(675, 469)
-        Me.NUMERO_CARNET.Name = "NUMERO_CARNET"
-        Me.NUMERO_CARNET.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.NUMERO_CARNET.PlaceholderText = ""
-        Me.NUMERO_CARNET.SelectedText = ""
-        Me.NUMERO_CARNET.Size = New System.Drawing.Size(211, 29)
-        Me.NUMERO_CARNET.TabIndex = 12
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -329,26 +338,6 @@ Partial Class Agregar_empleados
         Me.Label5.Size = New System.Drawing.Size(139, 21)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Número de carnet:"
-        '
-        'NUMERO_TELEFONO
-        '
-        Me.NUMERO_TELEFONO.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.NUMERO_TELEFONO.DefaultText = ""
-        Me.NUMERO_TELEFONO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.NUMERO_TELEFONO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.NUMERO_TELEFONO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NUMERO_TELEFONO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NUMERO_TELEFONO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.NUMERO_TELEFONO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NUMERO_TELEFONO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.NUMERO_TELEFONO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NUMERO_TELEFONO.Location = New System.Drawing.Point(234, 411)
-        Me.NUMERO_TELEFONO.Name = "NUMERO_TELEFONO"
-        Me.NUMERO_TELEFONO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.NUMERO_TELEFONO.PlaceholderText = ""
-        Me.NUMERO_TELEFONO.SelectedText = ""
-        Me.NUMERO_TELEFONO.Size = New System.Drawing.Size(211, 29)
-        Me.NUMERO_TELEFONO.TabIndex = 10
         '
         'Label6
         '
@@ -376,7 +365,7 @@ Partial Class Agregar_empleados
         Me.CONTRASENA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CONTRASENA.Location = New System.Drawing.Point(675, 359)
         Me.CONTRASENA.Name = "CONTRASENA"
-        Me.CONTRASENA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.CONTRASENA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.CONTRASENA.PlaceholderText = ""
         Me.CONTRASENA.SelectedText = ""
         Me.CONTRASENA.Size = New System.Drawing.Size(211, 29)
@@ -458,26 +447,6 @@ Partial Class Agregar_empleados
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Usuario:"
         '
-        'CEDULA
-        '
-        Me.CEDULA.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CEDULA.DefaultText = ""
-        Me.CEDULA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.CEDULA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.CEDULA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CEDULA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CEDULA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA.Location = New System.Drawing.Point(234, 310)
-        Me.CEDULA.Name = "CEDULA"
-        Me.CEDULA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.CEDULA.PlaceholderText = ""
-        Me.CEDULA.SelectedText = ""
-        Me.CEDULA.Size = New System.Drawing.Size(211, 29)
-        Me.CEDULA.TabIndex = 2
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -520,9 +489,7 @@ Partial Class Agregar_empleados
     Friend WithEvents Label10 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents NUMERO_CARNET As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents NUMERO_TELEFONO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents CONTRASENA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
@@ -530,7 +497,6 @@ Partial Class Agregar_empleados
     Friend WithEvents Label4 As Label
     Friend WithEvents USUARIO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents CEDULA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Btn_agregar_empleado As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents COREO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label11 As Label
@@ -541,4 +507,7 @@ Partial Class Agregar_empleados
     Friend WithEvents Label12 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Abrir As OpenFileDialog
+    Friend WithEvents CEDULA As MaskedTextBox
+    Friend WithEvents NUMERO_CARNET As MaskedTextBox
+    Friend WithEvents NUMERO_TELEFONO As MaskedTextBox
 End Class

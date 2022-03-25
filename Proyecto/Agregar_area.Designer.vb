@@ -36,14 +36,12 @@ Partial Class Agregar_area
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.NIVEL = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NOMBRE_AREA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Informacion_area = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Info_areas = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.BTN_BORRAR_AREA = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTN_ACTUALIZAR_AREA = New Guna.UI2.WinForms.Guna2Button()
         Me.L_AREAS = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -51,8 +49,10 @@ Partial Class Agregar_area
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.BTN_ACTUALIZAR_AREA = New Guna.UI2.WinForms.Guna2Button()
-        Me.BTN_BORRAR_AREA = New Guna.UI2.WinForms.Guna2Button()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        Me.Info_areas = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.NIVEL = New System.Windows.Forms.MaskedTextBox()
         Me.AgregarArea.SuspendLayout()
         CType(Me.CANTIDAD_EMPLEADOS, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Informacion_area.SuspendLayout()
@@ -63,6 +63,7 @@ Partial Class Agregar_area
         Me.AgregarArea.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.AgregarArea.BorderRadius = 4
         Me.AgregarArea.BorderThickness = 2
+        Me.AgregarArea.Controls.Add(Me.NIVEL)
         Me.AgregarArea.Controls.Add(Me.Label8)
         Me.AgregarArea.Controls.Add(Me.MINUTOS_FINAL)
         Me.AgregarArea.Controls.Add(Me.Label9)
@@ -76,7 +77,6 @@ Partial Class Agregar_area
         Me.AgregarArea.Controls.Add(Me.Label5)
         Me.AgregarArea.Controls.Add(Me.Label3)
         Me.AgregarArea.Controls.Add(Me.Label4)
-        Me.AgregarArea.Controls.Add(Me.NIVEL)
         Me.AgregarArea.Controls.Add(Me.Label2)
         Me.AgregarArea.Controls.Add(Me.NOMBRE_AREA)
         Me.AgregarArea.Controls.Add(Me.Label1)
@@ -238,26 +238,6 @@ Partial Class Agregar_area
         Me.Label4.TabIndex = 9
         Me.Label4.Text = "Cantidad de empleados:"
         '
-        'NIVEL
-        '
-        Me.NIVEL.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.NIVEL.DefaultText = ""
-        Me.NIVEL.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.NIVEL.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.NIVEL.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NIVEL.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NIVEL.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.NIVEL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NIVEL.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.NIVEL.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NIVEL.Location = New System.Drawing.Point(634, 62)
-        Me.NIVEL.Name = "NIVEL"
-        Me.NIVEL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.NIVEL.PlaceholderText = ""
-        Me.NIVEL.SelectedText = ""
-        Me.NIVEL.Size = New System.Drawing.Size(211, 33)
-        Me.NIVEL.TabIndex = 8
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -323,6 +303,80 @@ Partial Class Agregar_area
         Me.Informacion_area.TabIndex = 1
         Me.Informacion_area.Text = "Informacion de áreas"
         '
+        'BTN_BORRAR_AREA
+        '
+        Me.BTN_BORRAR_AREA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_BORRAR_AREA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_BORRAR_AREA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_BORRAR_AREA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_BORRAR_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.BTN_BORRAR_AREA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTN_BORRAR_AREA.ForeColor = System.Drawing.Color.White
+        Me.BTN_BORRAR_AREA.Location = New System.Drawing.Point(776, 276)
+        Me.BTN_BORRAR_AREA.Name = "BTN_BORRAR_AREA"
+        Me.BTN_BORRAR_AREA.Size = New System.Drawing.Size(179, 38)
+        Me.BTN_BORRAR_AREA.TabIndex = 36
+        Me.BTN_BORRAR_AREA.Text = "Borrar área"
+        '
+        'BTN_ACTUALIZAR_AREA
+        '
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_ACTUALIZAR_AREA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_ACTUALIZAR_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.BTN_ACTUALIZAR_AREA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTN_ACTUALIZAR_AREA.ForeColor = System.Drawing.Color.White
+        Me.BTN_ACTUALIZAR_AREA.Location = New System.Drawing.Point(776, 228)
+        Me.BTN_ACTUALIZAR_AREA.Name = "BTN_ACTUALIZAR_AREA"
+        Me.BTN_ACTUALIZAR_AREA.Size = New System.Drawing.Size(179, 38)
+        Me.BTN_ACTUALIZAR_AREA.TabIndex = 35
+        Me.BTN_ACTUALIZAR_AREA.Text = "Actualizar área"
+        '
+        'L_AREAS
+        '
+        Me.L_AREAS.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
+        Me.L_AREAS.FullRowSelect = True
+        Me.L_AREAS.GridLines = True
+        Me.L_AREAS.HideSelection = False
+        Me.L_AREAS.Location = New System.Drawing.Point(260, 134)
+        Me.L_AREAS.MultiSelect = False
+        Me.L_AREAS.Name = "L_AREAS"
+        Me.L_AREAS.Size = New System.Drawing.Size(482, 180)
+        Me.L_AREAS.TabIndex = 26
+        Me.L_AREAS.UseCompatibleStateImageBehavior = False
+        Me.L_AREAS.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ID"
+        Me.ColumnHeader1.Width = 0
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "Nombre área"
+        Me.ColumnHeader2.Width = 92
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "Nivel"
+        Me.ColumnHeader3.Width = 67
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "Cantidad empleados"
+        Me.ColumnHeader4.Width = 129
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "Hora entrada"
+        Me.ColumnHeader5.Width = 96
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "Hora salida"
+        Me.ColumnHeader6.Width = 95
+        '
         'Guna2Button1
         '
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
@@ -370,79 +424,15 @@ Partial Class Agregar_area
         Me.Label10.TabIndex = 5
         Me.Label10.Text = "Buscar área:"
         '
-        'L_AREAS
+        'NIVEL
         '
-        Me.L_AREAS.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6})
-        Me.L_AREAS.FullRowSelect = True
-        Me.L_AREAS.GridLines = True
-        Me.L_AREAS.HideSelection = False
-        Me.L_AREAS.Location = New System.Drawing.Point(260, 134)
-        Me.L_AREAS.MultiSelect = False
-        Me.L_AREAS.Name = "L_AREAS"
-        Me.L_AREAS.Size = New System.Drawing.Size(482, 180)
-        Me.L_AREAS.TabIndex = 26
-        Me.L_AREAS.UseCompatibleStateImageBehavior = False
-        Me.L_AREAS.View = System.Windows.Forms.View.Details
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "ID"
-        Me.ColumnHeader1.Width = 0
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "Nombre área"
-        Me.ColumnHeader2.Width = 92
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "Nivel"
-        Me.ColumnHeader3.Width = 67
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "Cantidad empleados"
-        Me.ColumnHeader4.Width = 129
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "Hora entrada"
-        Me.ColumnHeader5.Width = 96
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "Hora salida"
-        Me.ColumnHeader6.Width = 95
-        '
-        'BTN_ACTUALIZAR_AREA
-        '
-        Me.BTN_ACTUALIZAR_AREA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_ACTUALIZAR_AREA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_ACTUALIZAR_AREA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_ACTUALIZAR_AREA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_ACTUALIZAR_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.BTN_ACTUALIZAR_AREA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BTN_ACTUALIZAR_AREA.ForeColor = System.Drawing.Color.White
-        Me.BTN_ACTUALIZAR_AREA.Location = New System.Drawing.Point(776, 228)
-        Me.BTN_ACTUALIZAR_AREA.Name = "BTN_ACTUALIZAR_AREA"
-        Me.BTN_ACTUALIZAR_AREA.Size = New System.Drawing.Size(179, 38)
-        Me.BTN_ACTUALIZAR_AREA.TabIndex = 35
-        Me.BTN_ACTUALIZAR_AREA.Text = "Actualizar área"
-        '
-        'BTN_BORRAR_AREA
-        '
-        Me.BTN_BORRAR_AREA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_BORRAR_AREA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_BORRAR_AREA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_BORRAR_AREA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_BORRAR_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.BTN_BORRAR_AREA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BTN_BORRAR_AREA.ForeColor = System.Drawing.Color.White
-        Me.BTN_BORRAR_AREA.Location = New System.Drawing.Point(776, 276)
-        Me.BTN_BORRAR_AREA.Name = "BTN_BORRAR_AREA"
-        Me.BTN_BORRAR_AREA.Size = New System.Drawing.Size(179, 38)
-        Me.BTN_BORRAR_AREA.TabIndex = 36
-        Me.BTN_BORRAR_AREA.Text = "Borrar área"
+        Me.NIVEL.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.NIVEL.Location = New System.Drawing.Point(634, 67)
+        Me.NIVEL.Mask = "99999"
+        Me.NIVEL.Name = "NIVEL"
+        Me.NIVEL.Size = New System.Drawing.Size(201, 23)
+        Me.NIVEL.TabIndex = 35
+        Me.NIVEL.ValidatingType = GetType(Integer)
         '
         'Agregar_area
         '
@@ -468,7 +458,6 @@ Partial Class Agregar_area
     Friend WithEvents AgregarArea As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents NIVEL As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents NOMBRE_AREA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
@@ -496,4 +485,5 @@ Partial Class Agregar_area
     Friend WithEvents ColumnHeader6 As ColumnHeader
     Friend WithEvents BTN_BORRAR_AREA As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents BTN_ACTUALIZAR_AREA As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents NIVEL As MaskedTextBox
 End Class

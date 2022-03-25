@@ -3,7 +3,7 @@
     Public SQL As String
     Public NombreCompleto, correo, cedula, contrasena, foto_usuario, telefono As String
     Public ID As Integer
-    Public T, T2, T3 As New DataSet
+    Public T, T2, T3, T4 As New DataSet
     Public VECTOR_COLUMNA_OCULTAR(100) As Integer
     Friend Sub CONECTAR()
         Dim Ruta As String

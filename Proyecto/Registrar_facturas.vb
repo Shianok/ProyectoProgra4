@@ -10,6 +10,10 @@ Public Class Registrar_facturas
     'Fecha_de_pago.Format = DateFormat.LongDate
     'End Sub
 
+    Private Sub Registrar_facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarComboArea()
+    End Sub
+
     Friend Sub SUMA_TOTAL()
         Dim Suma As Integer = Convert.ToInt32(MONTO.Text)
         TOTAL_NETO = TOTAL_NETO + Suma
@@ -131,6 +135,20 @@ False, 0, False, T1, 0, False, False)
             Contador = (Contador - 1)
         End If
 
+    End Sub
+
+    Friend Sub cargarComboArea()
+        T4.Clear()
+        SQL = "SELECT ID FROM AREAS"
+        CARGAR_TABLA(T4, SQL)
+
+        If T4.Tables(0).Rows.Count > 0 Then
+            For FILA As Integer = 0 To T4.Tables(0).Rows.Count - 1 'se;ala el inicio de la tabla en 0,0
+                Dim Prueba As String
+                Prueba = T4.Tables(0).Rows(FILA).ItemArray(0)
+                COMBO_AREA.Items.Add(T4.Tables(0).Rows(FILA).ItemArray(0))
+            Next
+        End If
     End Sub
 
 End Class
