@@ -65,7 +65,7 @@ Partial Class Consultar_empleado
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(996, 686)
         Me.Guna2GroupBox1.TabIndex = 3
-        Me.Guna2GroupBox1.Text = "Consultar paciente"
+        Me.Guna2GroupBox1.Text = "Consultar empleado"
         '
         'Guna2GroupBox2
         '
@@ -207,7 +207,7 @@ Partial Class Consultar_empleado
         Me.CONSULTA_INFO.Name = "CONSULTA_INFO"
         Me.CONSULTA_INFO.Size = New System.Drawing.Size(934, 500)
         Me.CONSULTA_INFO.TabIndex = 25
-        Me.CONSULTA_INFO.Text = "Informacion de paciente"
+        Me.CONSULTA_INFO.Text = "Informacion de empleado"
         '
         'IMG_CONSULTA_EMPLEADO
         '
