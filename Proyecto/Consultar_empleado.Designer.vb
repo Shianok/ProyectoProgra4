@@ -27,10 +27,12 @@ Partial Class Consultar_empleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.BTN_ABRIR_REGISTRAR_EMPLEADO = New Guna.UI2.WinForms.Guna2Button()
         Me.CUNSULTA_PACIENTE = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.BTN_BUSCAR_PACIENTE = New Guna.UI2.WinForms.Guna2Button()
+        Me.BTN_BUSCAR_EMPLEADO = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CEDULA_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.CEDULA_EMPLEADO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CONSULTA_INFO = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.BORRAR = New Guna.UI2.WinForms.Guna2Button()
+        Me.ACTUALIZAR = New Guna.UI2.WinForms.Guna2Button()
         Me.IMG_CONSULTA_EMPLEADO = New Guna.UI2.WinForms.Guna2CirclePictureBox()
         Me.AREA_EMPLEADO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -119,9 +121,9 @@ Partial Class Consultar_empleado
         Me.CUNSULTA_PACIENTE.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.CUNSULTA_PACIENTE.BorderRadius = 5
         Me.CUNSULTA_PACIENTE.BorderThickness = 2
-        Me.CUNSULTA_PACIENTE.Controls.Add(Me.BTN_BUSCAR_PACIENTE)
+        Me.CUNSULTA_PACIENTE.Controls.Add(Me.BTN_BUSCAR_EMPLEADO)
         Me.CUNSULTA_PACIENTE.Controls.Add(Me.Label1)
-        Me.CUNSULTA_PACIENTE.Controls.Add(Me.CEDULA_PACIENTE)
+        Me.CUNSULTA_PACIENTE.Controls.Add(Me.CEDULA_EMPLEADO)
         Me.CUNSULTA_PACIENTE.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.CUNSULTA_PACIENTE.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.CUNSULTA_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -132,21 +134,21 @@ Partial Class Consultar_empleado
         Me.CUNSULTA_PACIENTE.TabIndex = 26
         Me.CUNSULTA_PACIENTE.Text = "Buscar paciente"
         '
-        'BTN_BUSCAR_PACIENTE
+        'BTN_BUSCAR_EMPLEADO
         '
-        Me.BTN_BUSCAR_PACIENTE.BorderRadius = 5
-        Me.BTN_BUSCAR_PACIENTE.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_BUSCAR_PACIENTE.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_BUSCAR_PACIENTE.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_BUSCAR_PACIENTE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_BUSCAR_PACIENTE.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.BTN_BUSCAR_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BTN_BUSCAR_PACIENTE.ForeColor = System.Drawing.Color.White
-        Me.BTN_BUSCAR_PACIENTE.Location = New System.Drawing.Point(319, 53)
-        Me.BTN_BUSCAR_PACIENTE.Name = "BTN_BUSCAR_PACIENTE"
-        Me.BTN_BUSCAR_PACIENTE.Size = New System.Drawing.Size(163, 33)
-        Me.BTN_BUSCAR_PACIENTE.TabIndex = 24
-        Me.BTN_BUSCAR_PACIENTE.Text = "Buscar empleado"
+        Me.BTN_BUSCAR_EMPLEADO.BorderRadius = 5
+        Me.BTN_BUSCAR_EMPLEADO.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_BUSCAR_EMPLEADO.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BTN_BUSCAR_EMPLEADO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BTN_BUSCAR_EMPLEADO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BTN_BUSCAR_EMPLEADO.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.BTN_BUSCAR_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BTN_BUSCAR_EMPLEADO.ForeColor = System.Drawing.Color.White
+        Me.BTN_BUSCAR_EMPLEADO.Location = New System.Drawing.Point(319, 53)
+        Me.BTN_BUSCAR_EMPLEADO.Name = "BTN_BUSCAR_EMPLEADO"
+        Me.BTN_BUSCAR_EMPLEADO.Size = New System.Drawing.Size(163, 33)
+        Me.BTN_BUSCAR_EMPLEADO.TabIndex = 24
+        Me.BTN_BUSCAR_EMPLEADO.Text = "Buscar empleado"
         '
         'Label1
         '
@@ -160,25 +162,25 @@ Partial Class Consultar_empleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Carnet:"
         '
-        'CEDULA_PACIENTE
+        'CEDULA_EMPLEADO
         '
-        Me.CEDULA_PACIENTE.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CEDULA_PACIENTE.DefaultText = ""
-        Me.CEDULA_PACIENTE.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.CEDULA_PACIENTE.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.CEDULA_PACIENTE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA_PACIENTE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA_PACIENTE.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CEDULA_PACIENTE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CEDULA_PACIENTE.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA_PACIENTE.Location = New System.Drawing.Point(72, 53)
-        Me.CEDULA_PACIENTE.Name = "CEDULA_PACIENTE"
-        Me.CEDULA_PACIENTE.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.CEDULA_PACIENTE.PlaceholderText = ""
-        Me.CEDULA_PACIENTE.SelectedText = ""
-        Me.CEDULA_PACIENTE.Size = New System.Drawing.Size(211, 33)
-        Me.CEDULA_PACIENTE.TabIndex = 2
+        Me.CEDULA_EMPLEADO.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.CEDULA_EMPLEADO.DefaultText = ""
+        Me.CEDULA_EMPLEADO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.CEDULA_EMPLEADO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.CEDULA_EMPLEADO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CEDULA_EMPLEADO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.CEDULA_EMPLEADO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CEDULA_EMPLEADO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CEDULA_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.CEDULA_EMPLEADO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.CEDULA_EMPLEADO.Location = New System.Drawing.Point(72, 53)
+        Me.CEDULA_EMPLEADO.Name = "CEDULA_EMPLEADO"
+        Me.CEDULA_EMPLEADO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.CEDULA_EMPLEADO.PlaceholderText = ""
+        Me.CEDULA_EMPLEADO.SelectedText = ""
+        Me.CEDULA_EMPLEADO.Size = New System.Drawing.Size(211, 33)
+        Me.CEDULA_EMPLEADO.TabIndex = 2
         '
         'CONSULTA_INFO
         '
@@ -186,6 +188,8 @@ Partial Class Consultar_empleado
         Me.CONSULTA_INFO.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.CONSULTA_INFO.BorderRadius = 5
         Me.CONSULTA_INFO.BorderThickness = 2
+        Me.CONSULTA_INFO.Controls.Add(Me.BORRAR)
+        Me.CONSULTA_INFO.Controls.Add(Me.ACTUALIZAR)
         Me.CONSULTA_INFO.Controls.Add(Me.IMG_CONSULTA_EMPLEADO)
         Me.CONSULTA_INFO.Controls.Add(Me.AREA_EMPLEADO)
         Me.CONSULTA_INFO.Controls.Add(Me.Label5)
@@ -208,6 +212,46 @@ Partial Class Consultar_empleado
         Me.CONSULTA_INFO.Size = New System.Drawing.Size(934, 500)
         Me.CONSULTA_INFO.TabIndex = 25
         Me.CONSULTA_INFO.Text = "Informacion de empleado"
+        '
+        'BORRAR
+        '
+        Me.BORRAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.BORRAR.BorderRadius = 5
+        Me.BORRAR.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.BORRAR.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BORRAR.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BORRAR.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BORRAR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BORRAR.Enabled = False
+        Me.BORRAR.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.BORRAR.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BORRAR.ForeColor = System.Drawing.Color.White
+        Me.BORRAR.Location = New System.Drawing.Point(795, 2)
+        Me.BORRAR.Margin = New System.Windows.Forms.Padding(2)
+        Me.BORRAR.Name = "BORRAR"
+        Me.BORRAR.Size = New System.Drawing.Size(131, 35)
+        Me.BORRAR.TabIndex = 66
+        Me.BORRAR.Text = "Eliminar paciente"
+        '
+        'ACTUALIZAR
+        '
+        Me.ACTUALIZAR.BackColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.ACTUALIZAR.BorderRadius = 5
+        Me.ACTUALIZAR.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.ACTUALIZAR.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.ACTUALIZAR.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.ACTUALIZAR.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.ACTUALIZAR.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.ACTUALIZAR.Enabled = False
+        Me.ACTUALIZAR.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.ACTUALIZAR.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.ACTUALIZAR.ForeColor = System.Drawing.Color.White
+        Me.ACTUALIZAR.Location = New System.Drawing.Point(660, 2)
+        Me.ACTUALIZAR.Margin = New System.Windows.Forms.Padding(2)
+        Me.ACTUALIZAR.Name = "ACTUALIZAR"
+        Me.ACTUALIZAR.Size = New System.Drawing.Size(129, 35)
+        Me.ACTUALIZAR.TabIndex = 65
+        Me.ACTUALIZAR.Text = "Actualizar paciente"
         '
         'IMG_CONSULTA_EMPLEADO
         '
@@ -451,9 +495,9 @@ Partial Class Consultar_empleado
     Friend WithEvents Label3 As Label
     Friend WithEvents BTN_ABRIR_REGISTRAR_EMPLEADO As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CUNSULTA_PACIENTE As Guna.UI2.WinForms.Guna2GroupBox
-    Friend WithEvents BTN_BUSCAR_PACIENTE As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents BTN_BUSCAR_EMPLEADO As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents CEDULA_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents CEDULA_EMPLEADO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CONSULTA_INFO As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents CONSULTA_RESIDENCIA_EMPLEADO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label9 As Label
@@ -468,4 +512,6 @@ Partial Class Consultar_empleado
     Friend WithEvents TIPO_EMPLEADO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents IMG_CONSULTA_EMPLEADO As Guna.UI2.WinForms.Guna2CirclePictureBox
+    Friend WithEvents BORRAR As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ACTUALIZAR As Guna.UI2.WinForms.Guna2Button
 End Class

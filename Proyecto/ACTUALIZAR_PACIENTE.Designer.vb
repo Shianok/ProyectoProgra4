@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Registrar_paciente
+Partial Class ACTUALIZAR_PACIENTE
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -24,7 +24,7 @@ Partial Class Registrar_paciente
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.NACIMIENTO_PACIENTE = New System.Windows.Forms.DateTimePicker()
-        Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
+        Me.BtnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
         Me.TXT_PADECIMIENTOS = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_agregar_paciente = New Guna.UI2.WinForms.Guna2Button()
@@ -49,7 +49,7 @@ Partial Class Registrar_paciente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox1.Controls.Add(Me.NACIMIENTO_PACIENTE)
-        Me.Guna2GroupBox1.Controls.Add(Me.btnCerrarInterfaz)
+        Me.Guna2GroupBox1.Controls.Add(Me.BtnCerrarInterfaz)
         Me.Guna2GroupBox1.Controls.Add(Me.TXT_PADECIMIENTOS)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
         Me.Guna2GroupBox1.Controls.Add(Me.Btn_agregar_paciente)
@@ -71,8 +71,8 @@ Partial Class Registrar_paciente
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(994, 527)
-        Me.Guna2GroupBox1.TabIndex = 1
-        Me.Guna2GroupBox1.Text = "Agregar paciente"
+        Me.Guna2GroupBox1.TabIndex = 2
+        Me.Guna2GroupBox1.Text = "Actualizar paciente"
         '
         'NACIMIENTO_PACIENTE
         '
@@ -87,23 +87,23 @@ Partial Class Registrar_paciente
         Me.NACIMIENTO_PACIENTE.TabIndex = 27
         Me.NACIMIENTO_PACIENTE.Value = New Date(2022, 3, 28, 3, 44, 20, 0)
         '
-        'btnCerrarInterfaz
+        'BtnCerrarInterfaz
         '
-        Me.btnCerrarInterfaz.BackColor = System.Drawing.Color.Transparent
-        Me.btnCerrarInterfaz.BorderRadius = 2
-        Me.btnCerrarInterfaz.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.btnCerrarInterfaz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.btnCerrarInterfaz.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.btnCerrarInterfaz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.btnCerrarInterfaz.FillColor = System.Drawing.Color.Red
-        Me.btnCerrarInterfaz.FocusedColor = System.Drawing.Color.Maroon
-        Me.btnCerrarInterfaz.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.btnCerrarInterfaz.ForeColor = System.Drawing.Color.White
-        Me.btnCerrarInterfaz.Location = New System.Drawing.Point(951, 3)
-        Me.btnCerrarInterfaz.Name = "btnCerrarInterfaz"
-        Me.btnCerrarInterfaz.Size = New System.Drawing.Size(38, 35)
-        Me.btnCerrarInterfaz.TabIndex = 14
-        Me.btnCerrarInterfaz.Text = "X"
+        Me.BtnCerrarInterfaz.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCerrarInterfaz.BorderRadius = 2
+        Me.BtnCerrarInterfaz.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.BtnCerrarInterfaz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.BtnCerrarInterfaz.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.BtnCerrarInterfaz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.BtnCerrarInterfaz.FillColor = System.Drawing.Color.Red
+        Me.BtnCerrarInterfaz.FocusedColor = System.Drawing.Color.Maroon
+        Me.BtnCerrarInterfaz.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BtnCerrarInterfaz.ForeColor = System.Drawing.Color.White
+        Me.BtnCerrarInterfaz.Location = New System.Drawing.Point(951, 3)
+        Me.BtnCerrarInterfaz.Name = "BtnCerrarInterfaz"
+        Me.BtnCerrarInterfaz.Size = New System.Drawing.Size(38, 35)
+        Me.BtnCerrarInterfaz.TabIndex = 14
+        Me.BtnCerrarInterfaz.Text = "X"
         '
         'TXT_PADECIMIENTOS
         '
@@ -150,7 +150,7 @@ Partial Class Registrar_paciente
         Me.Btn_agregar_paciente.Name = "Btn_agregar_paciente"
         Me.Btn_agregar_paciente.Size = New System.Drawing.Size(302, 63)
         Me.Btn_agregar_paciente.TabIndex = 24
-        Me.Btn_agregar_paciente.Text = "Agregar paciente"
+        Me.Btn_agregar_paciente.Text = "Actualizar paciente"
         '
         'RESIDENCIA_PACIENTE
         '
@@ -324,18 +324,16 @@ Partial Class Registrar_paciente
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cédula:"
         '
-        'Registrar_paciente
+        'ACTUALIZAR_PACIENTE
         '
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
-        Me.AutoSize = True
-        Me.BackColor = System.Drawing.Color.White
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(994, 527)
-        Me.ControlBox = False
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Registrar_paciente"
+        Me.Name = "ACTUALIZAR_PACIENTE"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Registrar_paciente"
+        Me.Text = "ACTUALIZAR_PACIENTE"
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.Guna2GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -343,6 +341,8 @@ Partial Class Registrar_paciente
     End Sub
 
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
+    Friend WithEvents NACIMIENTO_PACIENTE As DateTimePicker
+    Friend WithEvents BtnCerrarInterfaz As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents TXT_PADECIMIENTOS As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Btn_agregar_paciente As Guna.UI2.WinForms.Guna2Button
@@ -357,6 +357,4 @@ Partial Class Registrar_paciente
     Friend WithEvents Label4 As Label
     Friend WithEvents CEDULA_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnCerrarInterfaz As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents NACIMIENTO_PACIENTE As DateTimePicker
 End Class

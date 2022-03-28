@@ -79,6 +79,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ACTUALIZAR_PACIENTE.Designer.vb">
+      <DependentUpon>ACTUALIZAR_PACIENTE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ACTUALIZAR_PACIENTE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Agregar_area.Designer.vb">
       <DependentUpon>Agregar_area.vb</DependentUpon>
     </Compile>
@@ -165,6 +171,9 @@
     <Compile Include="reportes.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ACTUALIZAR_PACIENTE.resx">
+      <DependentUpon>ACTUALIZAR_PACIENTE.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agregar_area.resx">
       <DependentUpon>Agregar_area.vb</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +271,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Imagen_fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
