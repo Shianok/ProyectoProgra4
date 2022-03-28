@@ -92,4 +92,5 @@
     Private Sub BTN_BORRAR_AREA_Click(sender As Object, e As EventArgs) Handles BTN_BORRAR_AREA.Click
         BORRAR()
     End Sub
+
 End Class

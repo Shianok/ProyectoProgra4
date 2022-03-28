@@ -222,7 +222,6 @@ Partial Class Consultar_empleado
         Me.IMG_CONSULTA_EMPLEADO.TabIndex = 67
         Me.IMG_CONSULTA_EMPLEADO.TabStop = False
         Me.IMG_CONSULTA_EMPLEADO.UseTransparentBackground = True
-        Me.IMG_CONSULTA_EMPLEADO.Visible = False
         '
         'AREA_EMPLEADO
         '
@@ -244,7 +243,6 @@ Partial Class Consultar_empleado
         Me.AREA_EMPLEADO.SelectedText = ""
         Me.AREA_EMPLEADO.Size = New System.Drawing.Size(211, 33)
         Me.AREA_EMPLEADO.TabIndex = 66
-        Me.AREA_EMPLEADO.Visible = False
         '
         'Label5
         '
@@ -252,12 +250,11 @@ Partial Class Consultar_empleado
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(599, 446)
+        Me.Label5.Location = New System.Drawing.Point(599, 438)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 21)
         Me.Label5.TabIndex = 65
         Me.Label5.Text = "Area:"
-        Me.Label5.Visible = False
         '
         'TIPO_EMPLEADO
         '
@@ -279,7 +276,6 @@ Partial Class Consultar_empleado
         Me.TIPO_EMPLEADO.SelectedText = ""
         Me.TIPO_EMPLEADO.Size = New System.Drawing.Size(211, 33)
         Me.TIPO_EMPLEADO.TabIndex = 64
-        Me.TIPO_EMPLEADO.Visible = False
         '
         'Label2
         '
@@ -287,7 +283,7 @@ Partial Class Consultar_empleado
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(63, 446)
+        Me.Label2.Location = New System.Drawing.Point(63, 440)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(137, 21)
         Me.Label2.TabIndex = 63
@@ -314,7 +310,6 @@ Partial Class Consultar_empleado
         Me.CONSULTA_RESIDENCIA_EMPLEADO.SelectedText = ""
         Me.CONSULTA_RESIDENCIA_EMPLEADO.Size = New System.Drawing.Size(211, 33)
         Me.CONSULTA_RESIDENCIA_EMPLEADO.TabIndex = 62
-        Me.CONSULTA_RESIDENCIA_EMPLEADO.Visible = False
         '
         'Label9
         '
@@ -322,12 +317,11 @@ Partial Class Consultar_empleado
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(496, 332)
+        Me.Label9.Location = New System.Drawing.Point(496, 323)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(148, 21)
         Me.Label9.TabIndex = 61
         Me.Label9.Text = "Lugar de residencia:"
-        Me.Label9.Visible = False
         '
         'CONSULTA_NUMERO_CARNET
         '
@@ -349,7 +343,6 @@ Partial Class Consultar_empleado
         Me.CONSULTA_NUMERO_CARNET.SelectedText = ""
         Me.CONSULTA_NUMERO_CARNET.Size = New System.Drawing.Size(211, 33)
         Me.CONSULTA_NUMERO_CARNET.TabIndex = 60
-        Me.CONSULTA_NUMERO_CARNET.Visible = False
         '
         'USUARIO_EMPLEADO
         '
@@ -357,12 +350,11 @@ Partial Class Consultar_empleado
         Me.USUARIO_EMPLEADO.BackColor = System.Drawing.Color.Transparent
         Me.USUARIO_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.USUARIO_EMPLEADO.ForeColor = System.Drawing.Color.Black
-        Me.USUARIO_EMPLEADO.Location = New System.Drawing.Point(577, 222)
+        Me.USUARIO_EMPLEADO.Location = New System.Drawing.Point(577, 213)
         Me.USUARIO_EMPLEADO.Name = "USUARIO_EMPLEADO"
-        Me.USUARIO_EMPLEADO.Size = New System.Drawing.Size(67, 21)
+        Me.USUARIO_EMPLEADO.Size = New System.Drawing.Size(61, 21)
         Me.USUARIO_EMPLEADO.TabIndex = 59
-        Me.USUARIO_EMPLEADO.Text = "Usuario:"
-        Me.USUARIO_EMPLEADO.Visible = False
+        Me.USUARIO_EMPLEADO.Text = "Cedula:"
         '
         'CONSULTA_NUMERO_EMPLEADO
         '
@@ -384,7 +376,6 @@ Partial Class Consultar_empleado
         Me.CONSULTA_NUMERO_EMPLEADO.SelectedText = ""
         Me.CONSULTA_NUMERO_EMPLEADO.Size = New System.Drawing.Size(211, 33)
         Me.CONSULTA_NUMERO_EMPLEADO.TabIndex = 54
-        Me.CONSULTA_NUMERO_EMPLEADO.Visible = False
         '
         'Label6
         '
@@ -392,7 +383,7 @@ Partial Class Consultar_empleado
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(50, 333)
+        Me.Label6.Location = New System.Drawing.Point(50, 325)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(153, 21)
         Me.Label6.TabIndex = 53
@@ -419,7 +410,6 @@ Partial Class Consultar_empleado
         Me.CONSULTA_NOMBRE_EMPLEADO.SelectedText = ""
         Me.CONSULTA_NOMBRE_EMPLEADO.Size = New System.Drawing.Size(211, 33)
         Me.CONSULTA_NOMBRE_EMPLEADO.TabIndex = 52
-        Me.CONSULTA_NOMBRE_EMPLEADO.Visible = False
         '
         'Label4
         '
@@ -427,7 +417,7 @@ Partial Class Consultar_empleado
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(63, 222)
+        Me.Label4.Location = New System.Drawing.Point(63, 214)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(140, 21)
         Me.Label4.TabIndex = 51
