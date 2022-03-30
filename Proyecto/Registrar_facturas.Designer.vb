@@ -46,7 +46,7 @@ Partial Class Registrar_facturas
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Correo = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Correo_usuario = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_realizar_factura = New Guna.UI2.WinForms.Guna2Button()
@@ -76,7 +76,7 @@ Partial Class Registrar_facturas
         Me.Guna2GroupBox1.Controls.Add(Me.Label9)
         Me.Guna2GroupBox1.Controls.Add(Me.Label5)
         Me.Guna2GroupBox1.Controls.Add(Me.Label6)
-        Me.Guna2GroupBox1.Controls.Add(Me.Correo)
+        Me.Guna2GroupBox1.Controls.Add(Me.Correo_usuario)
         Me.Guna2GroupBox1.Controls.Add(Me.Label3)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
         Me.Guna2GroupBox1.Controls.Add(Me.Btn_realizar_factura)
@@ -402,25 +402,25 @@ Partial Class Registrar_facturas
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Correo:"
         '
-        'Correo
+        'Correo_usuario
         '
-        Me.Correo.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.Correo.DefaultText = ""
-        Me.Correo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.Correo.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.Correo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Correo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.Correo.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Correo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Correo.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Correo.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Correo.Location = New System.Drawing.Point(219, 161)
-        Me.Correo.Name = "Correo"
-        Me.Correo.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.Correo.PlaceholderText = ""
-        Me.Correo.SelectedText = ""
-        Me.Correo.Size = New System.Drawing.Size(200, 31)
-        Me.Correo.TabIndex = 7
+        Me.Correo_usuario.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Correo_usuario.DefaultText = ""
+        Me.Correo_usuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Correo_usuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Correo_usuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Correo_usuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Correo_usuario.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Correo_usuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Correo_usuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Correo_usuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Correo_usuario.Location = New System.Drawing.Point(219, 161)
+        Me.Correo_usuario.Name = "Correo_usuario"
+        Me.Correo_usuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Correo_usuario.PlaceholderText = ""
+        Me.Correo_usuario.SelectedText = ""
+        Me.Correo_usuario.Size = New System.Drawing.Size(200, 31)
+        Me.Correo_usuario.TabIndex = 7
         '
         'Label3
         '
@@ -488,7 +488,7 @@ Partial Class Registrar_facturas
     Friend WithEvents Label9 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Correo As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Correo_usuario As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Btn_realizar_factura As Guna.UI2.WinForms.Guna2Button

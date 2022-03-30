@@ -30,7 +30,7 @@
                 contrasena = T.Tables(0).Rows(FILA).ItemArray(0).ToString
                 NombreCompleto = T.Tables(0).Rows(FILA).ItemArray(1).ToString
                 Cedula = Cedula
-                correo = T.Tables(0).Rows(FILA).ItemArray(2).ToString
+                correo_conexion = T.Tables(0).Rows(FILA).ItemArray(2).ToString
                 foto_usuario = T.Tables(0).Rows(FILA).ItemArray(3).ToString
                 telefono = T.Tables(0).Rows(FILA).ItemArray(4).ToString
                 ID = Convert.ToInt32(T.Tables(0).Rows(FILA).ItemArray(5).ToString)

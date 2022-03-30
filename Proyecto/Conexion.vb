@@ -1,7 +1,7 @@
 ﻿Module Conexion
     Public Db As New OleDb.OleDbConnection
     Public SQL As String
-    Public NombreCompleto, correo, cedula, contrasena, foto_usuario, telefono As String
+    Public NombreCompleto, correo_conexion, cedula, contrasena, foto_usuario, telefono As String
     Public ID As Integer
     Public T, T2, T3, T4 As New DataSet
     Public VECTOR_COLUMNA_OCULTAR(100) As Integer
@@ -14,7 +14,7 @@
 
     Friend Sub LIMPIAR_UPDATE()
         NombreCompleto = ""
-        correo = ""
+        correo_conexion = ""
         cedula = ""
         contrasena = ""
         foto_usuario = ""

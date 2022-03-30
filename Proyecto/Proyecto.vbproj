@@ -116,6 +116,7 @@
     <Compile Include="Consultar_paciente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CORREO.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

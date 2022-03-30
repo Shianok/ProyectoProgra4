@@ -17,7 +17,7 @@
     Private Sub Registrarse_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         NOMBRE.Text = NombreCompleto
-        CORREO_USUARIO.Text = correo
+        CORREO_USUARIO.Text = correo_conexion
         CONTRASENA_USUARIO.Text = contrasena
         TELEFONO_USUARIO.Text = telefono
         IMG_USUARIO.Image = Image.FromFile(foto_usuario)

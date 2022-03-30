@@ -68,7 +68,7 @@ False, 0, False, T1, 0, False, False)
 
         INSERTAR_LINEA_BLANCO(P12, 1)
 
-        INSERTAR_REGLON(False, P13, "- Se extiende la siguiente factura del servicio hospitalario al paciente: " & NOMBRE_PACIENTE.Text & ", con el siguiente correo: " & Correo.Text, False, False, 8, "Century Gothic", "I", 0)
+        INSERTAR_REGLON(False, P13, "- Se extiende la siguiente factura del servicio hospitalario al paciente: " & NOMBRE_PACIENTE.Text & ", con el siguiente correo: " & Correo_usuario.Text, False, False, 8, "Century Gothic", "I", 0)
 
 
         CREAR_DIRECTORIO()
@@ -83,7 +83,7 @@ False, 0, False, T1, 0, False, False)
     Friend Sub LIMPIAR()
         Cedula.Clear()
         Telefono.Clear()
-        Correo.Clear()
+        Correo_usuario.Clear()
         NOMBRE_PACIENTE.Clear()
         Fecha_de_pago.ResetText()
         L.Clear()
@@ -113,9 +113,17 @@ False, 0, False, T1, 0, False, False)
     End Sub
 
     Private Sub Btn_realizar_factura_Click(sender As Object, e As EventArgs) Handles Btn_realizar_factura.Click
+        Dim ArchivoBorrar As String
         SQL = "INSERT INTO FACTURAS (ID, NOMBRE_PACIENTE, CEDULA, MONTO, FECHA_PAGO, NOMBRE_REMITENTE, AREA_ATENCION) VALUES(" & PK("FACTURAS", "ID") & ", '" & NOMBRE_PACIENTE.Text & "', '" & Cedula.Text & "', '" & MONTO_TOTAL.Text & "', '" & Fecha_de_pago.Value & "', '" & Nombre_remitente.Text & "', '" & COMBO_AREA.Text & "')"
         EJECUTAR(SQL)
         IMPRIMIR()
+        ENVIAR_CORREO("FACTURA DEL SISTEMA HOSPITALARIO", "POR ESTE MEDIO LE ADJUNTAMOS SU FACTURA DEL SISTEMA HOSPITALARIO, DESDE ESTE ARCHIVO PDF: ", Correo_usuario.Text, "C:\REPORTES\factura.pdf", "SistemaHospitalario@outlook.es", "Sistema2022")
+        ArchivoBorrar = "C:\REPORTES\factura.pdf"
+
+        'comprobamos que el archivo existe
+        'If System.IO.File.Exists(ArchivoBorrar) = True Then
+        'System.IO.File.Delete(ArchivoBorrar)
+        ' End If
         LIMPIAR()
         MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
     End Sub
