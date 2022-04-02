@@ -62,7 +62,7 @@ Partial Class Empleado_perfil
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.Black
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(-1, 0)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(638, 417)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(641, 421)
         Me.Guna2GroupBox1.TabIndex = 2
         Me.Guna2GroupBox1.Text = " Registrarse"
         '

@@ -28,10 +28,8 @@ Partial Class REGISTRAR_CONSULTAS
         Me.Label5 = New System.Windows.Forms.Label()
         Me.NUMERO_CONSULTORIO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.HORA_CONSULTA = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Btn_agregar_consulta = New Guna.UI2.WinForms.Guna2Button()
-        Me.FECHA_CONSULTA = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.CORREO_CONSULTA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CORREO_PACIENTE = New System.Windows.Forms.Label()
@@ -41,6 +39,11 @@ Partial Class REGISTRAR_CONSULTAS
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CEDULA_CONSULTA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.FECHA_CONSULTA = New System.Windows.Forms.DateTimePicker()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.MINUTOS_CONSULTA = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.HORA_CONSULTA = New System.Windows.Forms.ComboBox()
         Me.Registrar_consulta.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,15 +51,18 @@ Partial Class REGISTRAR_CONSULTAS
         'Registrar_consulta
         '
         Me.Registrar_consulta.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Registrar_consulta.Controls.Add(Me.Label7)
+        Me.Registrar_consulta.Controls.Add(Me.MINUTOS_CONSULTA)
+        Me.Registrar_consulta.Controls.Add(Me.Label8)
+        Me.Registrar_consulta.Controls.Add(Me.HORA_CONSULTA)
+        Me.Registrar_consulta.Controls.Add(Me.FECHA_CONSULTA)
         Me.Registrar_consulta.Controls.Add(Me.Guna2PictureBox1)
         Me.Registrar_consulta.Controls.Add(Me.AREA_CONSULTA)
         Me.Registrar_consulta.Controls.Add(Me.Label5)
         Me.Registrar_consulta.Controls.Add(Me.NUMERO_CONSULTORIO)
         Me.Registrar_consulta.Controls.Add(Me.Label2)
-        Me.Registrar_consulta.Controls.Add(Me.HORA_CONSULTA)
         Me.Registrar_consulta.Controls.Add(Me.Label3)
         Me.Registrar_consulta.Controls.Add(Me.Btn_agregar_consulta)
-        Me.Registrar_consulta.Controls.Add(Me.FECHA_CONSULTA)
         Me.Registrar_consulta.Controls.Add(Me.Label10)
         Me.Registrar_consulta.Controls.Add(Me.CORREO_CONSULTA)
         Me.Registrar_consulta.Controls.Add(Me.CORREO_PACIENTE)
@@ -153,20 +159,6 @@ Partial Class REGISTRAR_CONSULTAS
         Me.Label2.TabIndex = 44
         Me.Label2.Text = "Numero de consultorio:"
         '
-        'HORA_CONSULTA
-        '
-        Me.HORA_CONSULTA.Checked = True
-        Me.HORA_CONSULTA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.HORA_CONSULTA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.HORA_CONSULTA.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.HORA_CONSULTA.Location = New System.Drawing.Point(683, 402)
-        Me.HORA_CONSULTA.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.HORA_CONSULTA.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.HORA_CONSULTA.Name = "HORA_CONSULTA"
-        Me.HORA_CONSULTA.Size = New System.Drawing.Size(211, 33)
-        Me.HORA_CONSULTA.TabIndex = 43
-        Me.HORA_CONSULTA.Value = New Date(2022, 3, 8, 18, 42, 13, 222)
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -193,20 +185,6 @@ Partial Class REGISTRAR_CONSULTAS
         Me.Btn_agregar_consulta.Size = New System.Drawing.Size(302, 63)
         Me.Btn_agregar_consulta.TabIndex = 39
         Me.Btn_agregar_consulta.Text = "Agregar consulta"
-        '
-        'FECHA_CONSULTA
-        '
-        Me.FECHA_CONSULTA.Checked = True
-        Me.FECHA_CONSULTA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.FECHA_CONSULTA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.FECHA_CONSULTA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.FECHA_CONSULTA.Location = New System.Drawing.Point(241, 402)
-        Me.FECHA_CONSULTA.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        Me.FECHA_CONSULTA.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        Me.FECHA_CONSULTA.Name = "FECHA_CONSULTA"
-        Me.FECHA_CONSULTA.Size = New System.Drawing.Size(211, 33)
-        Me.FECHA_CONSULTA.TabIndex = 38
-        Me.FECHA_CONSULTA.Value = New Date(2022, 3, 8, 18, 42, 13, 222)
         '
         'Label10
         '
@@ -348,6 +326,59 @@ Partial Class REGISTRAR_CONSULTAS
         Me.Label1.TabIndex = 27
         Me.Label1.Text = "Cédula:"
         '
+        'FECHA_CONSULTA
+        '
+        Me.FECHA_CONSULTA.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FECHA_CONSULTA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.FECHA_CONSULTA.Location = New System.Drawing.Point(241, 402)
+        Me.FECHA_CONSULTA.Name = "FECHA_CONSULTA"
+        Me.FECHA_CONSULTA.Size = New System.Drawing.Size(211, 33)
+        Me.FECHA_CONSULTA.TabIndex = 49
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(853, 411)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(70, 21)
+        Me.Label7.TabIndex = 81
+        Me.Label7.Text = ":Minutos"
+        '
+        'MINUTOS_CONSULTA
+        '
+        Me.MINUTOS_CONSULTA.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MINUTOS_CONSULTA.FormattingEnabled = True
+        Me.MINUTOS_CONSULTA.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.MINUTOS_CONSULTA.Location = New System.Drawing.Point(798, 401)
+        Me.MINUTOS_CONSULTA.Name = "MINUTOS_CONSULTA"
+        Me.MINUTOS_CONSULTA.Size = New System.Drawing.Size(53, 33)
+        Me.MINUTOS_CONSULTA.TabIndex = 80
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(738, 411)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(54, 21)
+        Me.Label8.TabIndex = 79
+        Me.Label8.Text = ":Horas"
+        '
+        'HORA_CONSULTA
+        '
+        Me.HORA_CONSULTA.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.HORA_CONSULTA.FormattingEnabled = True
+        Me.HORA_CONSULTA.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
+        Me.HORA_CONSULTA.Location = New System.Drawing.Point(683, 402)
+        Me.HORA_CONSULTA.Name = "HORA_CONSULTA"
+        Me.HORA_CONSULTA.Size = New System.Drawing.Size(53, 33)
+        Me.HORA_CONSULTA.TabIndex = 78
+        '
         'REGISTRAR_CONSULTAS
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -368,7 +399,6 @@ Partial Class REGISTRAR_CONSULTAS
 
     Friend WithEvents Registrar_consulta As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents Btn_agregar_consulta As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents FECHA_CONSULTA As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label10 As Label
     Friend WithEvents CORREO_CONSULTA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CORREO_PACIENTE As Label
@@ -382,7 +412,11 @@ Partial Class REGISTRAR_CONSULTAS
     Friend WithEvents Label5 As Label
     Friend WithEvents NUMERO_CONSULTORIO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents HORA_CONSULTA As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label3 As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents FECHA_CONSULTA As DateTimePicker
+    Friend WithEvents Label7 As Label
+    Friend WithEvents MINUTOS_CONSULTA As ComboBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents HORA_CONSULTA As ComboBox
 End Class

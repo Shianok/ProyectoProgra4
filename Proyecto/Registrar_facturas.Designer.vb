@@ -86,13 +86,13 @@ Partial Class Registrar_facturas
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.White
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(-2, 0)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(1068, 709)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(997, 688)
         Me.Guna2GroupBox1.TabIndex = 0
         '
         'Telefono
         '
         Me.Telefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Telefono.Location = New System.Drawing.Point(632, 79)
+        Me.Telefono.Location = New System.Drawing.Point(599, 79)
         Me.Telefono.Mask = "99999"
         Me.Telefono.Name = "Telefono"
         Me.Telefono.Size = New System.Drawing.Size(201, 23)
@@ -102,7 +102,7 @@ Partial Class Registrar_facturas
         'Cedula
         '
         Me.Cedula.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.Cedula.Location = New System.Drawing.Point(219, 75)
+        Me.Cedula.Location = New System.Drawing.Point(184, 75)
         Me.Cedula.Mask = "00-0000-0000"
         Me.Cedula.Name = "Cedula"
         Me.Cedula.Size = New System.Drawing.Size(211, 23)
@@ -117,7 +117,7 @@ Partial Class Registrar_facturas
         Me.BORRAR_FILA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.BORRAR_FILA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.BORRAR_FILA.ForeColor = System.Drawing.Color.White
-        Me.BORRAR_FILA.Location = New System.Drawing.Point(632, 553)
+        Me.BORRAR_FILA.Location = New System.Drawing.Point(599, 553)
         Me.BORRAR_FILA.Name = "BORRAR_FILA"
         Me.BORRAR_FILA.Size = New System.Drawing.Size(118, 38)
         Me.BORRAR_FILA.TabIndex = 31
@@ -132,7 +132,7 @@ Partial Class Registrar_facturas
         Me.AGREGAR_LIST.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.AGREGAR_LIST.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.AGREGAR_LIST.ForeColor = System.Drawing.Color.White
-        Me.AGREGAR_LIST.Location = New System.Drawing.Point(633, 337)
+        Me.AGREGAR_LIST.Location = New System.Drawing.Point(600, 337)
         Me.AGREGAR_LIST.Name = "AGREGAR_LIST"
         Me.AGREGAR_LIST.Size = New System.Drawing.Size(177, 38)
         Me.AGREGAR_LIST.TabIndex = 30
@@ -144,7 +144,7 @@ Partial Class Registrar_facturas
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(846, 284)
+        Me.Label11.Location = New System.Drawing.Point(802, 283)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(59, 21)
         Me.Label11.TabIndex = 29
@@ -162,12 +162,12 @@ Partial Class Registrar_facturas
         Me.MONTO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MONTO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.MONTO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MONTO.Location = New System.Drawing.Point(911, 281)
+        Me.MONTO.Location = New System.Drawing.Point(867, 280)
         Me.MONTO.Name = "MONTO"
         Me.MONTO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.MONTO.PlaceholderText = ""
         Me.MONTO.SelectedText = ""
-        Me.MONTO.Size = New System.Drawing.Size(117, 31)
+        Me.MONTO.Size = New System.Drawing.Size(109, 31)
         Me.MONTO.TabIndex = 28
         '
         'Label10
@@ -176,7 +176,7 @@ Partial Class Registrar_facturas
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(449, 283)
+        Me.Label10.Location = New System.Drawing.Point(416, 283)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(178, 21)
         Me.Label10.TabIndex = 27
@@ -194,12 +194,12 @@ Partial Class Registrar_facturas
         Me.AGREGAR.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.AGREGAR.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.AGREGAR.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.AGREGAR.Location = New System.Drawing.Point(633, 280)
+        Me.AGREGAR.Location = New System.Drawing.Point(600, 280)
         Me.AGREGAR.Name = "AGREGAR"
         Me.AGREGAR.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.AGREGAR.PlaceholderText = ""
         Me.AGREGAR.SelectedText = ""
-        Me.AGREGAR.Size = New System.Drawing.Size(200, 31)
+        Me.AGREGAR.Size = New System.Drawing.Size(196, 31)
         Me.AGREGAR.TabIndex = 26
         '
         'L
@@ -208,10 +208,10 @@ Partial Class Registrar_facturas
         Me.L.FullRowSelect = True
         Me.L.GridLines = True
         Me.L.HideSelection = False
-        Me.L.Location = New System.Drawing.Point(633, 399)
+        Me.L.Location = New System.Drawing.Point(600, 399)
         Me.L.MultiSelect = False
         Me.L.Name = "L"
-        Me.L.Size = New System.Drawing.Size(385, 136)
+        Me.L.Size = New System.Drawing.Size(376, 136)
         Me.L.TabIndex = 25
         Me.L.UseCompatibleStateImageBehavior = False
         Me.L.View = System.Windows.Forms.View.Details
@@ -238,7 +238,7 @@ Partial Class Registrar_facturas
         Me.COMBO_AREA.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.COMBO_AREA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.COMBO_AREA.ItemHeight = 30
-        Me.COMBO_AREA.Location = New System.Drawing.Point(219, 371)
+        Me.COMBO_AREA.Location = New System.Drawing.Point(184, 371)
         Me.COMBO_AREA.Name = "COMBO_AREA"
         Me.COMBO_AREA.Size = New System.Drawing.Size(200, 36)
         Me.COMBO_AREA.TabIndex = 24
@@ -249,7 +249,7 @@ Partial Class Registrar_facturas
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(469, 166)
+        Me.Label1.Location = New System.Drawing.Point(436, 166)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(158, 21)
         Me.Label1.TabIndex = 23
@@ -267,7 +267,7 @@ Partial Class Registrar_facturas
         Me.NOMBRE_PACIENTE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.NOMBRE_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.NOMBRE_PACIENTE.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NOMBRE_PACIENTE.Location = New System.Drawing.Point(633, 161)
+        Me.NOMBRE_PACIENTE.Location = New System.Drawing.Point(600, 161)
         Me.NOMBRE_PACIENTE.Name = "NOMBRE_PACIENTE"
         Me.NOMBRE_PACIENTE.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.NOMBRE_PACIENTE.PlaceholderText = ""
@@ -281,7 +281,7 @@ Partial Class Registrar_facturas
         Me.Fecha_de_pago.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.Fecha_de_pago.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Fecha_de_pago.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.Fecha_de_pago.Location = New System.Drawing.Point(219, 271)
+        Me.Fecha_de_pago.Location = New System.Drawing.Point(184, 271)
         Me.Fecha_de_pago.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.Fecha_de_pago.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.Fecha_de_pago.Name = "Fecha_de_pago"
@@ -295,7 +295,7 @@ Partial Class Registrar_facturas
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(84, 376)
+        Me.Label4.Location = New System.Drawing.Point(49, 376)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(129, 21)
         Me.Label4.TabIndex = 20
@@ -307,7 +307,7 @@ Partial Class Registrar_facturas
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(766, 560)
+        Me.Label7.Location = New System.Drawing.Point(733, 560)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(94, 21)
         Me.Label7.TabIndex = 18
@@ -326,12 +326,12 @@ Partial Class Registrar_facturas
         Me.MONTO_TOTAL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MONTO_TOTAL.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.MONTO_TOTAL.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MONTO_TOTAL.Location = New System.Drawing.Point(866, 556)
+        Me.MONTO_TOTAL.Location = New System.Drawing.Point(833, 556)
         Me.MONTO_TOTAL.Name = "MONTO_TOTAL"
         Me.MONTO_TOTAL.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.MONTO_TOTAL.PlaceholderText = ""
         Me.MONTO_TOTAL.SelectedText = ""
-        Me.MONTO_TOTAL.Size = New System.Drawing.Size(152, 31)
+        Me.MONTO_TOTAL.Size = New System.Drawing.Size(143, 31)
         Me.MONTO_TOTAL.TabIndex = 17
         '
         'Label8
@@ -340,7 +340,7 @@ Partial Class Registrar_facturas
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(46, 489)
+        Me.Label8.Location = New System.Drawing.Point(11, 489)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(167, 21)
         Me.Label8.TabIndex = 16
@@ -358,7 +358,7 @@ Partial Class Registrar_facturas
         Me.Nombre_remitente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Nombre_remitente.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Nombre_remitente.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Nombre_remitente.Location = New System.Drawing.Point(219, 485)
+        Me.Nombre_remitente.Location = New System.Drawing.Point(184, 485)
         Me.Nombre_remitente.Name = "Nombre_remitente"
         Me.Nombre_remitente.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Nombre_remitente.PlaceholderText = ""
@@ -372,7 +372,7 @@ Partial Class Registrar_facturas
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(100, 275)
+        Me.Label9.Location = New System.Drawing.Point(65, 275)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(113, 21)
         Me.Label9.TabIndex = 14
@@ -384,7 +384,7 @@ Partial Class Registrar_facturas
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(516, 241)
+        Me.Label5.Location = New System.Drawing.Point(483, 241)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(167, 21)
         Me.Label5.TabIndex = 10
@@ -396,7 +396,7 @@ Partial Class Registrar_facturas
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(152, 164)
+        Me.Label6.Location = New System.Drawing.Point(117, 164)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(61, 21)
         Me.Label6.TabIndex = 8
@@ -414,7 +414,7 @@ Partial Class Registrar_facturas
         Me.Correo_usuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Correo_usuario.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Correo_usuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Correo_usuario.Location = New System.Drawing.Point(219, 161)
+        Me.Correo_usuario.Location = New System.Drawing.Point(184, 161)
         Me.Correo_usuario.Name = "Correo_usuario"
         Me.Correo_usuario.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.Correo_usuario.PlaceholderText = ""
@@ -428,7 +428,7 @@ Partial Class Registrar_facturas
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(556, 77)
+        Me.Label3.Location = New System.Drawing.Point(523, 77)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(71, 21)
         Me.Label3.TabIndex = 6
@@ -440,7 +440,7 @@ Partial Class Registrar_facturas
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(152, 74)
+        Me.Label2.Location = New System.Drawing.Point(117, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(61, 21)
         Me.Label2.TabIndex = 4
@@ -455,7 +455,7 @@ Partial Class Registrar_facturas
         Me.Btn_realizar_factura.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Btn_realizar_factura.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Btn_realizar_factura.ForeColor = System.Drawing.Color.White
-        Me.Btn_realizar_factura.Location = New System.Drawing.Point(416, 621)
+        Me.Btn_realizar_factura.Location = New System.Drawing.Point(383, 621)
         Me.Btn_realizar_factura.Name = "Btn_realizar_factura"
         Me.Btn_realizar_factura.Size = New System.Drawing.Size(267, 44)
         Me.Btn_realizar_factura.TabIndex = 0
@@ -465,7 +465,7 @@ Partial Class Registrar_facturas
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.AutoSize = True
-        Me.ClientSize = New System.Drawing.Size(1065, 705)
+        Me.ClientSize = New System.Drawing.Size(993, 686)
         Me.ControlBox = False
         Me.Controls.Add(Me.Guna2GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
