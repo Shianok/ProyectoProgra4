@@ -2,25 +2,8 @@
 
     Dim ID As Integer
     Private Sub Agregar_area_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        REFRESCAR_AREA()
-    End Sub
-
-    Friend Sub REFRESCAR_AREA()
-        L_AREAS.Items.Clear()
-        T.Tables.Clear() 'Limpiando el contenido de toda la tabla temporal
-
-        SQL = "SELECT ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA FROM AREAS"
-        CARGAR_TABLA(T, SQL)
-        If T.Tables(0).Rows.Count > 0 Then
-            For FILA As Integer = 0 To T.Tables(0).Rows.Count - 1 'se;ala el inicio de la tabla en 0,0
-                L_AREAS.Items.Add(T.Tables(0).Rows(FILA).ItemArray(0)) 'saca ID
-                L_AREAS.Items(L_AREAS.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(FILA).ItemArray(1))
-                L_AREAS.Items(L_AREAS.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(FILA).ItemArray(2))
-                L_AREAS.Items(L_AREAS.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(FILA).ItemArray(3))
-                L_AREAS.Items(L_AREAS.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(FILA).ItemArray(4))
-                L_AREAS.Items(L_AREAS.Items.Count - 1).SubItems.Add(T.Tables(0).Rows(FILA).ItemArray(5))
-            Next
-        End If
+        'REFRESCAR_AREA()
+        BUSQUEDA(L_AREAS, "AREAS", "ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO", "NOMBRE_AREA", BUSQUEDA_AREA.Text, False, 0)
     End Sub
 
     Friend Sub Actualizar()
@@ -29,15 +12,15 @@
 
         SQL = "UPDATE AREAS SET NOMBRE_AREA='" & NOMBRE_AREA.Text & "', NIVEL=" & Convert.ToInt32(NIVEL.Text) & ", CANTIDAD_EMPLEADOS=" & Convert.ToInt32(CANTIDAD_EMPLEADOS.Value) & ", HORA_ENTRADA='" & HoraInicial.ToString("HH:mm") & "', HORA_SALIDA='" & HoraFinal.ToString("HH:mm") & "' WHERE ID=" & ID & ""
         EJECUTAR(SQL)
-        REFRESCAR_AREA()
+        BUSQUEDA(L_AREAS, "AREAS", "ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO", "NOMBRE_AREA", BUSQUEDA_AREA.Text, False, 0)
         LIMPIAR()
         MsgBox("Informacion actualizada correctamente", vbInformation + vbOKOnly, "Guardando")
     End Sub
 
     Friend Sub BORRAR()
-        SQL = "DELETE FROM AREAS WHERE ID=" & ID & ""
+        SQL = "UPDATE AREAS SET ESTADO=" & 0 & " WHERE ID=" & ID & ""
         EJECUTAR(SQL)
-        REFRESCAR_AREA()
+        BUSQUEDA(L_AREAS, "AREAS", "ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO", "NOMBRE_AREA", BUSQUEDA_AREA.Text, False, 0)
         LIMPIAR()
         MsgBox("Informacion eliminada correctamente", vbInformation + vbOKOnly, "Guardando")
     End Sub
@@ -56,9 +39,9 @@
         Dim HoraInicial As DateTime = HORA_INICIO.Text + ":" + MINUTOS_INICIO.Text
         Dim HoraFinal As DateTime = HORA_FINAL.Text + ":" + MINUTOS_FINAL.Text
 
-        SQL = "INSERT INTO AREAS (ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA) VALUES(" & PK("AREAS", "ID") & ", '" & NOMBRE_AREA.Text & "', " & Convert.ToInt32(NIVEL.Text) & ", " & Convert.ToInt32(CANTIDAD_EMPLEADOS.Value) & ", '" & HoraInicial.ToString("HH:mm") & "', '" & HoraFinal.ToString("HH:mm") & "')"
+        SQL = "INSERT INTO AREAS (ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO) VALUES(" & PK("AREAS", "ID") & ", '" & NOMBRE_AREA.Text & "', " & Convert.ToInt32(NIVEL.Text) & ", " & Convert.ToInt32(CANTIDAD_EMPLEADOS.Value) & ", '" & HoraInicial.ToString("HH:mm") & "', '" & HoraFinal.ToString("HH:mm") & "')"
         EJECUTAR(SQL)
-        REFRESCAR_AREA()
+        BUSQUEDA(L_AREAS, "AREAS", "ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO", "NOMBRE_AREA", BUSQUEDA_AREA.Text, False, 0)
         LIMPIAR()
         MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
     End Sub
@@ -82,6 +65,11 @@
             hora_final_split = Split(hora_final_txt, ":")
             HORA_FINAL.Text = hora_final_split(0).ToString
             MINUTOS_FINAL.Text = hora_final_split(1).ToString
+            If L_AREAS.SelectedItems(0).SubItems(6).Text = 0 Then
+                ACTIVAR_AREA.Visible = True
+            Else
+                ACTIVAR_AREA.Visible = False
+            End If
         End If
     End Sub
 
@@ -93,4 +81,15 @@
         BORRAR()
     End Sub
 
+    Private Sub BUSQUEDA_AREA_TextChanged(sender As Object, e As EventArgs) Handles BUSQUEDA_AREA.TextChanged
+        BUSQUEDA(L_AREAS, "AREAS", "ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO", "NOMBRE_AREA", BUSQUEDA_AREA.Text, False, 0)
+    End Sub
+
+    Private Sub ACTIVAR_AREA_Click(sender As Object, e As EventArgs) Handles ACTIVAR_AREA.Click
+        SQL = "UPDATE AREAS SET ESTADO=" & 1 & " WHERE ID=" & ID & ""
+        EJECUTAR(SQL)
+        BUSQUEDA(L_AREAS, "AREAS", "ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO", "NOMBRE_AREA", BUSQUEDA_AREA.Text, False, 0)
+        LIMPIAR()
+        MsgBox("Informacion activada correctamente", vbInformation + vbOKOnly, "Se ha activado el campo seleccionado")
+    End Sub
 End Class

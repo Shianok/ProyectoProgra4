@@ -3,7 +3,7 @@
     Dim ID As Integer
 
     Private Sub Agregar_empleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cargarComboArea()
+        LLENAR(TIPO_AREA, "NIVEL", "AREAS", "ESTADO", 1)
     End Sub
     Private Sub BtnCerrarInterfaz_Click(sender As Object, e As EventArgs) Handles BTN_CerrarInterfaz.Click
         Me.Close()
