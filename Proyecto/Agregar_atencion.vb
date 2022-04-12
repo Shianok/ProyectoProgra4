@@ -8,7 +8,7 @@
         CEDULA.Clear()
         EDAD.ResetText()
         C_AREA.Items.Clear()
-        RECETA_MEDICA.Clear()
+        DIAGNOSTICO.Clear()
         L_ENFERMEDADES_DIAGNOSTICO.Items.Clear()
         DiagnosticoCont = ""
         DiagnosticoAux = ""
@@ -33,7 +33,7 @@
             DiagnosticoCont = DiagnosticoCont & DiagnosticoAux
         Next
 
-        SQL = "UPDATE ATENCION SET NOMBRE_PACIENTE='" & CONSULTA_NOMBRE_PACIENTE.Text & "', CEDULA_PACIENTE='" & CEDULA.Text & "', EDAD_PACIENTE=" & Convert.ToInt32(EDAD.Value) & ", RESULTADO_DIAGNOSTICO='" & DiagnosticoCont & "', RECETA='" & RECETA_MEDICA.Text & "', MEDICO_REMITENTE='" & NOMBRE_MEDICO.Text & "', FECHA='" & FECHA.Value & "', HORA='" & HoraConsulta.ToString("HH:mm") & "', AREA_ATENCION='" & C_AREA.Text & "' WHERE ID=" & ID & ""
+        SQL = "UPDATE ATENCION SET NOMBRE_PACIENTE='" & CONSULTA_NOMBRE_PACIENTE.Text & "', CEDULA_PACIENTE='" & CEDULA.Text & "', EDAD_PACIENTE=" & Convert.ToInt32(EDAD.Value) & ", RESULTADO_DIAGNOSTICO='" & DiagnosticoCont & "', RECETA='" & DIAGNOSTICO.Text & "', MEDICO_REMITENTE='" & NOMBRE_MEDICO.Text & "', FECHA='" & FECHA.Value & "', HORA='" & HoraConsulta.ToString("HH:mm") & "', AREA_ATENCION='" & C_AREA.Text & "' WHERE ID=" & ID & ""
         EJECUTAR(SQL)
         'REFRESCAR_AREA()
         LIMPIAR()
@@ -61,7 +61,7 @@
             Console.WriteLine("'{0}'", item)
         Next
 
-        SQL = "INSERT INTO ATENCION (ID, NOMBRE_PACIENTE, CEDULA_PACIENTE, EDAD_PACIENTE, RESULTADO_DIAGNOSTICO, RECETA, MEDICO_REMITENTE, FECHA, HORA, AREA_ATENCION) VALUES(" & PK("ATENCION", "ID") & ", '" & CONSULTA_NOMBRE_PACIENTE.Text & "', '" & CEDULA.Text & "', " & Convert.ToInt32(EDAD.Value) & ", '" & DiagnosticoCont & "', '" & RECETA_MEDICA.Text & "', '" & NOMBRE_MEDICO.Text & "', '" & FECHA.Value & "', '" & HoraConsulta.ToString("HH:mm") & "', '" & C_AREA.Text & "')"
+        SQL = "INSERT INTO ATENCION (ID, NOMBRE_PACIENTE, CEDULA_PACIENTE, EDAD_PACIENTE, ENFERMEDAD, RESULTADO_DIAGNOSTICO, RECETA, MEDICO_REMITENTE, FECHA, HORA, AREA_ATENCION) VALUES(" & PK("ATENCION", "ID") & ", '" & CONSULTA_NOMBRE_PACIENTE.Text & "', '" & CEDULA.Text & "', " & Convert.ToInt32(EDAD.Value) & ", '" & DiagnosticoCont & "', '" & DIAGNOSTICO.Text & "', '" & RECETA_MEDICA.Text & "','" & NOMBRE_MEDICO.Text & "', '" & FECHA.Value & "', '" & HoraConsulta.ToString("HH:mm") & "', '" & C_AREA.Text & "')"
         EJECUTAR(SQL)
         'IMPRIMIR()
         LIMPIAR()

@@ -95,7 +95,7 @@ Partial Class Interfaz
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(775, 12)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(59, 18)
+        Me.Label3.Size = New System.Drawing.Size(60, 18)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Label3"
         '
@@ -184,7 +184,7 @@ Partial Class Interfaz
         Me.Btn_ver_facturas.Name = "Btn_ver_facturas"
         Me.Btn_ver_facturas.Size = New System.Drawing.Size(244, 55)
         Me.Btn_ver_facturas.TabIndex = 29
-        Me.Btn_ver_facturas.Text = "Ver facturas"
+        Me.Btn_ver_facturas.Text = "Ver reportes:"
         Me.Btn_ver_facturas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Guna2Button5
@@ -313,7 +313,7 @@ Partial Class Interfaz
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(102, 72)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(106, 32)
+        Me.Label1.Size = New System.Drawing.Size(107, 32)
         Me.Label1.TabIndex = 20
         Me.Label1.Text = "Sistema"
         '
@@ -323,7 +323,7 @@ Partial Class Interfaz
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(78, 95)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(157, 32)
+        Me.Label2.Size = New System.Drawing.Size(158, 32)
         Me.Label2.TabIndex = 19
         Me.Label2.Text = "Hospitalario"
         '

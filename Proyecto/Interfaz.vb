@@ -97,4 +97,8 @@
         Me.Hide()
         Empleado_perfil.Show()
     End Sub
+
+    Private Sub Btn_ver_facturas_Click(sender As Object, e As EventArgs) Handles Btn_ver_facturas.Click
+        MostrarOpcion(Grafico)
+    End Sub
 End Class

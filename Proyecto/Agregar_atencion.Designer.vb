@@ -26,6 +26,9 @@ Partial Class Agregar_atencion
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.BTN_VER_CONSULTAS = New Guna.UI2.WinForms.Guna2Button()
         Me.AREA_GROUP = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.RECETA_MEDICA = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.L_ENFERMEDADES_DIAGNOSTICO = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CM_OPCIONES = New System.Windows.Forms.ContextMenuStrip(Me.components)
@@ -44,7 +47,7 @@ Partial Class Agregar_atencion
         Me.Label7 = New System.Windows.Forms.Label()
         Me.FECHA = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RECETA_MEDICA = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.DIAGNOSTICO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.NOMBRE_MEDICO = New Guna.UI2.WinForms.Guna2TextBox()
@@ -54,7 +57,6 @@ Partial Class Agregar_atencion
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CONSULTA_NOMBRE_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.AREA_GROUP.SuspendLayout()
         Me.CM_OPCIONES.SuspendLayout()
@@ -98,6 +100,8 @@ Partial Class Agregar_atencion
         Me.AREA_GROUP.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.AREA_GROUP.BorderRadius = 5
         Me.AREA_GROUP.BorderThickness = 2
+        Me.AREA_GROUP.Controls.Add(Me.RECETA_MEDICA)
+        Me.AREA_GROUP.Controls.Add(Me.Label11)
         Me.AREA_GROUP.Controls.Add(Me.Guna2Button1)
         Me.AREA_GROUP.Controls.Add(Me.L_ENFERMEDADES_DIAGNOSTICO)
         Me.AREA_GROUP.Controls.Add(Me.AGREGAR_ENFERMEDAD)
@@ -113,7 +117,7 @@ Partial Class Agregar_atencion
         Me.AREA_GROUP.Controls.Add(Me.Label7)
         Me.AREA_GROUP.Controls.Add(Me.FECHA)
         Me.AREA_GROUP.Controls.Add(Me.Label3)
-        Me.AREA_GROUP.Controls.Add(Me.RECETA_MEDICA)
+        Me.AREA_GROUP.Controls.Add(Me.DIAGNOSTICO)
         Me.AREA_GROUP.Controls.Add(Me.Label1)
         Me.AREA_GROUP.Controls.Add(Me.Label9)
         Me.AREA_GROUP.Controls.Add(Me.NOMBRE_MEDICO)
@@ -133,6 +137,55 @@ Partial Class Agregar_atencion
         Me.AREA_GROUP.TabIndex = 25
         Me.AREA_GROUP.Text = "Informacion de la consulta"
         '
+        'RECETA_MEDICA
+        '
+        Me.RECETA_MEDICA.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.RECETA_MEDICA.DefaultText = ""
+        Me.RECETA_MEDICA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.RECETA_MEDICA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.RECETA_MEDICA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.RECETA_MEDICA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.RECETA_MEDICA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.RECETA_MEDICA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RECETA_MEDICA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.RECETA_MEDICA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.RECETA_MEDICA.Location = New System.Drawing.Point(654, 344)
+        Me.RECETA_MEDICA.Name = "RECETA_MEDICA"
+        Me.RECETA_MEDICA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.RECETA_MEDICA.PlaceholderText = ""
+        Me.RECETA_MEDICA.SelectedText = ""
+        Me.RECETA_MEDICA.Size = New System.Drawing.Size(215, 59)
+        Me.RECETA_MEDICA.TabIndex = 82
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Black
+        Me.Label11.Location = New System.Drawing.Point(532, 361)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(113, 21)
+        Me.Label11.TabIndex = 81
+        Me.Label11.Text = "Receta medica:"
+        '
+        'Guna2Button1
+        '
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 5
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.Location = New System.Drawing.Point(421, 293)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(134, 34)
+        Me.Guna2Button1.TabIndex = 80
+        Me.Guna2Button1.Text = "Actualizar enfermedades"
+        '
         'L_ENFERMEDADES_DIAGNOSTICO
         '
         Me.L_ENFERMEDADES_DIAGNOSTICO.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1})
@@ -140,10 +193,10 @@ Partial Class Agregar_atencion
         Me.L_ENFERMEDADES_DIAGNOSTICO.FullRowSelect = True
         Me.L_ENFERMEDADES_DIAGNOSTICO.GridLines = True
         Me.L_ENFERMEDADES_DIAGNOSTICO.HideSelection = False
-        Me.L_ENFERMEDADES_DIAGNOSTICO.Location = New System.Drawing.Point(617, 191)
+        Me.L_ENFERMEDADES_DIAGNOSTICO.Location = New System.Drawing.Point(654, 191)
         Me.L_ENFERMEDADES_DIAGNOSTICO.MultiSelect = False
         Me.L_ENFERMEDADES_DIAGNOSTICO.Name = "L_ENFERMEDADES_DIAGNOSTICO"
-        Me.L_ENFERMEDADES_DIAGNOSTICO.Size = New System.Drawing.Size(252, 136)
+        Me.L_ENFERMEDADES_DIAGNOSTICO.Size = New System.Drawing.Size(215, 136)
         Me.L_ENFERMEDADES_DIAGNOSTICO.TabIndex = 79
         Me.L_ENFERMEDADES_DIAGNOSTICO.UseCompatibleStateImageBehavior = False
         Me.L_ENFERMEDADES_DIAGNOSTICO.View = System.Windows.Forms.View.Details
@@ -182,9 +235,9 @@ Partial Class Agregar_atencion
         Me.AGREGAR_ENFERMEDAD.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.AGREGAR_ENFERMEDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.AGREGAR_ENFERMEDAD.ForeColor = System.Drawing.Color.White
-        Me.AGREGAR_ENFERMEDAD.Location = New System.Drawing.Point(425, 270)
+        Me.AGREGAR_ENFERMEDAD.Location = New System.Drawing.Point(421, 251)
         Me.AGREGAR_ENFERMEDAD.Name = "AGREGAR_ENFERMEDAD"
-        Me.AGREGAR_ENFERMEDAD.Size = New System.Drawing.Size(138, 36)
+        Me.AGREGAR_ENFERMEDAD.Size = New System.Drawing.Size(136, 36)
         Me.AGREGAR_ENFERMEDAD.TabIndex = 27
         Me.AGREGAR_ENFERMEDAD.Text = "Agregar enfermedad al diagnostico"
         '
@@ -342,25 +395,25 @@ Partial Class Agregar_atencion
         Me.Label3.TabIndex = 65
         Me.Label3.Text = "Fecha de consulta:"
         '
-        'RECETA_MEDICA
+        'DIAGNOSTICO
         '
-        Me.RECETA_MEDICA.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.RECETA_MEDICA.DefaultText = ""
-        Me.RECETA_MEDICA.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.RECETA_MEDICA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.RECETA_MEDICA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.RECETA_MEDICA.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.RECETA_MEDICA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.RECETA_MEDICA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RECETA_MEDICA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.RECETA_MEDICA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RECETA_MEDICA.Location = New System.Drawing.Point(208, 344)
-        Me.RECETA_MEDICA.Name = "RECETA_MEDICA"
-        Me.RECETA_MEDICA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.RECETA_MEDICA.PlaceholderText = ""
-        Me.RECETA_MEDICA.SelectedText = ""
-        Me.RECETA_MEDICA.Size = New System.Drawing.Size(657, 59)
-        Me.RECETA_MEDICA.TabIndex = 64
+        Me.DIAGNOSTICO.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.DIAGNOSTICO.DefaultText = ""
+        Me.DIAGNOSTICO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.DIAGNOSTICO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.DIAGNOSTICO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.DIAGNOSTICO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.DIAGNOSTICO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.DIAGNOSTICO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DIAGNOSTICO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.DIAGNOSTICO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.DIAGNOSTICO.Location = New System.Drawing.Point(208, 344)
+        Me.DIAGNOSTICO.Name = "DIAGNOSTICO"
+        Me.DIAGNOSTICO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.DIAGNOSTICO.PlaceholderText = ""
+        Me.DIAGNOSTICO.SelectedText = ""
+        Me.DIAGNOSTICO.Size = New System.Drawing.Size(207, 59)
+        Me.DIAGNOSTICO.TabIndex = 64
         '
         'Label1
         '
@@ -368,11 +421,11 @@ Partial Class Agregar_atencion
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(89, 361)
+        Me.Label1.Location = New System.Drawing.Point(98, 361)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(113, 21)
+        Me.Label1.Size = New System.Drawing.Size(95, 21)
         Me.Label1.TabIndex = 63
-        Me.Label1.Text = "Receta medica:"
+        Me.Label1.Text = "Diagnostico:"
         '
         'Label9
         '
@@ -494,23 +547,6 @@ Partial Class Agregar_atencion
         Me.Label4.TabIndex = 51
         Me.Label4.Text = "Nombre de paciente:"
         '
-        'Guna2Button1
-        '
-        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Button1.BorderRadius = 5
-        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(204, 312)
-        Me.Guna2Button1.Name = "Guna2Button1"
-        Me.Guna2Button1.Size = New System.Drawing.Size(138, 26)
-        Me.Guna2Button1.TabIndex = 80
-        Me.Guna2Button1.Text = "Actualizar combo"
-        '
         'Agregar_atencion
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -544,7 +580,7 @@ Partial Class Agregar_atencion
     Friend WithEvents Label7 As Label
     Friend WithEvents FECHA As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label3 As Label
-    Friend WithEvents RECETA_MEDICA As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents DIAGNOSTICO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents EDAD As Guna.UI2.WinForms.Guna2NumericUpDown
     Friend WithEvents C_AREA As Guna.UI2.WinForms.Guna2ComboBox
@@ -561,4 +597,6 @@ Partial Class Agregar_atencion
     Friend WithEvents AgregarEnfermedadAlSistemaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents RECETA_MEDICA As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label11 As Label
 End Class
