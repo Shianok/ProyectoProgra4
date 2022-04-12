@@ -22,9 +22,24 @@ Partial Class Agregar_atencion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.BTN_VER_CONSULTAS = New Guna.UI2.WinForms.Guna2Button()
         Me.AREA_GROUP = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.L_ENFERMEDADES_DIAGNOSTICO = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CM_OPCIONES = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.AgregarEnfermedadAlSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AGREGAR_ENFERMEDAD = New Guna.UI2.WinForms.Guna2Button()
+        Me.COMBO_ENFERMEDADES = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.MINUTOS_CONSULTA = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.HORA_CONSULTA = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.EDAD = New Guna.UI2.WinForms.Guna2NumericUpDown()
+        Me.C_AREA = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.BTN_REGISTRAR_CONSULTA = New Guna.UI2.WinForms.Guna2Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.FECHA = New Guna.UI2.WinForms.Guna2DateTimePicker()
@@ -34,21 +49,15 @@ Partial Class Agregar_atencion
         Me.Label9 = New System.Windows.Forms.Label()
         Me.NOMBRE_MEDICO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CORREO_PACIENTE = New System.Windows.Forms.Label()
-        Me.CONSULTA_TXT_DIAGNOSTICO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CEDULA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CONSULTA_NOMBRE_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.C_AREA = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.EDAD = New Guna.UI2.WinForms.Guna2NumericUpDown()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.MINUTOS_CONSULTA = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.HORA_CONSULTA = New System.Windows.Forms.ComboBox()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.AREA_GROUP.SuspendLayout()
+        Me.CM_OPCIONES.SuspendLayout()
         CType(Me.EDAD, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -89,6 +98,10 @@ Partial Class Agregar_atencion
         Me.AREA_GROUP.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.AREA_GROUP.BorderRadius = 5
         Me.AREA_GROUP.BorderThickness = 2
+        Me.AREA_GROUP.Controls.Add(Me.Guna2Button1)
+        Me.AREA_GROUP.Controls.Add(Me.L_ENFERMEDADES_DIAGNOSTICO)
+        Me.AREA_GROUP.Controls.Add(Me.AGREGAR_ENFERMEDAD)
+        Me.AREA_GROUP.Controls.Add(Me.COMBO_ENFERMEDADES)
         Me.AREA_GROUP.Controls.Add(Me.Label5)
         Me.AREA_GROUP.Controls.Add(Me.MINUTOS_CONSULTA)
         Me.AREA_GROUP.Controls.Add(Me.Label8)
@@ -105,7 +118,6 @@ Partial Class Agregar_atencion
         Me.AREA_GROUP.Controls.Add(Me.Label9)
         Me.AREA_GROUP.Controls.Add(Me.NOMBRE_MEDICO)
         Me.AREA_GROUP.Controls.Add(Me.CORREO_PACIENTE)
-        Me.AREA_GROUP.Controls.Add(Me.CONSULTA_TXT_DIAGNOSTICO)
         Me.AREA_GROUP.Controls.Add(Me.Label2)
         Me.AREA_GROUP.Controls.Add(Me.CEDULA)
         Me.AREA_GROUP.Controls.Add(Me.Label6)
@@ -120,6 +132,160 @@ Partial Class Agregar_atencion
         Me.AREA_GROUP.Size = New System.Drawing.Size(959, 579)
         Me.AREA_GROUP.TabIndex = 25
         Me.AREA_GROUP.Text = "Informacion de la consulta"
+        '
+        'L_ENFERMEDADES_DIAGNOSTICO
+        '
+        Me.L_ENFERMEDADES_DIAGNOSTICO.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1})
+        Me.L_ENFERMEDADES_DIAGNOSTICO.ContextMenuStrip = Me.CM_OPCIONES
+        Me.L_ENFERMEDADES_DIAGNOSTICO.FullRowSelect = True
+        Me.L_ENFERMEDADES_DIAGNOSTICO.GridLines = True
+        Me.L_ENFERMEDADES_DIAGNOSTICO.HideSelection = False
+        Me.L_ENFERMEDADES_DIAGNOSTICO.Location = New System.Drawing.Point(617, 191)
+        Me.L_ENFERMEDADES_DIAGNOSTICO.MultiSelect = False
+        Me.L_ENFERMEDADES_DIAGNOSTICO.Name = "L_ENFERMEDADES_DIAGNOSTICO"
+        Me.L_ENFERMEDADES_DIAGNOSTICO.Size = New System.Drawing.Size(252, 136)
+        Me.L_ENFERMEDADES_DIAGNOSTICO.TabIndex = 79
+        Me.L_ENFERMEDADES_DIAGNOSTICO.UseCompatibleStateImageBehavior = False
+        Me.L_ENFERMEDADES_DIAGNOSTICO.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "Enfermedades diagnosticadas"
+        Me.ColumnHeader1.Width = 248
+        '
+        'CM_OPCIONES
+        '
+        Me.CM_OPCIONES.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarEnfermedadAlSistemaToolStripMenuItem, Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem})
+        Me.CM_OPCIONES.Name = "CM_OPCIONES"
+        Me.CM_OPCIONES.Size = New System.Drawing.Size(281, 48)
+        '
+        'AgregarEnfermedadAlSistemaToolStripMenuItem
+        '
+        Me.AgregarEnfermedadAlSistemaToolStripMenuItem.Name = "AgregarEnfermedadAlSistemaToolStripMenuItem"
+        Me.AgregarEnfermedadAlSistemaToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
+        Me.AgregarEnfermedadAlSistemaToolStripMenuItem.Text = "Agregar enfermedad al sistema"
+        '
+        'EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem
+        '
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Name = "EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem"
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Size = New System.Drawing.Size(280, 22)
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Text = "Eliminar la enfermedad del diagnostico"
+        '
+        'AGREGAR_ENFERMEDAD
+        '
+        Me.AGREGAR_ENFERMEDAD.BackColor = System.Drawing.Color.Transparent
+        Me.AGREGAR_ENFERMEDAD.BorderRadius = 5
+        Me.AGREGAR_ENFERMEDAD.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.AGREGAR_ENFERMEDAD.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.AGREGAR_ENFERMEDAD.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.AGREGAR_ENFERMEDAD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.AGREGAR_ENFERMEDAD.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.AGREGAR_ENFERMEDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.AGREGAR_ENFERMEDAD.ForeColor = System.Drawing.Color.White
+        Me.AGREGAR_ENFERMEDAD.Location = New System.Drawing.Point(425, 270)
+        Me.AGREGAR_ENFERMEDAD.Name = "AGREGAR_ENFERMEDAD"
+        Me.AGREGAR_ENFERMEDAD.Size = New System.Drawing.Size(138, 36)
+        Me.AGREGAR_ENFERMEDAD.TabIndex = 27
+        Me.AGREGAR_ENFERMEDAD.Text = "Agregar enfermedad al diagnostico"
+        '
+        'COMBO_ENFERMEDADES
+        '
+        Me.COMBO_ENFERMEDADES.BackColor = System.Drawing.Color.Transparent
+        Me.COMBO_ENFERMEDADES.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.COMBO_ENFERMEDADES.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.COMBO_ENFERMEDADES.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.COMBO_ENFERMEDADES.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.COMBO_ENFERMEDADES.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.COMBO_ENFERMEDADES.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.COMBO_ENFERMEDADES.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.COMBO_ENFERMEDADES.ItemHeight = 30
+        Me.COMBO_ENFERMEDADES.Location = New System.Drawing.Point(204, 270)
+        Me.COMBO_ENFERMEDADES.Name = "COMBO_ENFERMEDADES"
+        Me.COMBO_ENFERMEDADES.Size = New System.Drawing.Size(211, 36)
+        Me.COMBO_ENFERMEDADES.TabIndex = 78
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Black
+        Me.Label5.Location = New System.Drawing.Point(799, 440)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(70, 21)
+        Me.Label5.TabIndex = 77
+        Me.Label5.Text = ":Minutos"
+        '
+        'MINUTOS_CONSULTA
+        '
+        Me.MINUTOS_CONSULTA.FormattingEnabled = True
+        Me.MINUTOS_CONSULTA.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
+        Me.MINUTOS_CONSULTA.Location = New System.Drawing.Point(745, 440)
+        Me.MINUTOS_CONSULTA.Name = "MINUTOS_CONSULTA"
+        Me.MINUTOS_CONSULTA.Size = New System.Drawing.Size(53, 23)
+        Me.MINUTOS_CONSULTA.TabIndex = 76
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(685, 439)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(54, 21)
+        Me.Label8.TabIndex = 75
+        Me.Label8.Text = ":Horas"
+        '
+        'HORA_CONSULTA
+        '
+        Me.HORA_CONSULTA.FormattingEnabled = True
+        Me.HORA_CONSULTA.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
+        Me.HORA_CONSULTA.Location = New System.Drawing.Point(631, 439)
+        Me.HORA_CONSULTA.Name = "HORA_CONSULTA"
+        Me.HORA_CONSULTA.Size = New System.Drawing.Size(53, 23)
+        Me.HORA_CONSULTA.TabIndex = 74
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(500, 438)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(130, 21)
+        Me.Label10.TabIndex = 73
+        Me.Label10.Text = "Hora de consulta:"
+        '
+        'EDAD
+        '
+        Me.EDAD.BackColor = System.Drawing.Color.Transparent
+        Me.EDAD.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.EDAD.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.EDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.EDAD.ForeColor = System.Drawing.Color.Black
+        Me.EDAD.Location = New System.Drawing.Point(654, 125)
+        Me.EDAD.Name = "EDAD"
+        Me.EDAD.Size = New System.Drawing.Size(211, 33)
+        Me.EDAD.TabIndex = 72
+        Me.EDAD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        '
+        'C_AREA
+        '
+        Me.C_AREA.BackColor = System.Drawing.Color.Transparent
+        Me.C_AREA.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.C_AREA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.C_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.C_AREA.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.C_AREA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.C_AREA.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.C_AREA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.C_AREA.ItemHeight = 30
+        Me.C_AREA.Location = New System.Drawing.Point(204, 191)
+        Me.C_AREA.Name = "C_AREA"
+        Me.C_AREA.Size = New System.Drawing.Size(211, 36)
+        Me.C_AREA.TabIndex = 71
         '
         'BTN_REGISTRAR_CONSULTA
         '
@@ -252,37 +418,17 @@ Partial Class Agregar_atencion
         Me.CORREO_PACIENTE.TabIndex = 59
         Me.CORREO_PACIENTE.Text = "Nombre del medico:"
         '
-        'CONSULTA_TXT_DIAGNOSTICO
-        '
-        Me.CONSULTA_TXT_DIAGNOSTICO.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CONSULTA_TXT_DIAGNOSTICO.DefaultText = ""
-        Me.CONSULTA_TXT_DIAGNOSTICO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.CONSULTA_TXT_DIAGNOSTICO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.CONSULTA_TXT_DIAGNOSTICO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CONSULTA_TXT_DIAGNOSTICO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CONSULTA_TXT_DIAGNOSTICO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CONSULTA_TXT_DIAGNOSTICO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CONSULTA_TXT_DIAGNOSTICO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CONSULTA_TXT_DIAGNOSTICO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CONSULTA_TXT_DIAGNOSTICO.Location = New System.Drawing.Point(208, 255)
-        Me.CONSULTA_TXT_DIAGNOSTICO.Name = "CONSULTA_TXT_DIAGNOSTICO"
-        Me.CONSULTA_TXT_DIAGNOSTICO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.CONSULTA_TXT_DIAGNOSTICO.PlaceholderText = ""
-        Me.CONSULTA_TXT_DIAGNOSTICO.SelectedText = ""
-        Me.CONSULTA_TXT_DIAGNOSTICO.Size = New System.Drawing.Size(657, 59)
-        Me.CONSULTA_TXT_DIAGNOSTICO.TabIndex = 58
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(15, 272)
+        Me.Label2.Location = New System.Drawing.Point(87, 276)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(187, 21)
+        Me.Label2.Size = New System.Drawing.Size(106, 21)
         Me.Label2.TabIndex = 57
-        Me.Label2.Text = "Resultado de diagnóstico:"
+        Me.Label2.Text = "Enfemedades:"
         '
         'CEDULA
         '
@@ -348,88 +494,22 @@ Partial Class Agregar_atencion
         Me.Label4.TabIndex = 51
         Me.Label4.Text = "Nombre de paciente:"
         '
-        'C_AREA
+        'Guna2Button1
         '
-        Me.C_AREA.BackColor = System.Drawing.Color.Transparent
-        Me.C_AREA.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.C_AREA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.C_AREA.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.C_AREA.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.C_AREA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.C_AREA.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.C_AREA.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.C_AREA.ItemHeight = 30
-        Me.C_AREA.Location = New System.Drawing.Point(204, 191)
-        Me.C_AREA.Name = "C_AREA"
-        Me.C_AREA.Size = New System.Drawing.Size(211, 36)
-        Me.C_AREA.TabIndex = 71
-        '
-        'EDAD
-        '
-        Me.EDAD.BackColor = System.Drawing.Color.Transparent
-        Me.EDAD.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.EDAD.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.EDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.EDAD.ForeColor = System.Drawing.Color.Black
-        Me.EDAD.Location = New System.Drawing.Point(654, 125)
-        Me.EDAD.Name = "EDAD"
-        Me.EDAD.Size = New System.Drawing.Size(211, 33)
-        Me.EDAD.TabIndex = 72
-        Me.EDAD.UpDownButtonFillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(799, 440)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 21)
-        Me.Label5.TabIndex = 77
-        Me.Label5.Text = ":Minutos"
-        '
-        'MINUTOS_CONSULTA
-        '
-        Me.MINUTOS_CONSULTA.FormattingEnabled = True
-        Me.MINUTOS_CONSULTA.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59"})
-        Me.MINUTOS_CONSULTA.Location = New System.Drawing.Point(745, 440)
-        Me.MINUTOS_CONSULTA.Name = "MINUTOS_CONSULTA"
-        Me.MINUTOS_CONSULTA.Size = New System.Drawing.Size(53, 23)
-        Me.MINUTOS_CONSULTA.TabIndex = 76
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(685, 439)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(54, 21)
-        Me.Label8.TabIndex = 75
-        Me.Label8.Text = ":Horas"
-        '
-        'HORA_CONSULTA
-        '
-        Me.HORA_CONSULTA.FormattingEnabled = True
-        Me.HORA_CONSULTA.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"})
-        Me.HORA_CONSULTA.Location = New System.Drawing.Point(631, 439)
-        Me.HORA_CONSULTA.Name = "HORA_CONSULTA"
-        Me.HORA_CONSULTA.Size = New System.Drawing.Size(53, 23)
-        Me.HORA_CONSULTA.TabIndex = 74
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(500, 438)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(130, 21)
-        Me.Label10.TabIndex = 73
-        Me.Label10.Text = "Hora de consulta:"
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 5
+        Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Guna2Button1.ForeColor = System.Drawing.Color.White
+        Me.Guna2Button1.Location = New System.Drawing.Point(204, 312)
+        Me.Guna2Button1.Name = "Guna2Button1"
+        Me.Guna2Button1.Size = New System.Drawing.Size(138, 26)
+        Me.Guna2Button1.TabIndex = 80
+        Me.Guna2Button1.Text = "Actualizar combo"
         '
         'Agregar_atencion
         '
@@ -443,6 +523,7 @@ Partial Class Agregar_atencion
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.AREA_GROUP.ResumeLayout(False)
         Me.AREA_GROUP.PerformLayout()
+        Me.CM_OPCIONES.ResumeLayout(False)
         CType(Me.EDAD, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -454,7 +535,6 @@ Partial Class Agregar_atencion
     Friend WithEvents Label9 As Label
     Friend WithEvents NOMBRE_MEDICO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CORREO_PACIENTE As Label
-    Friend WithEvents CONSULTA_TXT_DIAGNOSTICO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents CEDULA As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
@@ -473,4 +553,12 @@ Partial Class Agregar_atencion
     Friend WithEvents Label8 As Label
     Friend WithEvents HORA_CONSULTA As ComboBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents AGREGAR_ENFERMEDAD As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents COMBO_ENFERMEDADES As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents L_ENFERMEDADES_DIAGNOSTICO As ListView
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents CM_OPCIONES As ContextMenuStrip
+    Friend WithEvents AgregarEnfermedadAlSistemaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
 End Class

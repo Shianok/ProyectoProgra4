@@ -98,6 +98,12 @@
     <Compile Include="ACTUALIZAR_PACIENTE.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AgregarEnfermedad.Designer.vb">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarEnfermedad.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Agregar_area.Designer.vb">
       <DependentUpon>Agregar_area.vb</DependentUpon>
     </Compile>
@@ -187,6 +193,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ACTUALIZAR_PACIENTE.resx">
       <DependentUpon>ACTUALIZAR_PACIENTE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarEnfermedad.resx">
+      <DependentUpon>AgregarEnfermedad.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar_area.resx">
       <DependentUpon>Agregar_area.vb</DependentUpon>
