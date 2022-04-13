@@ -101,7 +101,7 @@ Partial Class Grafico
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(623, 390)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 32)
+        Me.Label2.Size = New System.Drawing.Size(114, 32)
         Me.Label2.TabIndex = 10
         Me.Label2.Text = "Datos de:"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -114,7 +114,7 @@ Partial Class Grafico
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(623, 275)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 32)
+        Me.Label1.Size = New System.Drawing.Size(122, 32)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Buscar en:"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -201,7 +201,7 @@ Partial Class Grafico
         Me.ComboTabla.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.ComboTabla.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.ComboTabla.ItemHeight = 30
-        Me.ComboTabla.Items.AddRange(New Object() {"Paciente", "Atencion", "Facturas", "Empleado", "Consulta"})
+        Me.ComboTabla.Items.AddRange(New Object() {"Paciente", "Atencion", "Facturas", "Empleado"})
         Me.ComboTabla.Location = New System.Drawing.Point(629, 310)
         Me.ComboTabla.Name = "ComboTabla"
         Me.ComboTabla.Size = New System.Drawing.Size(235, 36)
@@ -232,7 +232,7 @@ Partial Class Grafico
         Me.CANTI_FACTURAS.ForeColor = System.Drawing.Color.White
         Me.CANTI_FACTURAS.Location = New System.Drawing.Point(51, 53)
         Me.CANTI_FACTURAS.Name = "CANTI_FACTURAS"
-        Me.CANTI_FACTURAS.Size = New System.Drawing.Size(84, 32)
+        Me.CANTI_FACTURAS.Size = New System.Drawing.Size(83, 32)
         Me.CANTI_FACTURAS.TabIndex = 4
         Me.CANTI_FACTURAS.Text = "Label1"
         Me.CANTI_FACTURAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -262,7 +262,7 @@ Partial Class Grafico
         Me.EMPLEADOS_ACTIVOS.ForeColor = System.Drawing.Color.White
         Me.EMPLEADOS_ACTIVOS.Location = New System.Drawing.Point(48, 54)
         Me.EMPLEADOS_ACTIVOS.Name = "EMPLEADOS_ACTIVOS"
-        Me.EMPLEADOS_ACTIVOS.Size = New System.Drawing.Size(84, 32)
+        Me.EMPLEADOS_ACTIVOS.Size = New System.Drawing.Size(83, 32)
         Me.EMPLEADOS_ACTIVOS.TabIndex = 3
         Me.EMPLEADOS_ACTIVOS.Text = "Label1"
         Me.EMPLEADOS_ACTIVOS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -292,7 +292,7 @@ Partial Class Grafico
         Me.CANTI_CONSULTAS.ForeColor = System.Drawing.Color.White
         Me.CANTI_CONSULTAS.Location = New System.Drawing.Point(47, 54)
         Me.CANTI_CONSULTAS.Name = "CANTI_CONSULTAS"
-        Me.CANTI_CONSULTAS.Size = New System.Drawing.Size(84, 32)
+        Me.CANTI_CONSULTAS.Size = New System.Drawing.Size(83, 32)
         Me.CANTI_CONSULTAS.TabIndex = 2
         Me.CANTI_CONSULTAS.Text = "Label1"
         Me.CANTI_CONSULTAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -323,7 +323,7 @@ Partial Class Grafico
         Me.PacientesActivos.ForeColor = System.Drawing.Color.White
         Me.PacientesActivos.Location = New System.Drawing.Point(44, 54)
         Me.PacientesActivos.Name = "PacientesActivos"
-        Me.PacientesActivos.Size = New System.Drawing.Size(84, 32)
+        Me.PacientesActivos.Size = New System.Drawing.Size(83, 32)
         Me.PacientesActivos.TabIndex = 1
         Me.PacientesActivos.Text = "Label1"
         Me.PacientesActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

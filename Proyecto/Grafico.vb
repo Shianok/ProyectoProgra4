@@ -8,18 +8,24 @@
         Dim dt As New DataTable
 
         T2.Tables.Clear()
+
         SQL = "Select ENFERMEDADES, COUNT(ENFERMEDADES) AS CANT
                FROM ATENCION AS P
                GROUP BY ENFERMEDADES"
         CARGAR_TABLA(T2, SQL)
 
+        If T2.Tables(0).Rows.Count > 0 Then
 
-        For i = 0 To T2.Tables(0).Rows.Count - 1
-            Diagnostico.Add(T2.Tables(0).Rows(i).ItemArray(0))
-            CantDiag.Add(T2.Tables(0).Rows(i).ItemArray(1))
-        Next
-
-        ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
+            For i = 0 To T2.Tables(0).Rows.Count - 1
+                Diagnostico.Add(T2.Tables(0).Rows(i).ItemArray(0))
+                CantDiag.Add(T2.Tables(0).Rows(i).ItemArray(1))
+            Next
+            ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
+        Else
+            Diagnostico.Add("No hay datos")
+            CantDiag.Add(1)
+            ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
+        End If
 
     End Sub
     Private Sub Reiniciar_grafico_Click(sender As Object, e As EventArgs) Handles Reiniciar_grafico.Click
@@ -68,7 +74,6 @@
 
     Private Sub CargarGraDiagnostico(ByVal CAMPO As String, ByVal TABLA As String)
 
-
         Dim Diagnostico As ArrayList = New ArrayList()
         Dim CantDiag As ArrayList = New ArrayList()
         Dim i As Integer = 0
@@ -80,13 +85,18 @@
                GROUP BY " & CAMPO & ""
         CARGAR_TABLA(T3, SQL)
 
-
-        For i = 0 To T3.Tables(0).Rows.Count - 1
-            Diagnostico.Add(T3.Tables(0).Rows(i).ItemArray(0))
-            CantDiag.Add(T3.Tables(0).Rows(i).ItemArray(1))
-        Next
-
-        ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
+        If T3.Tables(0).Rows.Count > 0 Then
+            For i = 0 To T3.Tables(0).Rows.Count - 1
+                Diagnostico.Add(T3.Tables(0).Rows(i).ItemArray(0))
+                CantDiag.Add(T3.Tables(0).Rows(i).ItemArray(1))
+            Next
+            ChartDiagnosticos.Series(0).ChartType = DataVisualization.Charting.SeriesChartType.Column
+            ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
+        Else
+            Diagnostico.Add("No hay datos")
+            CantDiag.Add(1)
+            ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
+        End If
 
     End Sub
 
@@ -127,28 +137,20 @@
                 ComboDato.Items.Add("Resultado_diagnostico")
 
             Else
-                If Seleccion = "Consulta" Then
+                If Seleccion = "Facturas" Then
                     ComboDato.ResetText()
                     ComboDato.Items.Clear()
-                    ComboDato.Items.Add("Lugar_de_residencia")
-
+                    ComboDato.Items.Add("Monto")
+                    ComboDato.Items.Add("AREA_ATENCION")
                 Else
                     If Seleccion = "Empleado" Then
                         ComboDato.ResetText()
                         ComboDato.Items.Clear()
-                        ComboDato.Items.Add("Lugar_de_residencia")
-
-                    Else
-                        If Seleccion = "Facturas" Then
-                            ComboDato.ResetText()
-                            ComboDato.Items.Clear()
-                            ComboDato.Items.Add("Monto")
-                            ComboDato.Items.Add("AREA_ATENCION")
-                        End If
+                        ComboDato.Items.Add("LUGAR_RESIDENCIA")
                     End If
-
                 End If
             End If
+
         End If
 
     End Sub
