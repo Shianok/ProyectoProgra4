@@ -115,7 +115,7 @@
             ComboDato.ResetText()
             ComboDato.Items.Clear()
             ComboDato.Items.Add("Padecimientos")
-            ComboDato.Items.Add("Lugar de residencia")
+            ComboDato.Items.Add("Lugar_residencia")
 
         Else
             If Seleccion = "Atencion" Then
@@ -123,26 +123,27 @@
                 ComboDato.Items.Clear()
                 ComboDato.Items.Add("Edad")
                 ComboDato.Items.Add("Enfermedades")
-                ComboDato.Items.Add("Area de atencion")
+                ComboDato.Items.Add("Area_atencion")
+                ComboDato.Items.Add("Resultado_diagnostico")
 
             Else
                 If Seleccion = "Consulta" Then
                     ComboDato.ResetText()
                     ComboDato.Items.Clear()
-                    ComboDato.Items.Add("Lugar de residencia")
+                    ComboDato.Items.Add("Lugar_de_residencia")
 
                 Else
                     If Seleccion = "Empleado" Then
                         ComboDato.ResetText()
                         ComboDato.Items.Clear()
-                        ComboDato.Items.Add("Lugar de residencia")
+                        ComboDato.Items.Add("Lugar_de_residencia")
 
                     Else
                         If Seleccion = "Facturas" Then
                             ComboDato.ResetText()
                             ComboDato.Items.Clear()
                             ComboDato.Items.Add("Monto")
-                            ComboDato.Items.Add("Area de atencion")
+                            ComboDato.Items.Add("AREA_ATENCION")
                         End If
                     End If
 
