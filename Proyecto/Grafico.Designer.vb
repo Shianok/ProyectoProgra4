@@ -29,8 +29,8 @@ Partial Class Grafico
         Me.ChartDiagnosticos = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2ComboBox2 = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.ComboDato = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.ComboTabla = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Guna2GroupBox5 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.Guna2GroupBox4 = New Guna.UI2.WinForms.Guna2GroupBox()
@@ -40,6 +40,9 @@ Partial Class Grafico
         Me.CANTI_CONSULTAS = New System.Windows.Forms.Label()
         Me.EMPLEADOS_ACTIVOS = New System.Windows.Forms.Label()
         Me.CANTI_FACTURAS = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Reiniciar_grafico = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.ChartDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GroupBox3.SuspendLayout()
@@ -51,11 +54,14 @@ Partial Class Grafico
         'Guna2GroupBox1
         '
         Me.Guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Guna2GroupBox1.Controls.Add(Me.Reiniciar_grafico)
+        Me.Guna2GroupBox1.Controls.Add(Me.Label2)
+        Me.Guna2GroupBox1.Controls.Add(Me.Label1)
         Me.Guna2GroupBox1.Controls.Add(Me.ChartDiagnosticos)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2Button2)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2Button1)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2ComboBox2)
-        Me.Guna2GroupBox1.Controls.Add(Me.Guna2ComboBox1)
+        Me.Guna2GroupBox1.Controls.Add(Me.ComboDato)
+        Me.Guna2GroupBox1.Controls.Add(Me.ComboTabla)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2GroupBox3)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2GroupBox5)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2GroupBox4)
@@ -63,7 +69,7 @@ Partial Class Grafico
         Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Guna2GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.White
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(0, -1)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(994, 686)
@@ -95,6 +101,8 @@ Partial Class Grafico
         '
         'Guna2Button2
         '
+        Me.Guna2Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button2.BorderRadius = 5
         Me.Guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -102,7 +110,7 @@ Partial Class Grafico
         Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(768, 507)
+        Me.Guna2Button2.Location = New System.Drawing.Point(824, 513)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(148, 59)
         Me.Guna2Button2.TabIndex = 7
@@ -110,6 +118,8 @@ Partial Class Grafico
         '
         'Guna2Button1
         '
+        Me.Guna2Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Button1.BorderRadius = 5
         Me.Guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -117,41 +127,42 @@ Partial Class Grafico
         Me.Guna2Button1.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button1.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button1.Location = New System.Drawing.Point(594, 507)
+        Me.Guna2Button1.Location = New System.Drawing.Point(658, 513)
         Me.Guna2Button1.Name = "Guna2Button1"
         Me.Guna2Button1.Size = New System.Drawing.Size(148, 59)
         Me.Guna2Button1.TabIndex = 6
         Me.Guna2Button1.Text = "Mostrar Grafico"
         '
-        'Guna2ComboBox2
+        'ComboDato
         '
-        Me.Guna2ComboBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox2.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.Guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Guna2ComboBox2.ItemHeight = 30
-        Me.Guna2ComboBox2.Location = New System.Drawing.Point(629, 425)
-        Me.Guna2ComboBox2.Name = "Guna2ComboBox2"
-        Me.Guna2ComboBox2.Size = New System.Drawing.Size(235, 36)
-        Me.Guna2ComboBox2.TabIndex = 5
+        Me.ComboDato.BackColor = System.Drawing.Color.Transparent
+        Me.ComboDato.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ComboDato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboDato.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ComboDato.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ComboDato.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ComboDato.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.ComboDato.ItemHeight = 30
+        Me.ComboDato.Location = New System.Drawing.Point(629, 425)
+        Me.ComboDato.Name = "ComboDato"
+        Me.ComboDato.Size = New System.Drawing.Size(235, 36)
+        Me.ComboDato.TabIndex = 5
         '
-        'Guna2ComboBox1
+        'ComboTabla
         '
-        Me.Guna2ComboBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.Guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Guna2ComboBox1.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.Guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Guna2ComboBox1.ItemHeight = 30
-        Me.Guna2ComboBox1.Location = New System.Drawing.Point(629, 310)
-        Me.Guna2ComboBox1.Name = "Guna2ComboBox1"
-        Me.Guna2ComboBox1.Size = New System.Drawing.Size(235, 36)
-        Me.Guna2ComboBox1.TabIndex = 4
+        Me.ComboTabla.BackColor = System.Drawing.Color.Transparent
+        Me.ComboTabla.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.ComboTabla.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboTabla.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ComboTabla.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ComboTabla.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        Me.ComboTabla.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.ComboTabla.ItemHeight = 30
+        Me.ComboTabla.Items.AddRange(New Object() {"Paciente", "Atencion", "Facturas", "Empleado", "Areas", "Consulta"})
+        Me.ComboTabla.Location = New System.Drawing.Point(629, 310)
+        Me.ComboTabla.Name = "ComboTabla"
+        Me.ComboTabla.Size = New System.Drawing.Size(235, 36)
+        Me.ComboTabla.TabIndex = 4
         '
         'Guna2GroupBox3
         '
@@ -164,7 +175,7 @@ Partial Class Grafico
         Me.Guna2GroupBox3.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox3.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Guna2GroupBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GroupBox3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox3.ForeColor = System.Drawing.Color.White
         Me.Guna2GroupBox3.Location = New System.Drawing.Point(727, 76)
         Me.Guna2GroupBox3.Name = "Guna2GroupBox3"
         Me.Guna2GroupBox3.Size = New System.Drawing.Size(176, 107)
@@ -182,7 +193,7 @@ Partial Class Grafico
         Me.Guna2GroupBox5.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox5.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Guna2GroupBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GroupBox5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox5.ForeColor = System.Drawing.Color.White
         Me.Guna2GroupBox5.Location = New System.Drawing.Point(509, 76)
         Me.Guna2GroupBox5.Name = "Guna2GroupBox5"
         Me.Guna2GroupBox5.Size = New System.Drawing.Size(176, 107)
@@ -200,7 +211,7 @@ Partial Class Grafico
         Me.Guna2GroupBox4.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox4.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Guna2GroupBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GroupBox4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox4.ForeColor = System.Drawing.Color.White
         Me.Guna2GroupBox4.Location = New System.Drawing.Point(293, 76)
         Me.Guna2GroupBox4.Name = "Guna2GroupBox4"
         Me.Guna2GroupBox4.Size = New System.Drawing.Size(176, 107)
@@ -219,7 +230,7 @@ Partial Class Grafico
         Me.Guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.Guna2GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.Guna2GroupBox2.ForeColor = System.Drawing.Color.White
         Me.Guna2GroupBox2.Location = New System.Drawing.Point(76, 76)
         Me.Guna2GroupBox2.Name = "Guna2GroupBox2"
         Me.Guna2GroupBox2.Size = New System.Drawing.Size(176, 107)
@@ -283,6 +294,49 @@ Partial Class Grafico
         Me.CANTI_FACTURAS.Text = "Label1"
         Me.CANTI_FACTURAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(623, 275)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(123, 32)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Buscar en:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(623, 390)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(115, 32)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Datos de:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Reiniciar_grafico
+        '
+        Me.Reiniciar_grafico.BackColor = System.Drawing.Color.Transparent
+        Me.Reiniciar_grafico.BorderRadius = 5
+        Me.Reiniciar_grafico.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Reiniciar_grafico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Reiniciar_grafico.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Reiniciar_grafico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Reiniciar_grafico.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Reiniciar_grafico.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Reiniciar_grafico.ForeColor = System.Drawing.Color.White
+        Me.Reiniciar_grafico.Location = New System.Drawing.Point(490, 513)
+        Me.Reiniciar_grafico.Name = "Reiniciar_grafico"
+        Me.Reiniciar_grafico.Size = New System.Drawing.Size(148, 59)
+        Me.Reiniciar_grafico.TabIndex = 11
+        Me.Reiniciar_grafico.Text = "Reiniciar Grafico"
+        '
         'Grafico
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -293,6 +347,7 @@ Partial Class Grafico
         Me.Name = "Grafico"
         Me.Text = "Grafico"
         Me.Guna2GroupBox1.ResumeLayout(False)
+        Me.Guna2GroupBox1.PerformLayout()
         CType(Me.ChartDiagnosticos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Guna2GroupBox3.ResumeLayout(False)
         Me.Guna2GroupBox3.PerformLayout()
@@ -309,8 +364,8 @@ Partial Class Grafico
     Friend WithEvents Guna2GroupBox1 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2ComboBox2 As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents ComboDato As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents ComboTabla As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2GroupBox3 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents Guna2GroupBox5 As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents Guna2GroupBox4 As Guna.UI2.WinForms.Guna2GroupBox
@@ -321,4 +376,7 @@ Partial Class Grafico
     Friend WithEvents CANTI_FACTURAS As Label
     Friend WithEvents EMPLEADOS_ACTIVOS As Label
     Friend WithEvents CANTI_CONSULTAS As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Reiniciar_grafico As Guna.UI2.WinForms.Guna2Button
 End Class
