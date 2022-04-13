@@ -26,23 +26,23 @@ Partial Class Grafico
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Reiniciar_grafico = New Guna.UI2.WinForms.Guna2Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.ChartDiagnosticos = New System.Windows.Forms.DataVisualization.Charting.Chart()
         Me.Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Me.ComboDato = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.ComboTabla = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Guna2GroupBox3 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CANTI_FACTURAS = New System.Windows.Forms.Label()
         Me.Guna2GroupBox5 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.EMPLEADOS_ACTIVOS = New System.Windows.Forms.Label()
         Me.Guna2GroupBox4 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CANTI_CONSULTAS = New System.Windows.Forms.Label()
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.PacientesActivos = New System.Windows.Forms.Label()
         Me.Pacientes = New System.Windows.Forms.Label()
-        Me.CANTI_CONSULTAS = New System.Windows.Forms.Label()
-        Me.EMPLEADOS_ACTIVOS = New System.Windows.Forms.Label()
-        Me.CANTI_FACTURAS = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Reiniciar_grafico = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.ChartDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GroupBox3.SuspendLayout()
@@ -75,6 +75,49 @@ Partial Class Grafico
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(994, 686)
         Me.Guna2GroupBox1.TabIndex = 11
         Me.Guna2GroupBox1.Text = "Reportes"
+        '
+        'Reiniciar_grafico
+        '
+        Me.Reiniciar_grafico.BackColor = System.Drawing.Color.Transparent
+        Me.Reiniciar_grafico.BorderRadius = 5
+        Me.Reiniciar_grafico.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Reiniciar_grafico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Reiniciar_grafico.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Reiniciar_grafico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Reiniciar_grafico.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Reiniciar_grafico.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Reiniciar_grafico.ForeColor = System.Drawing.Color.White
+        Me.Reiniciar_grafico.Location = New System.Drawing.Point(490, 513)
+        Me.Reiniciar_grafico.Name = "Reiniciar_grafico"
+        Me.Reiniciar_grafico.Size = New System.Drawing.Size(148, 59)
+        Me.Reiniciar_grafico.TabIndex = 11
+        Me.Reiniciar_grafico.Text = "Reiniciar Grafico"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(623, 390)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(115, 32)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Datos de:"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(623, 275)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(123, 32)
+        Me.Label1.TabIndex = 9
+        Me.Label1.Text = "Buscar en:"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ChartDiagnosticos
         '
@@ -158,7 +201,7 @@ Partial Class Grafico
         Me.ComboTabla.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.ComboTabla.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.ComboTabla.ItemHeight = 30
-        Me.ComboTabla.Items.AddRange(New Object() {"Paciente", "Atencion", "Facturas", "Empleado", "Areas", "Consulta"})
+        Me.ComboTabla.Items.AddRange(New Object() {"Paciente", "Atencion", "Facturas", "Empleado", "Consulta"})
         Me.ComboTabla.Location = New System.Drawing.Point(629, 310)
         Me.ComboTabla.Name = "ComboTabla"
         Me.ComboTabla.Size = New System.Drawing.Size(235, 36)
@@ -182,6 +225,18 @@ Partial Class Grafico
         Me.Guna2GroupBox3.TabIndex = 3
         Me.Guna2GroupBox3.Text = "Cantidad de facturas"
         '
+        'CANTI_FACTURAS
+        '
+        Me.CANTI_FACTURAS.AutoSize = True
+        Me.CANTI_FACTURAS.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CANTI_FACTURAS.ForeColor = System.Drawing.Color.White
+        Me.CANTI_FACTURAS.Location = New System.Drawing.Point(51, 53)
+        Me.CANTI_FACTURAS.Name = "CANTI_FACTURAS"
+        Me.CANTI_FACTURAS.Size = New System.Drawing.Size(84, 32)
+        Me.CANTI_FACTURAS.TabIndex = 4
+        Me.CANTI_FACTURAS.Text = "Label1"
+        Me.CANTI_FACTURAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Guna2GroupBox5
         '
         Me.Guna2GroupBox5.BackColor = System.Drawing.Color.Transparent
@@ -200,6 +255,18 @@ Partial Class Grafico
         Me.Guna2GroupBox5.TabIndex = 3
         Me.Guna2GroupBox5.Text = "Empleados activos"
         '
+        'EMPLEADOS_ACTIVOS
+        '
+        Me.EMPLEADOS_ACTIVOS.AutoSize = True
+        Me.EMPLEADOS_ACTIVOS.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EMPLEADOS_ACTIVOS.ForeColor = System.Drawing.Color.White
+        Me.EMPLEADOS_ACTIVOS.Location = New System.Drawing.Point(48, 54)
+        Me.EMPLEADOS_ACTIVOS.Name = "EMPLEADOS_ACTIVOS"
+        Me.EMPLEADOS_ACTIVOS.Size = New System.Drawing.Size(84, 32)
+        Me.EMPLEADOS_ACTIVOS.TabIndex = 3
+        Me.EMPLEADOS_ACTIVOS.Text = "Label1"
+        Me.EMPLEADOS_ACTIVOS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Guna2GroupBox4
         '
         Me.Guna2GroupBox4.BackColor = System.Drawing.Color.Transparent
@@ -217,6 +284,18 @@ Partial Class Grafico
         Me.Guna2GroupBox4.Size = New System.Drawing.Size(176, 107)
         Me.Guna2GroupBox4.TabIndex = 3
         Me.Guna2GroupBox4.Text = "Cantidad de consultas"
+        '
+        'CANTI_CONSULTAS
+        '
+        Me.CANTI_CONSULTAS.AutoSize = True
+        Me.CANTI_CONSULTAS.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CANTI_CONSULTAS.ForeColor = System.Drawing.Color.White
+        Me.CANTI_CONSULTAS.Location = New System.Drawing.Point(47, 54)
+        Me.CANTI_CONSULTAS.Name = "CANTI_CONSULTAS"
+        Me.CANTI_CONSULTAS.Size = New System.Drawing.Size(84, 32)
+        Me.CANTI_CONSULTAS.TabIndex = 2
+        Me.CANTI_CONSULTAS.Text = "Label1"
+        Me.CANTI_CONSULTAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Guna2GroupBox2
         '
@@ -257,85 +336,6 @@ Partial Class Grafico
         Me.Pacientes.Name = "Pacientes"
         Me.Pacientes.Size = New System.Drawing.Size(0, 25)
         Me.Pacientes.TabIndex = 0
-        '
-        'CANTI_CONSULTAS
-        '
-        Me.CANTI_CONSULTAS.AutoSize = True
-        Me.CANTI_CONSULTAS.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CANTI_CONSULTAS.ForeColor = System.Drawing.Color.White
-        Me.CANTI_CONSULTAS.Location = New System.Drawing.Point(47, 54)
-        Me.CANTI_CONSULTAS.Name = "CANTI_CONSULTAS"
-        Me.CANTI_CONSULTAS.Size = New System.Drawing.Size(84, 32)
-        Me.CANTI_CONSULTAS.TabIndex = 2
-        Me.CANTI_CONSULTAS.Text = "Label1"
-        Me.CANTI_CONSULTAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'EMPLEADOS_ACTIVOS
-        '
-        Me.EMPLEADOS_ACTIVOS.AutoSize = True
-        Me.EMPLEADOS_ACTIVOS.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EMPLEADOS_ACTIVOS.ForeColor = System.Drawing.Color.White
-        Me.EMPLEADOS_ACTIVOS.Location = New System.Drawing.Point(48, 54)
-        Me.EMPLEADOS_ACTIVOS.Name = "EMPLEADOS_ACTIVOS"
-        Me.EMPLEADOS_ACTIVOS.Size = New System.Drawing.Size(84, 32)
-        Me.EMPLEADOS_ACTIVOS.TabIndex = 3
-        Me.EMPLEADOS_ACTIVOS.Text = "Label1"
-        Me.EMPLEADOS_ACTIVOS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'CANTI_FACTURAS
-        '
-        Me.CANTI_FACTURAS.AutoSize = True
-        Me.CANTI_FACTURAS.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CANTI_FACTURAS.ForeColor = System.Drawing.Color.White
-        Me.CANTI_FACTURAS.Location = New System.Drawing.Point(51, 53)
-        Me.CANTI_FACTURAS.Name = "CANTI_FACTURAS"
-        Me.CANTI_FACTURAS.Size = New System.Drawing.Size(84, 32)
-        Me.CANTI_FACTURAS.TabIndex = 4
-        Me.CANTI_FACTURAS.Text = "Label1"
-        Me.CANTI_FACTURAS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(623, 275)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(123, 32)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Buscar en:"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(623, 390)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(115, 32)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Datos de:"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Reiniciar_grafico
-        '
-        Me.Reiniciar_grafico.BackColor = System.Drawing.Color.Transparent
-        Me.Reiniciar_grafico.BorderRadius = 5
-        Me.Reiniciar_grafico.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Reiniciar_grafico.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Reiniciar_grafico.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Reiniciar_grafico.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Reiniciar_grafico.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Reiniciar_grafico.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Reiniciar_grafico.ForeColor = System.Drawing.Color.White
-        Me.Reiniciar_grafico.Location = New System.Drawing.Point(490, 513)
-        Me.Reiniciar_grafico.Name = "Reiniciar_grafico"
-        Me.Reiniciar_grafico.Size = New System.Drawing.Size(148, 59)
-        Me.Reiniciar_grafico.TabIndex = 11
-        Me.Reiniciar_grafico.Text = "Reiniciar Grafico"
         '
         'Grafico
         '
