@@ -36,12 +36,16 @@ Partial Class AgregarEnfermedad
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Opciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Editar_Registro = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.BUSCAR_ENFERMEDAD = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.Opciones.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.BUSCAR_ENFERMEDAD)
+        Me.Guna2GroupBox1.Controls.Add(Me.Label3)
         Me.Guna2GroupBox1.Controls.Add(Me.Editar)
         Me.Guna2GroupBox1.Controls.Add(Me.Eliminar)
         Me.Guna2GroupBox1.Controls.Add(Me.Guna2Button1)
@@ -175,10 +179,10 @@ Partial Class AgregarEnfermedad
         Me.L_ENFERMEDADES.FullRowSelect = True
         Me.L_ENFERMEDADES.GridLines = True
         Me.L_ENFERMEDADES.HideSelection = False
-        Me.L_ENFERMEDADES.Location = New System.Drawing.Point(271, 75)
+        Me.L_ENFERMEDADES.Location = New System.Drawing.Point(271, 112)
         Me.L_ENFERMEDADES.MultiSelect = False
         Me.L_ENFERMEDADES.Name = "L_ENFERMEDADES"
-        Me.L_ENFERMEDADES.Size = New System.Drawing.Size(232, 216)
+        Me.L_ENFERMEDADES.Size = New System.Drawing.Size(232, 179)
         Me.L_ENFERMEDADES.TabIndex = 26
         Me.L_ENFERMEDADES.UseCompatibleStateImageBehavior = False
         Me.L_ENFERMEDADES.View = System.Windows.Forms.View.Details
@@ -204,6 +208,37 @@ Partial Class AgregarEnfermedad
         Me.Editar_Registro.Name = "Editar_Registro"
         Me.Editar_Registro.Size = New System.Drawing.Size(171, 22)
         Me.Editar_Registro.Text = "Editar este registro"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(225, 83)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(45, 15)
+        Me.Label3.TabIndex = 34
+        Me.Label3.Text = "Buscar:"
+        '
+        'BUSCAR_ENFERMEDAD
+        '
+        Me.BUSCAR_ENFERMEDAD.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.BUSCAR_ENFERMEDAD.DefaultText = ""
+        Me.BUSCAR_ENFERMEDAD.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.BUSCAR_ENFERMEDAD.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.BUSCAR_ENFERMEDAD.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.BUSCAR_ENFERMEDAD.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.BUSCAR_ENFERMEDAD.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.BUSCAR_ENFERMEDAD.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BUSCAR_ENFERMEDAD.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BUSCAR_ENFERMEDAD.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BUSCAR_ENFERMEDAD.Location = New System.Drawing.Point(271, 77)
+        Me.BUSCAR_ENFERMEDAD.Name = "BUSCAR_ENFERMEDAD"
+        Me.BUSCAR_ENFERMEDAD.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.BUSCAR_ENFERMEDAD.PlaceholderText = ""
+        Me.BUSCAR_ENFERMEDAD.SelectedText = ""
+        Me.BUSCAR_ENFERMEDAD.Size = New System.Drawing.Size(232, 29)
+        Me.BUSCAR_ENFERMEDAD.TabIndex = 35
         '
         'AgregarEnfermedad
         '
@@ -236,4 +271,6 @@ Partial Class AgregarEnfermedad
     Friend WithEvents Eliminar As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Opciones As ContextMenuStrip
     Friend WithEvents Editar_Registro As ToolStripMenuItem
+    Friend WithEvents BUSCAR_ENFERMEDAD As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Label3 As Label
 End Class

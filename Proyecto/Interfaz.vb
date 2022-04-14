@@ -90,7 +90,12 @@
 
     Private Sub Interfaz_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label3.Text = NombreCompleto
-        FOTO_EMPLEADO.Image = Image.FromFile(foto_usuario)
+        If foto_usuario = "." Then
+            FOTO_EMPLEADO.Image = My.Resources.user
+        Else
+            FOTO_EMPLEADO.Image = Image.FromFile(foto_usuario)
+        End If
+
     End Sub
 
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click

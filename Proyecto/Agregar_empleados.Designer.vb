@@ -46,8 +46,6 @@ Partial Class Agregar_empleados
         Me.Label3 = New System.Windows.Forms.Label()
         Me.NOMBRE_COMPLETO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.USUARIO = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Abrir = New System.Windows.Forms.OpenFileDialog()
         Me.Guna2GroupBox1.SuspendLayout()
@@ -79,8 +77,6 @@ Partial Class Agregar_empleados
         Me.Guna2GroupBox1.Controls.Add(Me.Label3)
         Me.Guna2GroupBox1.Controls.Add(Me.NOMBRE_COMPLETO)
         Me.Guna2GroupBox1.Controls.Add(Me.Label4)
-        Me.Guna2GroupBox1.Controls.Add(Me.USUARIO)
-        Me.Guna2GroupBox1.Controls.Add(Me.Label2)
         Me.Guna2GroupBox1.Controls.Add(Me.Label1)
         Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
@@ -96,7 +92,7 @@ Partial Class Agregar_empleados
         '
         Me.NUMERO_CARNET.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.NUMERO_CARNET.Location = New System.Drawing.Point(675, 470)
-        Me.NUMERO_CARNET.Mask = "99999"
+        Me.NUMERO_CARNET.Mask = "9999999999"
         Me.NUMERO_CARNET.Name = "NUMERO_CARNET"
         Me.NUMERO_CARNET.Size = New System.Drawing.Size(211, 23)
         Me.NUMERO_CARNET.TabIndex = 33
@@ -106,7 +102,7 @@ Partial Class Agregar_empleados
         '
         Me.NUMERO_TELEFONO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.NUMERO_TELEFONO.Location = New System.Drawing.Point(234, 415)
-        Me.NUMERO_TELEFONO.Mask = "99999"
+        Me.NUMERO_TELEFONO.Mask = "99999999"
         Me.NUMERO_TELEFONO.Name = "NUMERO_TELEFONO"
         Me.NUMERO_TELEFONO.Size = New System.Drawing.Size(211, 23)
         Me.NUMERO_TELEFONO.TabIndex = 32
@@ -133,7 +129,7 @@ Partial Class Agregar_empleados
         Me.RESIDENCIA.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.RESIDENCIA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.RESIDENCIA.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.RESIDENCIA.Location = New System.Drawing.Point(234, 592)
+        Me.RESIDENCIA.Location = New System.Drawing.Point(675, 307)
         Me.RESIDENCIA.Name = "RESIDENCIA"
         Me.RESIDENCIA.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
         Me.RESIDENCIA.PlaceholderText = ""
@@ -147,7 +143,7 @@ Partial Class Agregar_empleados
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(78, 595)
+        Me.Label12.Location = New System.Drawing.Point(521, 309)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(148, 21)
         Me.Label12.TabIndex = 29
@@ -237,7 +233,7 @@ Partial Class Agregar_empleados
         Me.Btn_agregar_empleado.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Btn_agregar_empleado.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Btn_agregar_empleado.ForeColor = System.Drawing.Color.White
-        Me.Btn_agregar_empleado.Location = New System.Drawing.Point(642, 592)
+        Me.Btn_agregar_empleado.Location = New System.Drawing.Point(425, 587)
         Me.Btn_agregar_empleado.Name = "Btn_agregar_empleado"
         Me.Btn_agregar_empleado.Size = New System.Drawing.Size(244, 47)
         Me.Btn_agregar_empleado.TabIndex = 24
@@ -415,38 +411,6 @@ Partial Class Agregar_empleados
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Nombre completo:"
         '
-        'USUARIO
-        '
-        Me.USUARIO.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.USUARIO.DefaultText = ""
-        Me.USUARIO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.USUARIO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.USUARIO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.USUARIO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.USUARIO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.USUARIO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.USUARIO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.USUARIO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.USUARIO.Location = New System.Drawing.Point(675, 310)
-        Me.USUARIO.Name = "USUARIO"
-        Me.USUARIO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.USUARIO.PlaceholderText = ""
-        Me.USUARIO.SelectedText = ""
-        Me.USUARIO.Size = New System.Drawing.Size(211, 29)
-        Me.USUARIO.TabIndex = 4
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(602, 311)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 21)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Usuario:"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -495,8 +459,6 @@ Partial Class Agregar_empleados
     Friend WithEvents Label3 As Label
     Friend WithEvents NOMBRE_COMPLETO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents USUARIO As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Label2 As Label
     Friend WithEvents Btn_agregar_empleado As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents COREO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label11 As Label

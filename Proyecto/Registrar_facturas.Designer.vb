@@ -28,7 +28,6 @@ Partial Class Registrar_facturas
         Me.BORRAR_FILA = New Guna.UI2.WinForms.Guna2Button()
         Me.AGREGAR_LIST = New Guna.UI2.WinForms.Guna2Button()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.MONTO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.AGREGAR = New Guna.UI2.WinForms.Guna2TextBox()
         Me.L = New System.Windows.Forms.ListView()
@@ -50,17 +49,18 @@ Partial Class Registrar_facturas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_realizar_factura = New Guna.UI2.WinForms.Guna2Button()
+        Me.MONTO = New System.Windows.Forms.MaskedTextBox()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.MONTO)
         Me.Guna2GroupBox1.Controls.Add(Me.Telefono)
         Me.Guna2GroupBox1.Controls.Add(Me.Cedula)
         Me.Guna2GroupBox1.Controls.Add(Me.BORRAR_FILA)
         Me.Guna2GroupBox1.Controls.Add(Me.AGREGAR_LIST)
         Me.Guna2GroupBox1.Controls.Add(Me.Label11)
-        Me.Guna2GroupBox1.Controls.Add(Me.MONTO)
         Me.Guna2GroupBox1.Controls.Add(Me.Label10)
         Me.Guna2GroupBox1.Controls.Add(Me.AGREGAR)
         Me.Guna2GroupBox1.Controls.Add(Me.L)
@@ -93,7 +93,7 @@ Partial Class Registrar_facturas
         '
         Me.Telefono.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.Telefono.Location = New System.Drawing.Point(599, 79)
-        Me.Telefono.Mask = "99999"
+        Me.Telefono.Mask = "99999999"
         Me.Telefono.Name = "Telefono"
         Me.Telefono.Size = New System.Drawing.Size(201, 23)
         Me.Telefono.TabIndex = 33
@@ -149,26 +149,6 @@ Partial Class Registrar_facturas
         Me.Label11.Size = New System.Drawing.Size(59, 21)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Monto:"
-        '
-        'MONTO
-        '
-        Me.MONTO.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.MONTO.DefaultText = ""
-        Me.MONTO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.MONTO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.MONTO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.MONTO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.MONTO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.MONTO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MONTO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.MONTO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.MONTO.Location = New System.Drawing.Point(867, 280)
-        Me.MONTO.Name = "MONTO"
-        Me.MONTO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.MONTO.PlaceholderText = ""
-        Me.MONTO.SelectedText = ""
-        Me.MONTO.Size = New System.Drawing.Size(109, 31)
-        Me.MONTO.TabIndex = 28
         '
         'Label10
         '
@@ -461,6 +441,16 @@ Partial Class Registrar_facturas
         Me.Btn_realizar_factura.TabIndex = 0
         Me.Btn_realizar_factura.Text = "Realizar factura"
         '
+        'MONTO
+        '
+        Me.MONTO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.MONTO.Location = New System.Drawing.Point(864, 284)
+        Me.MONTO.Mask = "99999999999"
+        Me.MONTO.Name = "MONTO"
+        Me.MONTO.Size = New System.Drawing.Size(109, 23)
+        Me.MONTO.TabIndex = 34
+        Me.MONTO.ValidatingType = GetType(Integer)
+        '
         'Registrar_facturas
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -500,10 +490,10 @@ Partial Class Registrar_facturas
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents AGREGAR_LIST As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label11 As Label
-    Friend WithEvents MONTO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents AGREGAR As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BORRAR_FILA As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Cedula As MaskedTextBox
     Friend WithEvents Telefono As MaskedTextBox
+    Friend WithEvents MONTO As MaskedTextBox
 End Class

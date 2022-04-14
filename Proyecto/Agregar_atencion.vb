@@ -2,7 +2,7 @@
     Dim DiagnosticoAux As String
     Dim DiagnosticoCont As String = ""
     Friend Sub LIMPIAR()
-        LLENAR_SIN_CONDICION(COMBO_ENFERMEDADES, "ENFERMEDADES", "ENFERMEDADES")
+        LLENAR_SIN_CONDICION(COMBO_ENFERMEDADES, "ENFERMEDAD", "ENFERMEDADES")
         CONSULTA_NOMBRE_PACIENTE.Clear()
         NOMBRE_MEDICO.Clear()
         CEDULA.Clear()

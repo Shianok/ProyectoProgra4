@@ -8,8 +8,8 @@
         End
     End Sub
 
-    Private Sub USERNAME_Click(sender As Object, e As EventArgs) Handles USERNAME.Click
-        USERNAME.Text = ""
+    Private Sub USERNAME_Click(sender As Object, e As EventArgs)
+        Cedula.Text = ""
     End Sub
 
     Private Sub PASSWORD_Click(sender As Object, e As EventArgs) Handles PASSWORD.Click
@@ -50,7 +50,7 @@
             For FILA As Integer = 0 To T.Tables(0).Rows.Count - 1 'se;ala el inicio de la tabla en 0,0
                 cedula_txt = T.Tables(0).Rows(FILA).ItemArray(0).ToString
                 contrasena_txt = T.Tables(0).Rows(FILA).ItemArray(1).ToString
-                If cedula_txt = USERNAME.Text And contrasena_txt = PASSWORD.Text Then
+                If cedula_txt = Cedula.Text And contrasena_txt = PASSWORD.Text Then
                     bandera = 1
                     cedula_parametro = T.Tables(0).Rows(FILA).ItemArray(0).ToString
                 Else

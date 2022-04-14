@@ -2,6 +2,7 @@
 
     Private Sub AgregarEnfermedad_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         REFRESCAR(L_ENFERMEDADES, "ENFERMEDADES", "ID, ENFERMEDAD")
+        BUSQUEDA(L_ENFERMEDADES, "ENFERMEDADES", "ID, ENFERMEDAD", "ENFERMEDAD", BUSCAR_ENFERMEDAD.Text, False, 0)
     End Sub
 
     Friend Sub LIMPIAR()
@@ -69,5 +70,9 @@
             TXT_ENFERMEDAD.Tag = L_ENFERMEDADES.SelectedItems(0).SubItems(0).Text
             TXT_ENFERMEDAD.Text = L_ENFERMEDADES.SelectedItems(0).SubItems(1).Text
         End If
+    End Sub
+
+    Private Sub BUSCAR_ENFERMEDAD_TextChanged(sender As Object, e As EventArgs) Handles BUSCAR_ENFERMEDAD.TextChanged
+        BUSQUEDA(L_ENFERMEDADES, "ENFERMEDADES", "ID, ENFERMEDAD", "ENFERMEDAD", BUSCAR_ENFERMEDAD.Text, False, 0)
     End Sub
 End Class
