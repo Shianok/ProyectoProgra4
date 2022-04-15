@@ -31,6 +31,7 @@ Partial Class Consultar_paciente
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BUSCAR_CEDULA_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CONSULTA_INFO = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CONSULTA_NUMERO_PACIENTE = New System.Windows.Forms.MaskedTextBox()
         Me.BORRAR = New Guna.UI2.WinForms.Guna2Button()
         Me.ACTUALIZAR = New Guna.UI2.WinForms.Guna2Button()
         Me.CONSULTA_RESIDENCIA_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
@@ -41,7 +42,6 @@ Partial Class Consultar_paciente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.NACIMIENTO_PACIENTE = New Guna.UI2.WinForms.Guna2DateTimePicker()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.CONSULTA_NUMERO_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CONSULTA_NOMBRE_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -185,6 +185,7 @@ Partial Class Consultar_paciente
         Me.CONSULTA_INFO.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.CONSULTA_INFO.BorderRadius = 5
         Me.CONSULTA_INFO.BorderThickness = 2
+        Me.CONSULTA_INFO.Controls.Add(Me.CONSULTA_NUMERO_PACIENTE)
         Me.CONSULTA_INFO.Controls.Add(Me.BORRAR)
         Me.CONSULTA_INFO.Controls.Add(Me.ACTUALIZAR)
         Me.CONSULTA_INFO.Controls.Add(Me.CONSULTA_RESIDENCIA_PACIENTE)
@@ -195,7 +196,6 @@ Partial Class Consultar_paciente
         Me.CONSULTA_INFO.Controls.Add(Me.Label2)
         Me.CONSULTA_INFO.Controls.Add(Me.NACIMIENTO_PACIENTE)
         Me.CONSULTA_INFO.Controls.Add(Me.Label10)
-        Me.CONSULTA_INFO.Controls.Add(Me.CONSULTA_NUMERO_PACIENTE)
         Me.CONSULTA_INFO.Controls.Add(Me.Label6)
         Me.CONSULTA_INFO.Controls.Add(Me.CONSULTA_NOMBRE_PACIENTE)
         Me.CONSULTA_INFO.Controls.Add(Me.Label4)
@@ -208,6 +208,16 @@ Partial Class Consultar_paciente
         Me.CONSULTA_INFO.Size = New System.Drawing.Size(934, 500)
         Me.CONSULTA_INFO.TabIndex = 25
         Me.CONSULTA_INFO.Text = "Informacion de paciente"
+        '
+        'CONSULTA_NUMERO_PACIENTE
+        '
+        Me.CONSULTA_NUMERO_PACIENTE.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CONSULTA_NUMERO_PACIENTE.Location = New System.Drawing.Point(208, 186)
+        Me.CONSULTA_NUMERO_PACIENTE.Mask = "99999999"
+        Me.CONSULTA_NUMERO_PACIENTE.Name = "CONSULTA_NUMERO_PACIENTE"
+        Me.CONSULTA_NUMERO_PACIENTE.Size = New System.Drawing.Size(211, 23)
+        Me.CONSULTA_NUMERO_PACIENTE.TabIndex = 65
+        Me.CONSULTA_NUMERO_PACIENTE.ValidatingType = GetType(Integer)
         '
         'BORRAR
         '
@@ -375,27 +385,6 @@ Partial Class Consultar_paciente
         Me.Label10.TabIndex = 55
         Me.Label10.Text = "Fecha de nacimiento:"
         '
-        'CONSULTA_NUMERO_PACIENTE
-        '
-        Me.CONSULTA_NUMERO_PACIENTE.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CONSULTA_NUMERO_PACIENTE.DefaultText = ""
-        Me.CONSULTA_NUMERO_PACIENTE.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.CONSULTA_NUMERO_PACIENTE.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.CONSULTA_NUMERO_PACIENTE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CONSULTA_NUMERO_PACIENTE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CONSULTA_NUMERO_PACIENTE.Enabled = False
-        Me.CONSULTA_NUMERO_PACIENTE.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CONSULTA_NUMERO_PACIENTE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CONSULTA_NUMERO_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CONSULTA_NUMERO_PACIENTE.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CONSULTA_NUMERO_PACIENTE.Location = New System.Drawing.Point(208, 172)
-        Me.CONSULTA_NUMERO_PACIENTE.Name = "CONSULTA_NUMERO_PACIENTE"
-        Me.CONSULTA_NUMERO_PACIENTE.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.CONSULTA_NUMERO_PACIENTE.PlaceholderText = ""
-        Me.CONSULTA_NUMERO_PACIENTE.SelectedText = ""
-        Me.CONSULTA_NUMERO_PACIENTE.Size = New System.Drawing.Size(211, 33)
-        Me.CONSULTA_NUMERO_PACIENTE.TabIndex = 54
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -478,11 +467,11 @@ Partial Class Consultar_paciente
     Friend WithEvents Label2 As Label
     Friend WithEvents NACIMIENTO_PACIENTE As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label10 As Label
-    Friend WithEvents CONSULTA_NUMERO_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents CONSULTA_NOMBRE_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents BUSCAR_CEDULA_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents BORRAR As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ACTUALIZAR As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents CONSULTA_NUMERO_PACIENTE As MaskedTextBox
 End Class

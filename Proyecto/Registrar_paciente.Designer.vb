@@ -37,8 +37,8 @@ Partial Class Registrar_paciente
         Me.Label6 = New System.Windows.Forms.Label()
         Me.NOMBRE_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.CEDULA_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.CEDULA_PACIENTE = New System.Windows.Forms.MaskedTextBox()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,6 +48,7 @@ Partial Class Registrar_paciente
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Guna2GroupBox1.Controls.Add(Me.CEDULA_PACIENTE)
         Me.Guna2GroupBox1.Controls.Add(Me.NACIMIENTO_PACIENTE)
         Me.Guna2GroupBox1.Controls.Add(Me.btnCerrarInterfaz)
         Me.Guna2GroupBox1.Controls.Add(Me.TXT_PADECIMIENTOS)
@@ -62,7 +63,6 @@ Partial Class Registrar_paciente
         Me.Guna2GroupBox1.Controls.Add(Me.Label6)
         Me.Guna2GroupBox1.Controls.Add(Me.NOMBRE_PACIENTE)
         Me.Guna2GroupBox1.Controls.Add(Me.Label4)
-        Me.Guna2GroupBox1.Controls.Add(Me.CEDULA_PACIENTE)
         Me.Guna2GroupBox1.Controls.Add(Me.Label1)
         Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
@@ -131,7 +131,7 @@ Partial Class Registrar_paciente
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(115, 336)
+        Me.Label2.Location = New System.Drawing.Point(115, 337)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(113, 21)
         Me.Label2.TabIndex = 25
@@ -178,7 +178,7 @@ Partial Class Registrar_paciente
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Black
-        Me.Label9.Location = New System.Drawing.Point(522, 261)
+        Me.Label9.Location = New System.Drawing.Point(522, 252)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(148, 21)
         Me.Label9.TabIndex = 19
@@ -190,7 +190,7 @@ Partial Class Registrar_paciente
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(73, 261)
+        Me.Label10.Location = New System.Drawing.Point(73, 257)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(155, 21)
         Me.Label10.TabIndex = 17
@@ -222,7 +222,7 @@ Partial Class Registrar_paciente
         Me.CORREO_PACIENTE.BackColor = System.Drawing.Color.Transparent
         Me.CORREO_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CORREO_PACIENTE.ForeColor = System.Drawing.Color.Black
-        Me.CORREO_PACIENTE.Location = New System.Drawing.Point(609, 188)
+        Me.CORREO_PACIENTE.Location = New System.Drawing.Point(609, 179)
         Me.CORREO_PACIENTE.Name = "CORREO_PACIENTE"
         Me.CORREO_PACIENTE.Size = New System.Drawing.Size(61, 21)
         Me.CORREO_PACIENTE.TabIndex = 11
@@ -254,7 +254,7 @@ Partial Class Registrar_paciente
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(75, 188)
+        Me.Label6.Location = New System.Drawing.Point(75, 180)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(153, 21)
         Me.Label6.TabIndex = 9
@@ -286,31 +286,11 @@ Partial Class Registrar_paciente
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(88, 109)
+        Me.Label4.Location = New System.Drawing.Point(88, 100)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(140, 21)
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Nombre completo:"
-        '
-        'CEDULA_PACIENTE
-        '
-        Me.CEDULA_PACIENTE.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CEDULA_PACIENTE.DefaultText = ""
-        Me.CEDULA_PACIENTE.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.CEDULA_PACIENTE.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.CEDULA_PACIENTE.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA_PACIENTE.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA_PACIENTE.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CEDULA_PACIENTE.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CEDULA_PACIENTE.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA_PACIENTE.Location = New System.Drawing.Point(676, 97)
-        Me.CEDULA_PACIENTE.Name = "CEDULA_PACIENTE"
-        Me.CEDULA_PACIENTE.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.CEDULA_PACIENTE.PlaceholderText = ""
-        Me.CEDULA_PACIENTE.SelectedText = ""
-        Me.CEDULA_PACIENTE.Size = New System.Drawing.Size(211, 33)
-        Me.CEDULA_PACIENTE.TabIndex = 2
         '
         'Label1
         '
@@ -318,11 +298,20 @@ Partial Class Registrar_paciente
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(609, 109)
+        Me.Label1.Location = New System.Drawing.Point(609, 105)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(61, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cédula:"
+        '
+        'CEDULA_PACIENTE
+        '
+        Me.CEDULA_PACIENTE.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CEDULA_PACIENTE.Location = New System.Drawing.Point(676, 105)
+        Me.CEDULA_PACIENTE.Mask = "00-0000-0000"
+        Me.CEDULA_PACIENTE.Name = "CEDULA_PACIENTE"
+        Me.CEDULA_PACIENTE.Size = New System.Drawing.Size(211, 23)
+        Me.CEDULA_PACIENTE.TabIndex = 33
         '
         'Registrar_paciente
         '
@@ -355,8 +344,8 @@ Partial Class Registrar_paciente
     Friend WithEvents Label6 As Label
     Friend WithEvents NOMBRE_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents CEDULA_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnCerrarInterfaz As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents NACIMIENTO_PACIENTE As DateTimePicker
+    Friend WithEvents CEDULA_PACIENTE As MaskedTextBox
 End Class
