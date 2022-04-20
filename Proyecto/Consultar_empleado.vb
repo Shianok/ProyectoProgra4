@@ -7,26 +7,41 @@
     Friend Sub CONSULTA_EMPLEADO()
         T.Tables.Clear()
         Try
-            SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, NUMERO_TELEFONO, LUGAR_RESIDENCIA, TIPO_EMPLEADO, AREA FROM EMPLEADO WHERE CEDULA='" & CEDULA_EMPLEADO.Text & "'"
+            SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, NUMERO_TELEFONO, LUGAR_RESIDENCIA, CORREO, ESTADO, FOTO FROM EMPLEADO WHERE CEDULA='" & CEDULA_EMPLEADO.Text & "'"
             CARGAR_TABLA(T, SQL)
             If T.Tables(0).Rows.Count > 0 Then
                 For FILA As Integer = 0 To T.Tables(0).Rows.Count - 1 'se;ala el inicio de la tabla en 0,0
-                    ID = Convert.ToInt32(T.Tables(0).Rows(FILA).ItemArray(1))
+                    ID = Convert.ToInt32(T.Tables(0).Rows(FILA).ItemArray(0))
                     CONSULTA_NOMBRE_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(1)
                     CONSULTA_NUMERO_CARNET.Text = T.Tables(0).Rows(FILA).ItemArray(2)
                     CONSULTA_NUMERO_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(3)
                     CONSULTA_RESIDENCIA_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(4)
-                    TIPO_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(5)
-                    AREA_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(6)
+                    Correo_empleado.Text = T.Tables(0).Rows(FILA).ItemArray(5)
+                    Dim resultado_estado As Integer = T.Tables(0).Rows(FILA).ItemArray(6)
+                    If resultado_estado = 1 Then
+                        Estado.Text = "Activo"
+                    Else
+                        Estado.Text = "Inactivo"
+                    End If
+
+                    Dim foto As String = T.Tables(0).Rows(FILA).ItemArray(7)
+
+                    If foto = "." Then
+                        IMG_CONSULTA_EMPLEADO.Image = My.Resources.user
+                    Else
+                        IMG_CONSULTA_EMPLEADO.Image = Image.FromFile(T.Tables(0).Rows(FILA).ItemArray(7))
+                    End If
+
                 Next
+                ACTUALIZAR.Enabled = True
+                BORRAR.Enabled = True
             End If
-            ACTUALIZAR.Enabled = True
-            BORRAR.Enabled = True
         Catch ex As Exception
             MsgBox("No se ha encontrado ningún empleado con número de cédula digitado")
-            ACTUALIZAR.Enabled = False
-            BORRAR.Enabled = False
+        ACTUALIZAR.Enabled = False
+        BORRAR.Enabled = False
         End Try
+
     End Sub
 
 
@@ -58,25 +73,32 @@
         CONSULTA_NUMERO_CARNET.Text = ""
         CONSULTA_NUMERO_EMPLEADO.Text = ""
         CONSULTA_RESIDENCIA_EMPLEADO.Text = ""
-        TIPO_EMPLEADO.Text = ""
+        CEDULA_EMPLEADO.Text = ""
+        Correo_empleado.Text = ""
         ID = Nothing
-        AREA_EMPLEADO.Text = ""
+        Estado.Text = ""
     End Sub
 
     Private Sub ACTUALIZAR_Click(sender As Object, e As EventArgs) Handles ACTUALIZAR.Click
-        SQL = "UPDATE EMPLEADO SET NOMBRE_COMPLETO='" & CONSULTA_NOMBRE_EMPLEADO.Text & "', CEDULA='" & CONSULTA_NUMERO_CARNET.Text & "', NUMERO_TELEFONO='" & CONSULTA_NUMERO_EMPLEADO.Text & "', LUGAR_RESIDENCIA='" & CONSULTA_RESIDENCIA_EMPLEADO.Text & "', TIPO_EMPLEADO='" & TIPO_EMPLEADO.Text & "', AREA='" & AREA_EMPLEADO.Text & "' WHERE ID=" & ID & ""
+        Dim estado_empleado As Integer = 1
+        If Estado.Text = "Inactivo" Then
+            If MsgBox(“Este usuario está inactivo ¿Desea cambiar su estado a Activo?", vbQuestion + vbYesNo, “Usuario inactivo") = vbYes Then
+                estado_empleado = 1
+            Else
+                estado_empleado = 0
+            End If
+        End If
+        SQL = "UPDATE EMPLEADO SET NOMBRE_COMPLETO='" & CONSULTA_NOMBRE_EMPLEADO.Text & "', CEDULA='" & CONSULTA_NUMERO_CARNET.Text & "', NUMERO_TELEFONO='" & CONSULTA_NUMERO_EMPLEADO.Text & "', LUGAR_RESIDENCIA='" & CONSULTA_RESIDENCIA_EMPLEADO.Text & "', CORREO='" & Correo_empleado.Text & "', ESTADO='" & estado_empleado & "' WHERE ID=" & ID & ""
         EJECUTAR(SQL)
         LIMPIAR()
         MsgBox("Informacion actualizada correctamente", vbInformation + vbOKOnly, "Guardando")
     End Sub
 
     Private Sub BORRAR_Click(sender As Object, e As EventArgs) Handles BORRAR.Click
-        If MsgBox(“¿Desea eliminar al empleado?", vbQuestion + vbYesNo, “Verifique") = vbYes Then
-            SQL = "UPDATE EMPLEADO SET ESTADO=" & 0 & " WHERE ID = '" & ID & "'"
-            EJECUTAR(SQL)
-            LIMPIAR()
-            MsgBox("Información eliminada satisfactoriamente.", vbInformation + vbOKOnly, "Eliminando")
-        End If
+        SQL = "UPDATE EMPLEADO SET ESTADO=" & 0 & " WHERE ID = '" & ID & "'"
+        EJECUTAR(SQL)
+        LIMPIAR()
+        MsgBox("Información eliminada satisfactoriamente.", vbInformation + vbOKOnly, "Eliminando")
     End Sub
 
 End Class

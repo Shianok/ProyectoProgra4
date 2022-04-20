@@ -64,6 +64,8 @@
 
             If bandera = 1 Then 'Con este if logro que el mensaje de error se muestre unicamente cuando recorrió toda la tabla y no encontró ningun dato que coincidiera con lo que el usuario ingresó
                 Cargar_Datos(cedula_parametro)
+                Cedula.Text = ""
+                PASSWORD.Text = ""
                 Interfaz.Show()
                 Me.Hide()
             Else

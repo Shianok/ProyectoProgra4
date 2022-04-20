@@ -49,6 +49,8 @@
         If Abrir.ShowDialog = DialogResult.OK Then
             IMG_EMPLEADO.Image = Image.FromFile(Abrir.FileName)
             IMG_EMPLEADO.Tag = Abrir.FileName 'Almacena la ruta de la imagen
+        Else
+            IMG_EMPLEADO.Tag = "."
         End If
     End Sub
 

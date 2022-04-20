@@ -1,5 +1,6 @@
 ﻿Public Class Interfaz
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles btnCerrarInterfaz.Click
+        LIMPIAR_UPDATE()
         Me.Close()
         Form1.Show()
     End Sub
@@ -74,6 +75,7 @@
     End Sub
 
     Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
+        LIMPIAR_UPDATE()
         Me.Close()
         Form1.Show()
     End Sub

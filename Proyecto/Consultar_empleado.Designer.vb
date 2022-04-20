@@ -29,8 +29,9 @@ Partial Class Consultar_empleado
         Me.CUNSULTA_PACIENTE = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.BTN_BUSCAR_EMPLEADO = New Guna.UI2.WinForms.Guna2Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CEDULA_EMPLEADO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.CONSULTA_INFO = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CONSULTA_NUMERO_EMPLEADO = New System.Windows.Forms.MaskedTextBox()
+        Me.CONSULTA_NUMERO_CARNET = New System.Windows.Forms.MaskedTextBox()
         Me.BORRAR = New Guna.UI2.WinForms.Guna2Button()
         Me.ACTUALIZAR = New Guna.UI2.WinForms.Guna2Button()
         Me.IMG_CONSULTA_EMPLEADO = New Guna.UI2.WinForms.Guna2CirclePictureBox()
@@ -42,10 +43,9 @@ Partial Class Consultar_empleado
         Me.Label6 = New System.Windows.Forms.Label()
         Me.CONSULTA_NOMBRE_EMPLEADO = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.CONSULTA_NUMERO_CARNET = New System.Windows.Forms.MaskedTextBox()
-        Me.CONSULTA_NUMERO_EMPLEADO = New System.Windows.Forms.MaskedTextBox()
-        Me.TIPO_EMPLEADO = New Guna.UI2.WinForms.Guna2ComboBox()
-        Me.AREA_EMPLEADO = New Guna.UI2.WinForms.Guna2ComboBox()
+        Me.CEDULA_EMPLEADO = New System.Windows.Forms.MaskedTextBox()
+        Me.Correo_empleado = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Estado = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.Guna2GroupBox2.SuspendLayout()
         Me.CUNSULTA_PACIENTE.SuspendLayout()
@@ -121,9 +121,9 @@ Partial Class Consultar_empleado
         Me.CUNSULTA_PACIENTE.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.CUNSULTA_PACIENTE.BorderRadius = 5
         Me.CUNSULTA_PACIENTE.BorderThickness = 2
+        Me.CUNSULTA_PACIENTE.Controls.Add(Me.CEDULA_EMPLEADO)
         Me.CUNSULTA_PACIENTE.Controls.Add(Me.BTN_BUSCAR_EMPLEADO)
         Me.CUNSULTA_PACIENTE.Controls.Add(Me.Label1)
-        Me.CUNSULTA_PACIENTE.Controls.Add(Me.CEDULA_EMPLEADO)
         Me.CUNSULTA_PACIENTE.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.CUNSULTA_PACIENTE.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
         Me.CUNSULTA_PACIENTE.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -162,34 +162,14 @@ Partial Class Consultar_empleado
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Carnet:"
         '
-        'CEDULA_EMPLEADO
-        '
-        Me.CEDULA_EMPLEADO.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.CEDULA_EMPLEADO.DefaultText = ""
-        Me.CEDULA_EMPLEADO.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.CEDULA_EMPLEADO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.CEDULA_EMPLEADO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA_EMPLEADO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CEDULA_EMPLEADO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CEDULA_EMPLEADO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.CEDULA_EMPLEADO.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.CEDULA_EMPLEADO.Location = New System.Drawing.Point(72, 53)
-        Me.CEDULA_EMPLEADO.Name = "CEDULA_EMPLEADO"
-        Me.CEDULA_EMPLEADO.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.CEDULA_EMPLEADO.PlaceholderText = ""
-        Me.CEDULA_EMPLEADO.SelectedText = ""
-        Me.CEDULA_EMPLEADO.Size = New System.Drawing.Size(211, 33)
-        Me.CEDULA_EMPLEADO.TabIndex = 2
-        '
         'CONSULTA_INFO
         '
         Me.CONSULTA_INFO.BackColor = System.Drawing.Color.Transparent
         Me.CONSULTA_INFO.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.CONSULTA_INFO.BorderRadius = 5
         Me.CONSULTA_INFO.BorderThickness = 2
-        Me.CONSULTA_INFO.Controls.Add(Me.AREA_EMPLEADO)
-        Me.CONSULTA_INFO.Controls.Add(Me.TIPO_EMPLEADO)
+        Me.CONSULTA_INFO.Controls.Add(Me.Estado)
+        Me.CONSULTA_INFO.Controls.Add(Me.Correo_empleado)
         Me.CONSULTA_INFO.Controls.Add(Me.CONSULTA_NUMERO_EMPLEADO)
         Me.CONSULTA_INFO.Controls.Add(Me.CONSULTA_NUMERO_CARNET)
         Me.CONSULTA_INFO.Controls.Add(Me.BORRAR)
@@ -212,6 +192,25 @@ Partial Class Consultar_empleado
         Me.CONSULTA_INFO.Size = New System.Drawing.Size(934, 500)
         Me.CONSULTA_INFO.TabIndex = 25
         Me.CONSULTA_INFO.Text = "Informacion de empleado"
+        '
+        'CONSULTA_NUMERO_EMPLEADO
+        '
+        Me.CONSULTA_NUMERO_EMPLEADO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CONSULTA_NUMERO_EMPLEADO.Location = New System.Drawing.Point(209, 325)
+        Me.CONSULTA_NUMERO_EMPLEADO.Mask = "99999999"
+        Me.CONSULTA_NUMERO_EMPLEADO.Name = "CONSULTA_NUMERO_EMPLEADO"
+        Me.CONSULTA_NUMERO_EMPLEADO.Size = New System.Drawing.Size(211, 23)
+        Me.CONSULTA_NUMERO_EMPLEADO.TabIndex = 69
+        Me.CONSULTA_NUMERO_EMPLEADO.ValidatingType = GetType(Integer)
+        '
+        'CONSULTA_NUMERO_CARNET
+        '
+        Me.CONSULTA_NUMERO_CARNET.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CONSULTA_NUMERO_CARNET.Location = New System.Drawing.Point(650, 214)
+        Me.CONSULTA_NUMERO_CARNET.Mask = "00-0000-0000"
+        Me.CONSULTA_NUMERO_CARNET.Name = "CONSULTA_NUMERO_CARNET"
+        Me.CONSULTA_NUMERO_CARNET.Size = New System.Drawing.Size(211, 23)
+        Me.CONSULTA_NUMERO_CARNET.TabIndex = 68
         '
         'BORRAR
         '
@@ -273,11 +272,11 @@ Partial Class Consultar_empleado
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(599, 438)
+        Me.Label5.Location = New System.Drawing.Point(584, 438)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(45, 21)
+        Me.Label5.Size = New System.Drawing.Size(59, 21)
         Me.Label5.TabIndex = 65
-        Me.Label5.Text = "Area:"
+        Me.Label5.Text = "Estado:"
         '
         'Label2
         '
@@ -285,12 +284,11 @@ Partial Class Consultar_empleado
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.Black
-        Me.Label2.Location = New System.Drawing.Point(63, 440)
+        Me.Label2.Location = New System.Drawing.Point(60, 440)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(137, 21)
+        Me.Label2.Size = New System.Drawing.Size(141, 21)
         Me.Label2.TabIndex = 63
-        Me.Label2.Text = "Tipo de empleado:"
-        Me.Label2.Visible = False
+        Me.Label2.Text = "Correo electrónico:"
         '
         'CONSULTA_RESIDENCIA_EMPLEADO
         '
@@ -300,7 +298,6 @@ Partial Class Consultar_empleado
         Me.CONSULTA_RESIDENCIA_EMPLEADO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.CONSULTA_RESIDENCIA_EMPLEADO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.CONSULTA_RESIDENCIA_EMPLEADO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CONSULTA_RESIDENCIA_EMPLEADO.Enabled = False
         Me.CONSULTA_RESIDENCIA_EMPLEADO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.CONSULTA_RESIDENCIA_EMPLEADO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CONSULTA_RESIDENCIA_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -348,7 +345,6 @@ Partial Class Consultar_empleado
         Me.Label6.Size = New System.Drawing.Size(153, 21)
         Me.Label6.TabIndex = 53
         Me.Label6.Text = "Número de teléfono:"
-        Me.Label6.Visible = False
         '
         'CONSULTA_NOMBRE_EMPLEADO
         '
@@ -358,7 +354,6 @@ Partial Class Consultar_empleado
         Me.CONSULTA_NOMBRE_EMPLEADO.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.CONSULTA_NOMBRE_EMPLEADO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
         Me.CONSULTA_NOMBRE_EMPLEADO.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.CONSULTA_NOMBRE_EMPLEADO.Enabled = False
         Me.CONSULTA_NOMBRE_EMPLEADO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.CONSULTA_NOMBRE_EMPLEADO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.CONSULTA_NOMBRE_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -382,60 +377,55 @@ Partial Class Consultar_empleado
         Me.Label4.Size = New System.Drawing.Size(140, 21)
         Me.Label4.TabIndex = 51
         Me.Label4.Text = "Nombre completo:"
-        Me.Label4.Visible = False
         '
-        'CONSULTA_NUMERO_CARNET
+        'CEDULA_EMPLEADO
         '
-        Me.CONSULTA_NUMERO_CARNET.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CONSULTA_NUMERO_CARNET.Location = New System.Drawing.Point(650, 214)
-        Me.CONSULTA_NUMERO_CARNET.Mask = "00-0000-0000"
-        Me.CONSULTA_NUMERO_CARNET.Name = "CONSULTA_NUMERO_CARNET"
-        Me.CONSULTA_NUMERO_CARNET.Size = New System.Drawing.Size(211, 23)
-        Me.CONSULTA_NUMERO_CARNET.TabIndex = 68
+        Me.CEDULA_EMPLEADO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CEDULA_EMPLEADO.Location = New System.Drawing.Point(72, 60)
+        Me.CEDULA_EMPLEADO.Mask = "00-0000-0000"
+        Me.CEDULA_EMPLEADO.Name = "CEDULA_EMPLEADO"
+        Me.CEDULA_EMPLEADO.Size = New System.Drawing.Size(211, 23)
+        Me.CEDULA_EMPLEADO.TabIndex = 69
         '
-        'CONSULTA_NUMERO_EMPLEADO
+        'Correo_empleado
         '
-        Me.CONSULTA_NUMERO_EMPLEADO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CONSULTA_NUMERO_EMPLEADO.Location = New System.Drawing.Point(209, 325)
-        Me.CONSULTA_NUMERO_EMPLEADO.Mask = "99999999"
-        Me.CONSULTA_NUMERO_EMPLEADO.Name = "CONSULTA_NUMERO_EMPLEADO"
-        Me.CONSULTA_NUMERO_EMPLEADO.Size = New System.Drawing.Size(211, 23)
-        Me.CONSULTA_NUMERO_EMPLEADO.TabIndex = 69
-        Me.CONSULTA_NUMERO_EMPLEADO.ValidatingType = GetType(Integer)
+        Me.Correo_empleado.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Correo_empleado.DefaultText = ""
+        Me.Correo_empleado.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Correo_empleado.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Correo_empleado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Correo_empleado.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Correo_empleado.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Correo_empleado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Correo_empleado.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Correo_empleado.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Correo_empleado.Location = New System.Drawing.Point(209, 436)
+        Me.Correo_empleado.Name = "Correo_empleado"
+        Me.Correo_empleado.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Correo_empleado.PlaceholderText = ""
+        Me.Correo_empleado.SelectedText = ""
+        Me.Correo_empleado.Size = New System.Drawing.Size(211, 33)
+        Me.Correo_empleado.TabIndex = 72
         '
-        'TIPO_EMPLEADO
+        'Estado
         '
-        Me.TIPO_EMPLEADO.BackColor = System.Drawing.Color.Transparent
-        Me.TIPO_EMPLEADO.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
-        Me.TIPO_EMPLEADO.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.TIPO_EMPLEADO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.TIPO_EMPLEADO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.TIPO_EMPLEADO.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TIPO_EMPLEADO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.TIPO_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.TIPO_EMPLEADO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.TIPO_EMPLEADO.ItemHeight = 30
-        Me.TIPO_EMPLEADO.Location = New System.Drawing.Point(209, 435)
-        Me.TIPO_EMPLEADO.Name = "TIPO_EMPLEADO"
-        Me.TIPO_EMPLEADO.Size = New System.Drawing.Size(211, 36)
-        Me.TIPO_EMPLEADO.TabIndex = 70
-        '
-        'AREA_EMPLEADO
-        '
-        Me.AREA_EMPLEADO.BackColor = System.Drawing.Color.Transparent
-        Me.AREA_EMPLEADO.BorderColor = System.Drawing.Color.FromArgb(CType(CType(213, Byte), Integer), CType(CType(218, Byte), Integer), CType(CType(223, Byte), Integer))
-        Me.AREA_EMPLEADO.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
-        Me.AREA_EMPLEADO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.AREA_EMPLEADO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.AREA_EMPLEADO.FocusedColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.AREA_EMPLEADO.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.AREA_EMPLEADO.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        Me.AREA_EMPLEADO.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.AREA_EMPLEADO.ItemHeight = 30
-        Me.AREA_EMPLEADO.Location = New System.Drawing.Point(650, 432)
-        Me.AREA_EMPLEADO.Name = "AREA_EMPLEADO"
-        Me.AREA_EMPLEADO.Size = New System.Drawing.Size(211, 36)
-        Me.AREA_EMPLEADO.TabIndex = 71
+        Me.Estado.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.Estado.DefaultText = ""
+        Me.Estado.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.Estado.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.Estado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Estado.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.Estado.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.Estado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Estado.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Estado.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Estado.Location = New System.Drawing.Point(650, 433)
+        Me.Estado.Name = "Estado"
+        Me.Estado.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.Estado.PlaceholderText = ""
+        Me.Estado.SelectedText = ""
+        Me.Estado.Size = New System.Drawing.Size(211, 33)
+        Me.Estado.TabIndex = 73
         '
         'Consultar_empleado
         '
@@ -466,7 +456,6 @@ Partial Class Consultar_empleado
     Friend WithEvents CUNSULTA_PACIENTE As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents BTN_BUSCAR_EMPLEADO As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents CEDULA_EMPLEADO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents CONSULTA_INFO As Guna.UI2.WinForms.Guna2GroupBox
     Friend WithEvents CONSULTA_RESIDENCIA_EMPLEADO As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label9 As Label
@@ -481,6 +470,7 @@ Partial Class Consultar_empleado
     Friend WithEvents ACTUALIZAR As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents CONSULTA_NUMERO_CARNET As MaskedTextBox
     Friend WithEvents CONSULTA_NUMERO_EMPLEADO As MaskedTextBox
-    Friend WithEvents TIPO_EMPLEADO As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents AREA_EMPLEADO As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents CEDULA_EMPLEADO As MaskedTextBox
+    Friend WithEvents Correo_empleado As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Estado As Guna.UI2.WinForms.Guna2TextBox
 End Class
