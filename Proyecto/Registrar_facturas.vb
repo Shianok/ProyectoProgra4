@@ -5,21 +5,32 @@ Imports System.IO
 Public Class Registrar_facturas
     Dim ID As Integer
     Dim TOTAL_NETO As Integer
-
-    'Private Sub Registrar_facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    'Fecha_de_pago.Format = DateFormat.LongDate
-    'End Sub
-
     Private Sub Registrar_facturas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        cargarComboArea()
+        LLENAR(COMBO_AREA, "NOMBRE_AREA", "AREAS", "ESTADO", 1)
+        'cargarComboArea()
     End Sub
 
-    Friend Sub SUMA_TOTAL()
-        Dim Suma As Integer = Convert.ToInt32(MONTO.Text)
+    Friend Sub SUMA_TOTAL(ByVal Restar As Integer) 'Este metodo suma los montos de los medicamente agregados al listview
+        'TOTAL_NETO = 0
+        Dim Suma As Integer
+        If L.Items.Count > 0 Then
+
+            If Restar = 0 Then
+                For I = 0 To L.Items.Count - 1
+                    Suma = Convert.ToInt32(L.Items(I).SubItems(1).Text)
+                Next
+            Else
+                TOTAL_NETO = TOTAL_NETO - Restar
+            End If
+
+        Else
+            MONTO_TOTAL.Text = 0
+        End If
+
         TOTAL_NETO = TOTAL_NETO + Suma
         MONTO_TOTAL.Text = TOTAL_NETO.ToString
     End Sub
-    Friend Sub IMPRIMIR()
+    Friend Sub IMPRIMIR() 'Creamos el pdf para la factura
         Dim P0, P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12, P13 As Word.Paragraph
 
         Dim T1, T2 As Word.Paragraph
@@ -92,13 +103,12 @@ False, 0, False, T1, 0, False, False)
         MONTO_TOTAL.Clear()
     End Sub
 
-    Friend Sub AGREGAR_AL_LIST()
-        'L.Items.Clear()
+    Friend Sub AGREGAR_AL_LIST() 'Este metodo es para agregar los el medicamento y su monto al listview
         L.Items.Add(AGREGAR.Text)
         L.Items(L.Items.Count - 1).SubItems.Add(MONTO.Text)
     End Sub
 
-    Friend Sub Actualizar()
+    Friend Sub Actualizar() 'Actualiza 
         SQL = "UPDATE FACTURAS SET NOMBRE_PACIENTE='" & NOMBRE_PACIENTE.Text & "', CEDULA='" & Cedula.Text & "', MONTO='" & MONTO_TOTAL.Text & "', FECHA_PAGO='" & Fecha_de_pago.Value & "', NOMBRE_REMITENTE ='" & NOMBRE_PACIENTE.Text & "', AREA_ATENCION='" & COMBO_AREA.Text & "' WHERE ID=" & ID & ""
         EJECUTAR(SQL)
         LIMPIAR()
@@ -113,24 +123,17 @@ False, 0, False, T1, 0, False, False)
     End Sub
 
     Private Sub Btn_realizar_factura_Click(sender As Object, e As EventArgs) Handles Btn_realizar_factura.Click
-        Dim ArchivoBorrar As String
         SQL = "INSERT INTO FACTURAS (ID, NOMBRE_PACIENTE, CEDULA, MONTO, FECHA_PAGO, NOMBRE_REMITENTE, AREA_ATENCION) VALUES(" & PK("FACTURAS", "ID") & ", '" & NOMBRE_PACIENTE.Text & "', '" & Cedula.Text & "', '" & MONTO_TOTAL.Text & "', '" & Fecha_de_pago.Value & "', '" & Nombre_remitente.Text & "', '" & COMBO_AREA.Text & "')"
         EJECUTAR(SQL)
         IMPRIMIR()
-        ENVIAR_CORREO("FACTURA DEL SISTEMA HOSPITALARIO", "POR ESTE MEDIO LE ADJUNTAMOS SU FACTURA DEL SISTEMA HOSPITALARIO, DESDE ESTE ARCHIVO PDF: ", Correo_usuario.Text, "C:\REPORTES\factura.pdf", "SistemaHospitalario@outlook.es", "Sistema2022")
-        ArchivoBorrar = "C:\REPORTES\factura.pdf"
-
-        'comprobamos que el archivo existe
-        'If System.IO.File.Exists(ArchivoBorrar) = True Then
-        'System.IO.File.Delete(ArchivoBorrar)
-        ' End If
+        ENVIAR_CORREO("FACTURA DEL SISTEMA HOSPITALARIO", "POR ESTE MEDIO LE ADJUNTAMOS SU FACTURA DEL SISTEMA HOSPITALARIO, DESDE ESTE ARCHIVO PDF: ", Correo_usuario.Text, "C:\REPORTES\factura.pdf", "SistemaHospitalario@outlook.es", "Sistema2022") 'Traemos el metodo del módulo de conexion para enviar la factura del pdf por correo
         LIMPIAR()
         MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
     End Sub
 
-    Private Sub AGREGAR_LIST_Click(sender As Object, e As EventArgs) Handles AGREGAR_LIST.Click
-        SUMA_TOTAL()
+    Private Sub AGREGAR_LIST_Click(sender As Object, e As EventArgs) Handles AGREGAR_LIST.Click 'Aqui llamamos al metodo para agregar los datos al listview y sumar los montos
         AGREGAR_AL_LIST()
+        SUMA_TOTAL(0)
         AGREGAR.Clear()
         MONTO.Clear()
     End Sub
@@ -138,8 +141,9 @@ False, 0, False, T1, 0, False, False)
     Private Sub BORRAR_FILA_Click(sender As Object, e As EventArgs) Handles BORRAR_FILA.Click
         Dim Contador As Double
 
-        If L.Items.Count > 0 Then
+        If L.Items.Count > 0 Then 'Aqui se remueve la última fila de los datos agregados al listview
             L.Items.RemoveAt(Contador)
+
             Contador = (Contador - 1)
         End If
 
@@ -159,4 +163,20 @@ False, 0, False, T1, 0, False, False)
         End If
     End Sub
 
+    Private Sub EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Click
+        Dim Restar As Integer
+        If L.SelectedItems.Count > 0 Then
+            Restar = Convert.ToInt32(L.SelectedItems(0).SubItems(1).Text)
+            Dim Valor As Integer = Convert.ToInt32(MONTO_TOTAL.Text)
+            Valor = Valor - Restar
+            MONTO_TOTAL.Text = Valor
+            L.Items.RemoveAt(L.SelectedItems(0).Index)
+            SUMA_TOTAL(Restar)
+            If L.Items.Count > 0 Then
+                EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Enabled = True
+            Else
+                EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Enabled = False
+            End If
+        End If
+    End Sub
 End Class

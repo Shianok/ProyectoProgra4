@@ -22,7 +22,9 @@ Partial Class Registrar_facturas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.MONTO = New System.Windows.Forms.MaskedTextBox()
         Me.Telefono = New System.Windows.Forms.MaskedTextBox()
         Me.Cedula = New System.Windows.Forms.MaskedTextBox()
         Me.BORRAR_FILA = New Guna.UI2.WinForms.Guna2Button()
@@ -49,8 +51,10 @@ Partial Class Registrar_facturas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_realizar_factura = New Guna.UI2.WinForms.Guna2Button()
-        Me.MONTO = New System.Windows.Forms.MaskedTextBox()
+        Me.CM_OPCIONES = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Guna2GroupBox1.SuspendLayout()
+        Me.CM_OPCIONES.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
@@ -88,6 +92,16 @@ Partial Class Registrar_facturas
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(997, 688)
         Me.Guna2GroupBox1.TabIndex = 0
+        '
+        'MONTO
+        '
+        Me.MONTO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.MONTO.Location = New System.Drawing.Point(864, 284)
+        Me.MONTO.Mask = "99999999999"
+        Me.MONTO.Name = "MONTO"
+        Me.MONTO.Size = New System.Drawing.Size(109, 23)
+        Me.MONTO.TabIndex = 34
+        Me.MONTO.ValidatingType = GetType(Integer)
         '
         'Telefono
         '
@@ -185,6 +199,7 @@ Partial Class Registrar_facturas
         'L
         '
         Me.L.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2})
+        Me.L.ContextMenuStrip = Me.CM_OPCIONES
         Me.L.FullRowSelect = True
         Me.L.GridLines = True
         Me.L.HideSelection = False
@@ -441,15 +456,17 @@ Partial Class Registrar_facturas
         Me.Btn_realizar_factura.TabIndex = 0
         Me.Btn_realizar_factura.Text = "Realizar factura"
         '
-        'MONTO
+        'CM_OPCIONES
         '
-        Me.MONTO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.MONTO.Location = New System.Drawing.Point(864, 284)
-        Me.MONTO.Mask = "99999999999"
-        Me.MONTO.Name = "MONTO"
-        Me.MONTO.Size = New System.Drawing.Size(109, 23)
-        Me.MONTO.TabIndex = 34
-        Me.MONTO.ValidatingType = GetType(Integer)
+        Me.CM_OPCIONES.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem})
+        Me.CM_OPCIONES.Name = "CM_OPCIONES"
+        Me.CM_OPCIONES.Size = New System.Drawing.Size(161, 26)
+        '
+        'EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem
+        '
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Name = "EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem"
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Text = "Eliminar esta fila"
         '
         'Registrar_facturas
         '
@@ -464,6 +481,7 @@ Partial Class Registrar_facturas
         Me.Text = "Registrar_facturas"
         Me.Guna2GroupBox1.ResumeLayout(False)
         Me.Guna2GroupBox1.PerformLayout()
+        Me.CM_OPCIONES.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -496,4 +514,6 @@ Partial Class Registrar_facturas
     Friend WithEvents Cedula As MaskedTextBox
     Friend WithEvents Telefono As MaskedTextBox
     Friend WithEvents MONTO As MaskedTextBox
+    Friend WithEvents CM_OPCIONES As ContextMenuStrip
+    Friend WithEvents EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem As ToolStripMenuItem
 End Class
