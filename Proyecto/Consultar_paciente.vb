@@ -4,7 +4,7 @@
     End Sub
 
     Friend Sub BORRAR_PACIENTE()
-        SQL = "DELETE FROM PACIENTE WHERE ID='" & BUSCAR_CEDULA_PACIENTE.Text & "'"
+        SQL = "DELETE FROM PACIENTE WHERE CEDULA ='" & BUSCAR_CEDULA_PACIENTE.Text & "'"
         EJECUTAR(SQL)
         LIMPIAR()
         MsgBox("Informacion eliminada correctamente", vbInformation + vbOKOnly, "Guardando")
@@ -31,7 +31,7 @@
 
             If T4.Tables(0).Rows.Count = 0 Then
                 T4.Tables.Clear() 'LIMPIANDO EL CONTENIDO DE TODA LA TABLA TEMPORAL
-                SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, LUGAR_RESIDENCIA, FECHA_NACIMIENTO, CORREO, TELEFONO, PADECIMIENTOS FROM PACIENTE"
+                SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, LUGAR_RESIDENCIA, FECHA_NACIMIENTO, CORREO, TELEFONO, PADECIMIENTOS FROM PACIENTE WHERE ESTADO = 1"
                 CARGAR_TABLA(T4, SQL)
             End If
 
@@ -90,7 +90,8 @@
 
     Private Sub BORRAR_Click(sender As Object, e As EventArgs) Handles BORRAR.Click
         If MsgBox(“¿Desea eliminar al paciente?", vbQuestion + vbYesNo, “Verifique") = vbYes Then
-            SQL = "DELETE FROM PACIENTE WHERE ID = '" & ID & "'"
+            Dim Borrado As Integer = 0
+            SQL = "UPDATE PACIENTE SET ESTADO = '" & Borrado & "' WHERE ID = '" & ID & "'"
             EJECUTAR(SQL)
             LIMPIAR()
             MsgBox("Información eliminada satisfactoriamente.", vbInformation + vbOKOnly, "Eliminando")

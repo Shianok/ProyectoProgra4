@@ -23,6 +23,7 @@ Partial Class Agregar_empleados
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Btn_agregar_tipo_empleado = New Guna.UI2.WinForms.Guna2Button()
         Me.NUMERO_CARNET = New System.Windows.Forms.MaskedTextBox()
         Me.NUMERO_TELEFONO = New System.Windows.Forms.MaskedTextBox()
         Me.CEDULA = New System.Windows.Forms.MaskedTextBox()
@@ -48,7 +49,6 @@ Partial Class Agregar_empleados
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Abrir = New System.Windows.Forms.OpenFileDialog()
-        Me.Btn_agregar_tipo_empleado = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.IMG_EMPLEADO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -86,9 +86,24 @@ Partial Class Agregar_empleados
         Me.Guna2GroupBox1.ForeColor = System.Drawing.Color.White
         Me.Guna2GroupBox1.Location = New System.Drawing.Point(-1, 0)
         Me.Guna2GroupBox1.Name = "Guna2GroupBox1"
-        Me.Guna2GroupBox1.Size = New System.Drawing.Size(993, 687)
+        Me.Guna2GroupBox1.Size = New System.Drawing.Size(995, 690)
         Me.Guna2GroupBox1.TabIndex = 0
         Me.Guna2GroupBox1.Text = "Agregar empleados"
+        '
+        'Btn_agregar_tipo_empleado
+        '
+        Me.Btn_agregar_tipo_empleado.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Btn_agregar_tipo_empleado.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Btn_agregar_tipo_empleado.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Btn_agregar_tipo_empleado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Btn_agregar_tipo_empleado.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Btn_agregar_tipo_empleado.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Btn_agregar_tipo_empleado.ForeColor = System.Drawing.Color.White
+        Me.Btn_agregar_tipo_empleado.Location = New System.Drawing.Point(234, 569)
+        Me.Btn_agregar_tipo_empleado.Name = "Btn_agregar_tipo_empleado"
+        Me.Btn_agregar_tipo_empleado.Size = New System.Drawing.Size(180, 26)
+        Me.Btn_agregar_tipo_empleado.TabIndex = 34
+        Me.Btn_agregar_tipo_empleado.Text = "Agregar_tipo_empleado"
         '
         'NUMERO_CARNET
         '
@@ -281,14 +296,14 @@ Partial Class Agregar_empleados
         Me.FECHA_NACIMIENTO.Checked = True
         Me.FECHA_NACIMIENTO.FillColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.FECHA_NACIMIENTO.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.FECHA_NACIMIENTO.Format = System.Windows.Forms.DateTimePickerFormat.[Long]
+        Me.FECHA_NACIMIENTO.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.FECHA_NACIMIENTO.Location = New System.Drawing.Point(234, 469)
         Me.FECHA_NACIMIENTO.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         Me.FECHA_NACIMIENTO.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         Me.FECHA_NACIMIENTO.Name = "FECHA_NACIMIENTO"
         Me.FECHA_NACIMIENTO.Size = New System.Drawing.Size(211, 29)
         Me.FECHA_NACIMIENTO.TabIndex = 21
-        Me.FECHA_NACIMIENTO.Value = New Date(2022, 3, 8, 18, 42, 13, 222)
+        Me.FECHA_NACIMIENTO.Value = New Date(2022, 3, 8, 0, 0, 0, 0)
         '
         'Label10
         '
@@ -429,21 +444,6 @@ Partial Class Agregar_empleados
         'Abrir
         '
         Me.Abrir.FileName = "OpenFileDialog1"
-        '
-        'Btn_agregar_tipo_empleado
-        '
-        Me.Btn_agregar_tipo_empleado.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Btn_agregar_tipo_empleado.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Btn_agregar_tipo_empleado.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Btn_agregar_tipo_empleado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Btn_agregar_tipo_empleado.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.Btn_agregar_tipo_empleado.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Btn_agregar_tipo_empleado.ForeColor = System.Drawing.Color.White
-        Me.Btn_agregar_tipo_empleado.Location = New System.Drawing.Point(234, 569)
-        Me.Btn_agregar_tipo_empleado.Name = "Btn_agregar_tipo_empleado"
-        Me.Btn_agregar_tipo_empleado.Size = New System.Drawing.Size(180, 26)
-        Me.Btn_agregar_tipo_empleado.TabIndex = 34
-        Me.Btn_agregar_tipo_empleado.Text = "Agregar_tipo_empleado"
         '
         'Agregar_empleados
         '

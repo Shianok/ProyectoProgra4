@@ -5,43 +5,55 @@
     End Sub
 
     Friend Sub CONSULTA_EMPLEADO()
-        T.Tables.Clear()
-        Try
-            SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, NUMERO_TELEFONO, LUGAR_RESIDENCIA, CORREO, ESTADO, FOTO FROM EMPLEADO WHERE CEDULA='" & CEDULA_EMPLEADO.Text & "'"
+        If CEDULA_EMPLEADO.Text <> "" Then
+            T.Tables.Clear() 'LIMPIANDO EL CONTENIDO DE TODA LA TABLA TEMPORAL
+            SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, NUMERO_TELEFONO, LUGAR_RESIDENCIA, CORREO, ESTADO, FOTO FROM EMPLEADO WHERE CEDULA LIKE  '" & CEDULA_EMPLEADO.Text & "%'"
             CARGAR_TABLA(T, SQL)
-            If T.Tables(0).Rows.Count > 0 Then
-                For FILA As Integer = 0 To T.Tables(0).Rows.Count - 1 'se;ala el inicio de la tabla en 0,0
-                    ID = Convert.ToInt32(T.Tables(0).Rows(FILA).ItemArray(0))
-                    CONSULTA_NOMBRE_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(1)
-                    CONSULTA_NUMERO_CARNET.Text = T.Tables(0).Rows(FILA).ItemArray(2)
-                    CONSULTA_NUMERO_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(3)
-                    CONSULTA_RESIDENCIA_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(4)
-                    Correo_empleado.Text = T.Tables(0).Rows(FILA).ItemArray(5)
-                    Dim resultado_estado As Integer = T.Tables(0).Rows(FILA).ItemArray(6)
-                    If resultado_estado = 1 Then
-                        Estado.Text = "Activo"
-                    Else
-                        Estado.Text = "Inactivo"
-                    End If
+            Dim ID As String
 
-                    Dim foto As String = T.Tables(0).Rows(FILA).ItemArray(7)
-
-                    If foto = "." Then
-                        IMG_CONSULTA_EMPLEADO.Image = My.Resources.user
-                    Else
-                        IMG_CONSULTA_EMPLEADO.Image = Image.FromFile(T.Tables(0).Rows(FILA).ItemArray(7))
-                    End If
-
-                Next
-                ACTUALIZAR.Enabled = True
-                BORRAR.Enabled = True
+            If T.Tables(0).Rows.Count = 0 Then
+                T.Tables.Clear() 'LIMPIANDO EL CONTENIDO DE TODA LA TABLA TEMPORAL
+                SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, NUMERO_TELEFONO, LUGAR_RESIDENCIA, CORREO, ESTADO, FOTO FROM EMPLEADO WHERE ESTADO = 1"
+                CARGAR_TABLA(T, SQL)
             End If
-        Catch ex As Exception
-            MsgBox("No se ha encontrado ningún empleado con número de cédula digitado")
-        ACTUALIZAR.Enabled = False
-        BORRAR.Enabled = False
-        End Try
 
+            Try
+                SQL = "SELECT ID, NOMBRE_COMPLETO, CEDULA, NUMERO_TELEFONO, LUGAR_RESIDENCIA, CORREO, ESTADO, FOTO FROM EMPLEADO WHERE CEDULA='" & CEDULA_EMPLEADO.Text & "'"
+                CARGAR_TABLA(T, SQL)
+                If T.Tables(0).Rows.Count > 0 Then
+                    For FILA As Integer = 0 To T.Tables(0).Rows.Count - 1 'se;ala el inicio de la tabla en 0,0
+                        ID = Convert.ToInt32(T.Tables(0).Rows(FILA).ItemArray(0))
+                        CONSULTA_NOMBRE_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(1)
+                        CONSULTA_NUMERO_CARNET.Text = T.Tables(0).Rows(FILA).ItemArray(2)
+                        CONSULTA_NUMERO_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(3)
+                        CONSULTA_RESIDENCIA_EMPLEADO.Text = T.Tables(0).Rows(FILA).ItemArray(4)
+                        Correo_empleado.Text = T.Tables(0).Rows(FILA).ItemArray(5)
+                        Dim resultado_estado As Integer = T.Tables(0).Rows(FILA).ItemArray(6)
+                        If resultado_estado = 1 Then
+                            Estado.Text = "Activo"
+                        Else
+                            Estado.Text = "Inactivo"
+                        End If
+
+                        Dim foto As String = T.Tables(0).Rows(FILA).ItemArray(7)
+
+                        If foto = "." Then
+                            IMG_CONSULTA_EMPLEADO.Image = My.Resources.user
+                        Else
+                            IMG_CONSULTA_EMPLEADO.Image = Image.FromFile(T.Tables(0).Rows(FILA).ItemArray(7))
+                        End If
+
+                    Next
+                    ACTUALIZAR.Enabled = True
+                    BORRAR.Enabled = True
+                Else
+                    ACTUALIZAR.Enabled = False
+                    BORRAR.Enabled = False
+                End If
+            Catch ex As Exception
+                MsgBox("No se ha encontrado ningún empleado con número de cédula digitado")
+            End Try
+        End If
     End Sub
 
 

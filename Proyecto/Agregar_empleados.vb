@@ -4,6 +4,7 @@
 
     Private Sub Agregar_empleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LLENAR(TIPO_AREA, "NOMBRE_AREA", "AREAS", "ESTADO", 1)
+        LLENAR_SIN_CONDICION(TIPO_EMPLEADO, "TIPO_EMPLEADO", "TIPOS_EMPLEADOS")
     End Sub
 
     Friend Sub Validar()

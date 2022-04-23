@@ -1,11 +1,12 @@
-﻿Public Class Grafico
+﻿Imports System.ComponentModel
+Public Class Grafico
     Public i As Integer = 0
-    Dim ExcelApp = New Microsoft.Office.Interop.Excel.Application
-    Dim Libro = ExcelApp.Workbooks.Add
+
     Dim final As Long
     Dim Diagnostico As ArrayList = New ArrayList()
     Dim CantDiag As ArrayList = New ArrayList()
     Dim TextoCombo As String
+
     Private Sub GraDiagnostico()
 
         Dim Diagnostico As ArrayList = New ArrayList()
@@ -160,36 +161,51 @@
     End Sub
 
     Friend Sub CrearExcel()
+        Dim ExcelApp = New Microsoft.Office.Interop.Excel.Application
+        Dim Libro = ExcelApp.Workbooks.Add
 
         Dim Fila As Integer = 2
         Dim Columna As Integer = 1
         Dim RowCount = T2.Tables(0).Rows.Count - 1
         Dim ColumnCount = T2.Tables(0).Columns.Count - 1
 
-        For nColumna As Integer = 0 To ColumnCount
+        Try
+            For nColumna As Integer = 0 To ColumnCount
 
-            Libro.Worksheets("Hoja1").Cells(1, Columna) = T2.Tables(0).Columns(nColumna).ToString
-            Libro.Worksheets("Hoja1").Cells(1, Columna).Font.bold = True
+                Libro.Worksheets("Hoja1").Cells(1, Columna) = T2.Tables(0).Columns(nColumna).ToString
+                Libro.Worksheets("Hoja1").Cells(1, Columna).Font.bold = True
 
-            For nFila As Integer = 0 To RowCount
-                Libro.Worksheets("Hoja1").Cells(Fila, Columna) = T2.Tables(0).Rows(nFila).ItemArray(nColumna).ToString
-                Fila = Fila + 1
+                For nFila As Integer = 0 To RowCount
+                    Libro.Worksheets("Hoja1").Cells(Fila, Columna) = T2.Tables(0).Rows(nFila).ItemArray(nColumna).ToString
+                    Fila = Fila + 1
+                Next
+                Columna = Columna + 1
+                Fila = 2
             Next
-            Columna = Columna + 1
-            Fila = 2
-        Next
 
-        For i = 0 To T2.Tables(0).Rows.Count - 1
-            Diagnostico.Add(T2.Tables(0).Rows(i).ItemArray(0))
-            CantDiag.Add(T2.Tables(0).Rows(i).ItemArray(1))
-        Next
+            For i = 0 To T2.Tables(0).Rows.Count - 1
+                Diagnostico.Add(T2.Tables(0).Rows(i).ItemArray(0))
+                CantDiag.Add(T2.Tables(0).Rows(i).ItemArray(1))
+            Next
 
 
-        MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
-        ExcelApp.Visible = True
+            SaveFileDialog1.DefaultExt = "*.xlsx"
+            SaveFileDialog1.FileName = "datos"
+            SaveFileDialog1.Filter = "Libro de excel (*.xlsx) | *.xlsx"
 
-        Libro = Nothing
-        ExcelApp = Nothing
+            If SaveFileDialog1.ShowDialog = DialogResult.OK Then
+                Libro.SaveAs(SaveFileDialog1.FileName)
+                MsgBox("Los registros se exportaron con exito")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            Libro.Saved() = True
+            ExcelApp.Quit()
+            Libro = Nothing
+            ExcelApp = Nothing
+        End Try
+
 
 
     End Sub
@@ -209,6 +225,7 @@
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         CrearExcel()
+        ENVIAR_CORREO("Registro de sistema hospitalario", "Su reporte fue guardado y enviado con exito", Correo.Text, "C:\REPORTES\datos.xlsx", "SistemaHospitalario@outlook.es", "Sistema2022") 'Traemos el metodo del módulo de conexion para enviar la factura del pdf por correo
     End Sub
 
 End Class

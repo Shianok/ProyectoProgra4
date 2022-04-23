@@ -26,6 +26,8 @@ Partial Class Grafico
         Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
         Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Correo = New System.Windows.Forms.TextBox()
         Me.Reiniciar_grafico = New Guna.UI2.WinForms.Guna2Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -43,6 +45,7 @@ Partial Class Grafico
         Me.Guna2GroupBox2 = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.PacientesActivos = New System.Windows.Forms.Label()
         Me.Pacientes = New System.Windows.Forms.Label()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.ChartDiagnosticos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Guna2GroupBox3.SuspendLayout()
@@ -54,6 +57,8 @@ Partial Class Grafico
         'Guna2GroupBox1
         '
         Me.Guna2GroupBox1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Guna2GroupBox1.Controls.Add(Me.Label3)
+        Me.Guna2GroupBox1.Controls.Add(Me.Correo)
         Me.Guna2GroupBox1.Controls.Add(Me.Reiniciar_grafico)
         Me.Guna2GroupBox1.Controls.Add(Me.Label2)
         Me.Guna2GroupBox1.Controls.Add(Me.Label1)
@@ -76,6 +81,27 @@ Partial Class Grafico
         Me.Guna2GroupBox1.TabIndex = 11
         Me.Guna2GroupBox1.Text = "Reportes"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(603, 455)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(184, 32)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "Enviar al correo:"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Correo
+        '
+        Me.Correo.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Correo.Location = New System.Drawing.Point(609, 490)
+        Me.Correo.Name = "Correo"
+        Me.Correo.Size = New System.Drawing.Size(235, 35)
+        Me.Correo.TabIndex = 12
+        '
         'Reiniciar_grafico
         '
         Me.Reiniciar_grafico.BackColor = System.Drawing.Color.Transparent
@@ -87,7 +113,7 @@ Partial Class Grafico
         Me.Reiniciar_grafico.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Reiniciar_grafico.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Reiniciar_grafico.ForeColor = System.Drawing.Color.White
-        Me.Reiniciar_grafico.Location = New System.Drawing.Point(490, 513)
+        Me.Reiniciar_grafico.Location = New System.Drawing.Point(491, 567)
         Me.Reiniciar_grafico.Name = "Reiniciar_grafico"
         Me.Reiniciar_grafico.Size = New System.Drawing.Size(148, 59)
         Me.Reiniciar_grafico.TabIndex = 11
@@ -99,7 +125,7 @@ Partial Class Grafico
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(623, 390)
+        Me.Label2.Location = New System.Drawing.Point(603, 366)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(115, 32)
         Me.Label2.TabIndex = 10
@@ -112,7 +138,7 @@ Partial Class Grafico
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(623, 275)
+        Me.Label1.Location = New System.Drawing.Point(603, 251)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(123, 32)
         Me.Label1.TabIndex = 9
@@ -153,7 +179,7 @@ Partial Class Grafico
         Me.Guna2Button2.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Guna2Button2.ForeColor = System.Drawing.Color.White
-        Me.Guna2Button2.Location = New System.Drawing.Point(824, 513)
+        Me.Guna2Button2.Location = New System.Drawing.Point(825, 567)
         Me.Guna2Button2.Name = "Guna2Button2"
         Me.Guna2Button2.Size = New System.Drawing.Size(148, 59)
         Me.Guna2Button2.TabIndex = 7
@@ -170,7 +196,7 @@ Partial Class Grafico
         Me.Mostrar_grafico.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Mostrar_grafico.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Mostrar_grafico.ForeColor = System.Drawing.Color.White
-        Me.Mostrar_grafico.Location = New System.Drawing.Point(658, 513)
+        Me.Mostrar_grafico.Location = New System.Drawing.Point(659, 567)
         Me.Mostrar_grafico.Name = "Mostrar_grafico"
         Me.Mostrar_grafico.Size = New System.Drawing.Size(148, 59)
         Me.Mostrar_grafico.TabIndex = 6
@@ -186,7 +212,7 @@ Partial Class Grafico
         Me.ComboDato.Font = New System.Drawing.Font("Segoe UI", 10.0!)
         Me.ComboDato.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.ComboDato.ItemHeight = 30
-        Me.ComboDato.Location = New System.Drawing.Point(629, 425)
+        Me.ComboDato.Location = New System.Drawing.Point(609, 401)
         Me.ComboDato.Name = "ComboDato"
         Me.ComboDato.Size = New System.Drawing.Size(235, 36)
         Me.ComboDato.TabIndex = 5
@@ -202,7 +228,7 @@ Partial Class Grafico
         Me.ComboTabla.ForeColor = System.Drawing.Color.FromArgb(CType(CType(68, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.ComboTabla.ItemHeight = 30
         Me.ComboTabla.Items.AddRange(New Object() {"Paciente", "Atencion", "Facturas", "Empleado"})
-        Me.ComboTabla.Location = New System.Drawing.Point(629, 310)
+        Me.ComboTabla.Location = New System.Drawing.Point(609, 286)
         Me.ComboTabla.Name = "ComboTabla"
         Me.ComboTabla.Size = New System.Drawing.Size(235, 36)
         Me.ComboTabla.TabIndex = 4
@@ -379,4 +405,7 @@ Partial Class Grafico
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Reiniciar_grafico As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Correo As TextBox
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
 End Class

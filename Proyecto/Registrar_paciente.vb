@@ -6,7 +6,8 @@ Public Class Registrar_paciente
 
 
     Friend Sub REGISTRAR_PACIENTE() 'SQL para registrar un paciente
-        SQL = "INSERT INTO PACIENTE (ID, NOMBRE_COMPLETO, CEDULA, LUGAR_RESIDENCIA, FECHA_NACIMIENTO, CORREO, TELEFONO, PADECIMIENTOS) VALUES(" & PK("PACIENTE", "ID") & ", '" & NOMBRE_PACIENTE.Text & "', '" & CEDULA_PACIENTE.Text & "', '" & RESIDENCIA_PACIENTE.Text & "', '" & NACIMIENTO_PACIENTE.Text & "', '" & CORREO.Text & "', '" & NUMERO_PACIENTE.Text & "', '" & TXT_PADECIMIENTOS.Text & "')"
+        Dim fecha As Date = NACIMIENTO_PACIENTE.Value
+        SQL = "INSERT INTO PACIENTE (ID, NOMBRE_COMPLETO, CEDULA, LUGAR_RESIDENCIA, FECHA_NACIMIENTO, CORREO, TELEFONO, PADECIMIENTOS, ESTADO) VALUES(" & PK("PACIENTE", "ID") & ", '" & NOMBRE_PACIENTE.Text & "', '" & CEDULA_PACIENTE.Text & "', '" & RESIDENCIA_PACIENTE.Text & "', '" & fecha & "', '" & CORREO.Text & "', '" & NUMERO_PACIENTE.Text & "', '" & TXT_PADECIMIENTOS.Text & "', '1')"
         EJECUTAR(SQL)
         LIMPIAR()
         MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")

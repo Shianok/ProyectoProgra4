@@ -11,8 +11,8 @@
 
     Friend Sub AGREGAR_CONSULTA()
         Dim HoraConsulta As DateTime = HORA_CONSULTA.Text + ":" + MINUTOS_CONSULTA.Text
-
-        SQL = "INSERT INTO CONSULTA (ID, FECHA, HORA, AREA, TELEFONO_PACIENTE, NUMERO_CONSULTORIO, CEDULA_PACIENTE, CORREO) VALUES(" & PK("CONSULTA", "ID") & ", '" & FECHA_CONSULTA.Text & "', '" & HoraConsulta.ToString("HH:mm") & "', " & AREA_CONSULTA.Text & ", '" & NUMERO_CONSULTA.Text & "', '" & NUMERO_CONSULTORIO.Text & "', '" & CEDULA_CONSULTA.Text & "', '" & CORREO_CONSULTA.Text & "')"
+        Dim fecha As Date = FECHA_CONSULTA.Value
+        SQL = "INSERT INTO CONSULTA (ID, FECHA, HORA, AREA, TELEFONO_PACIENTE, NUMERO_CONSULTORIO, CEDULA_PACIENTE, CORREO, ESTADO) VALUES(" & PK("CONSULTA", "ID") & ", '" & fecha & "', '" & HoraConsulta.ToString("HH:mm") & "', " & AREA_CONSULTA.Text & ", '" & NUMERO_CONSULTA.Text & "', '" & NUMERO_CONSULTORIO.Text & "', '" & CEDULA_CONSULTA.Text & "', '" & CORREO_CONSULTA.Text & "', '1')"
         EJECUTAR(SQL)
         LIMPIAR()
         MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
