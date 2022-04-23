@@ -5,7 +5,7 @@
     Dim final As Long
     Dim Diagnostico As ArrayList = New ArrayList()
     Dim CantDiag As ArrayList = New ArrayList()
-
+    Dim TextoCombo As String
     Private Sub GraDiagnostico()
 
         Dim Diagnostico As ArrayList = New ArrayList()
@@ -78,7 +78,8 @@
 
     Private Sub CargarGraDiagnostico(ByVal CAMPO As String, ByVal TABLA As String)
 
-
+        Diagnostico.Clear()
+        CantDiag.Clear()
         Dim i As Integer = 0
         T3.Tables.Clear()
 
@@ -98,13 +99,10 @@
             CantDiag.Add(1)
             ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
         End If
-
     End Sub
 
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        CargarGraDiagnostico(ComboDato.Text, ComboTabla.Text)
-    End Sub
+
 
     Friend Sub LLENAR(ByRef COMBO As ComboBox, ByVal CAMPO As String, ByVal TABLA As String, ByVal CAMPO_CONDICION As String, ByVal VALOR_CONDICION As Integer)
         T.Tables.Clear()
@@ -196,6 +194,18 @@
 
     End Sub
 
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Mostrar_grafico.Click
+        If ComboDato.Text <> "" And ComboTabla.Text <> "" Then
+            If TextoCombo <> ComboDato.Text Then
+                CargarGraDiagnostico(ComboDato.Text, ComboTabla.Text)
+            Else
+                MsgBox("Grafico ya cargado", vbInformation + vbOK)
+            End If
+        Else
+            MsgBox("Seleccione datos para el grafico", vbInformation + vbOK)
+        End If
+        TextoCombo = ComboDato.Text
+    End Sub
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         CrearExcel()
