@@ -35,6 +35,8 @@ Partial Class Registrar_facturas
         Me.L = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.CM_OPCIONES = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.COMBO_AREA = New Guna.UI2.WinForms.Guna2ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NOMBRE_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
@@ -51,14 +53,14 @@ Partial Class Registrar_facturas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_realizar_factura = New Guna.UI2.WinForms.Guna2Button()
-        Me.CM_OPCIONES = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Historial_Factura = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.CM_OPCIONES.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.Historial_Factura)
         Me.Guna2GroupBox1.Controls.Add(Me.MONTO)
         Me.Guna2GroupBox1.Controls.Add(Me.Telefono)
         Me.Guna2GroupBox1.Controls.Add(Me.Cedula)
@@ -220,6 +222,18 @@ Partial Class Registrar_facturas
         '
         Me.ColumnHeader2.Text = "MONTO"
         Me.ColumnHeader2.Width = 133
+        '
+        'CM_OPCIONES
+        '
+        Me.CM_OPCIONES.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem})
+        Me.CM_OPCIONES.Name = "CM_OPCIONES"
+        Me.CM_OPCIONES.Size = New System.Drawing.Size(161, 26)
+        '
+        'EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem
+        '
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Name = "EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem"
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Text = "Eliminar esta fila"
         '
         'COMBO_AREA
         '
@@ -456,17 +470,20 @@ Partial Class Registrar_facturas
         Me.Btn_realizar_factura.TabIndex = 0
         Me.Btn_realizar_factura.Text = "Realizar factura"
         '
-        'CM_OPCIONES
+        'Historial_Factura
         '
-        Me.CM_OPCIONES.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem})
-        Me.CM_OPCIONES.Name = "CM_OPCIONES"
-        Me.CM_OPCIONES.Size = New System.Drawing.Size(161, 26)
-        '
-        'EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem
-        '
-        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Name = "EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem"
-        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Text = "Eliminar esta fila"
+        Me.Historial_Factura.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Historial_Factura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Historial_Factura.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Historial_Factura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Historial_Factura.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Historial_Factura.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Historial_Factura.ForeColor = System.Drawing.Color.Black
+        Me.Historial_Factura.Location = New System.Drawing.Point(833, 7)
+        Me.Historial_Factura.Name = "Historial_Factura"
+        Me.Historial_Factura.Size = New System.Drawing.Size(150, 26)
+        Me.Historial_Factura.TabIndex = 35
+        Me.Historial_Factura.Text = "Ver historial de facturas"
         '
         'Registrar_facturas
         '
@@ -516,4 +533,5 @@ Partial Class Registrar_facturas
     Friend WithEvents MONTO As MaskedTextBox
     Friend WithEvents CM_OPCIONES As ContextMenuStrip
     Friend WithEvents EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Historial_Factura As Guna.UI2.WinForms.Guna2Button
 End Class

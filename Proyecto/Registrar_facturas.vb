@@ -179,4 +179,8 @@ False, 0, False, T1, 0, False, False)
             End If
         End If
     End Sub
+
+    Private Sub Historial_Factura_Click(sender As Object, e As EventArgs) Handles Historial_Factura.Click
+        REGISTRO_FACTURAS.Show()
+    End Sub
 End Class

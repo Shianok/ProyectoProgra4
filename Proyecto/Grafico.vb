@@ -1,11 +1,15 @@
 ﻿Public Class Grafico
     Public i As Integer = 0
+    Dim ExcelApp = New Microsoft.Office.Interop.Excel.Application
+    Dim Libro = ExcelApp.Workbooks.Add
+    Dim final As Long
+    Dim Diagnostico As ArrayList = New ArrayList()
+    Dim CantDiag As ArrayList = New ArrayList()
 
     Private Sub GraDiagnostico()
 
         Dim Diagnostico As ArrayList = New ArrayList()
         Dim CantDiag As ArrayList = New ArrayList()
-        Dim dt As New DataTable
 
         T2.Tables.Clear()
 
@@ -47,8 +51,8 @@
 
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then
-            For I = 0 To T.Tables(0).Rows.Count - 1
-                CANTIDAD.Add(T.Tables(0).Rows(I).ItemArray(0))
+            For i = 0 To T.Tables(0).Rows.Count - 1
+                CANTIDAD.Add(T.Tables(0).Rows(i).ItemArray(0))
             Next
             DATOS.Text = T.Tables(0).Rows(0).ItemArray(0).ToString
         End If
@@ -63,8 +67,8 @@
 
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then
-            For I = 0 To T.Tables(0).Rows.Count - 1
-                CANTIDAD.Add(T.Tables(0).Rows(I).ItemArray(0))
+            For i = 0 To T.Tables(0).Rows.Count - 1
+                CANTIDAD.Add(T.Tables(0).Rows(i).ItemArray(0))
             Next
             DATOS.Text = T.Tables(0).Rows(0).ItemArray(0).ToString
         End If
@@ -74,10 +78,8 @@
 
     Private Sub CargarGraDiagnostico(ByVal CAMPO As String, ByVal TABLA As String)
 
-        Dim Diagnostico As ArrayList = New ArrayList()
-        Dim CantDiag As ArrayList = New ArrayList()
+
         Dim i As Integer = 0
-        Dim dt As New DataTable
         T3.Tables.Clear()
 
         SQL = "Select " & CAMPO & ", COUNT(" & CAMPO & ") AS CANT
@@ -90,7 +92,6 @@
                 Diagnostico.Add(T3.Tables(0).Rows(i).ItemArray(0))
                 CantDiag.Add(T3.Tables(0).Rows(i).ItemArray(1))
             Next
-            ChartDiagnosticos.Series(0).ChartType = DataVisualization.Charting.SeriesChartType.Column
             ChartDiagnosticos.Series(0).Points.DataBindXY(Diagnostico, CantDiag)
         Else
             Diagnostico.Add("No hay datos")
@@ -111,8 +112,8 @@
         SQL = "SELECT DISTINCT(" & CAMPO & ") FROM " & TABLA & " WHERE " & CAMPO_CONDICION & " = " & VALOR_CONDICION & ""
         CARGAR_TABLA(T, SQL)
         If T.Tables(0).Rows.Count > 0 Then
-            For I = 0 To T.Tables(0).Rows.Count - 1
-                COMBO.Items.Add(T.Tables(0).Rows(I).Item(0))
+            For i = 0 To T.Tables(0).Rows.Count - 1
+                COMBO.Items.Add(T.Tables(0).Rows(i).Item(0))
             Next
         End If
     End Sub
@@ -158,6 +159,46 @@
     Private Sub LIMPIAR()
         ComboTabla.ResetText()
         ChartDiagnosticos.Series.Clear()
+    End Sub
+
+    Friend Sub CrearExcel()
+
+        Dim Fila As Integer = 2
+        Dim Columna As Integer = 1
+        Dim RowCount = T2.Tables(0).Rows.Count - 1
+        Dim ColumnCount = T2.Tables(0).Columns.Count - 1
+
+        For nColumna As Integer = 0 To ColumnCount
+
+            Libro.Worksheets("Hoja1").Cells(1, Columna) = T2.Tables(0).Columns(nColumna).ToString
+            Libro.Worksheets("Hoja1").Cells(1, Columna).Font.bold = True
+
+            For nFila As Integer = 0 To RowCount
+                Libro.Worksheets("Hoja1").Cells(Fila, Columna) = T2.Tables(0).Rows(nFila).ItemArray(nColumna).ToString
+                Fila = Fila + 1
+            Next
+            Columna = Columna + 1
+            Fila = 2
+        Next
+
+        For i = 0 To T2.Tables(0).Rows.Count - 1
+            Diagnostico.Add(T2.Tables(0).Rows(i).ItemArray(0))
+            CantDiag.Add(T2.Tables(0).Rows(i).ItemArray(1))
+        Next
+
+
+        MsgBox("Informacion enviada", vbInformation + vbOKOnly, "Guardando")
+        ExcelApp.Visible = True
+
+        Libro = Nothing
+        ExcelApp = Nothing
+
+
+    End Sub
+
+
+    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
+        CrearExcel()
     End Sub
 
 End Class

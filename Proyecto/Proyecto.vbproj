@@ -57,6 +57,9 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.1.2\lib\net451\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -195,6 +198,12 @@
     <Compile Include="Registrar_paciente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="REGISTRO_FACTURAS.Designer.vb">
+      <DependentUpon>REGISTRO_FACTURAS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REGISTRO_FACTURAS.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="reportes.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registrar_paciente.resx">
       <DependentUpon>Registrar_paciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REGISTRO_FACTURAS.resx">
+      <DependentUpon>REGISTRO_FACTURAS.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
