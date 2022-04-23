@@ -126,6 +126,12 @@
     <Compile Include="Agregar_empleados.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Agregar_tipo_empleado.Designer.vb">
+      <DependentUpon>Agregar_tipo_empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_tipo_empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Conexion.vb" />
     <Compile Include="Consultar_empleado.Designer.vb">
       <DependentUpon>Consultar_empleado.vb</DependentUpon>
@@ -174,12 +180,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Empleado_perfil.Designer.vb">
-      <DependentUpon>Empleado_perfil.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Empleado_perfil.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="REGISTRAR_CONSULTAS.Designer.vb">
       <DependentUpon>REGISTRAR_CONSULTAS.vb</DependentUpon>
     </Compile>
@@ -222,6 +222,9 @@
     <EmbeddedResource Include="Agregar_empleados.resx">
       <DependentUpon>Agregar_empleados.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_tipo_empleado.resx">
+      <DependentUpon>Agregar_tipo_empleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultar_empleado.resx">
       <DependentUpon>Consultar_empleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -242,9 +245,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Empleado_perfil.resx">
-      <DependentUpon>Empleado_perfil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REGISTRAR_CONSULTAS.resx">
       <DependentUpon>REGISTRAR_CONSULTAS.vb</DependentUpon>

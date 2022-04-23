@@ -3,8 +3,16 @@
     Dim ID As Integer
 
     Private Sub Agregar_empleados_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LLENAR(TIPO_AREA, "NIVEL", "AREAS", "ESTADO", 1)
+        LLENAR(TIPO_AREA, "NOMBRE_AREA", "AREAS", "ESTADO", 1)
     End Sub
+
+    Friend Sub Validar()
+        If CEDULA.Text <> "" And RESIDENCIA.Text <> "" And NOMBRE_COMPLETO.Text <> "" And CONTRASENA.Text <> "" And NUMERO_TELEFONO.Text <> "" And COREO.Text <> "" And
+        NUMERO_CARNET.Text <> "" Then
+            Btn_agregar_empleado.Enabled = True
+        End If
+    End Sub
+
     Private Sub BtnCerrarInterfaz_Click(sender As Object, e As EventArgs) Handles BTN_CerrarInterfaz.Click
         Me.Close()
     End Sub
@@ -68,4 +76,35 @@
         End If
     End Sub
 
+    Private Sub CEDULA_TextChanged(sender As Object, e As EventArgs) Handles CEDULA.TextChanged
+        Validar()
+    End Sub
+
+    Private Sub RESIDENCIA_TextChanged(sender As Object, e As EventArgs) Handles RESIDENCIA.TextChanged
+        Validar()
+    End Sub
+
+    Private Sub NOMBRE_COMPLETO_TextChanged(sender As Object, e As EventArgs) Handles NOMBRE_COMPLETO.TextChanged
+        Validar()
+    End Sub
+
+    Private Sub CONTRASENA_TextChanged(sender As Object, e As EventArgs) Handles CONTRASENA.TextChanged
+        Validar()
+    End Sub
+
+    Private Sub NUMERO_TELEFONO_TextChanged(sender As Object, e As EventArgs) Handles NUMERO_TELEFONO.TextChanged
+        Validar()
+    End Sub
+
+    Private Sub COREO_TextChanged(sender As Object, e As EventArgs) Handles COREO.TextChanged
+        Validar()
+    End Sub
+
+    Private Sub NUMERO_CARNET_TextChanged(sender As Object, e As EventArgs) Handles NUMERO_CARNET.TextChanged
+        Validar()
+    End Sub
+
+    Private Sub Btn_agregar_tipo_empleado_Click(sender As Object, e As EventArgs) Handles Btn_agregar_tipo_empleado.Click
+        Agregar_tipo_empleado.Show()
+    End Sub
 End Class

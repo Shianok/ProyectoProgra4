@@ -48,12 +48,14 @@ Partial Class Agregar_empleados
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Abrir = New System.Windows.Forms.OpenFileDialog()
+        Me.Btn_agregar_tipo_empleado = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         CType(Me.IMG_EMPLEADO, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2GroupBox1
         '
+        Me.Guna2GroupBox1.Controls.Add(Me.Btn_agregar_tipo_empleado)
         Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_CARNET)
         Me.Guna2GroupBox1.Controls.Add(Me.NUMERO_TELEFONO)
         Me.Guna2GroupBox1.Controls.Add(Me.CEDULA)
@@ -230,10 +232,11 @@ Partial Class Agregar_empleados
         Me.Btn_agregar_empleado.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Btn_agregar_empleado.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Btn_agregar_empleado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Btn_agregar_empleado.Enabled = False
         Me.Btn_agregar_empleado.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Btn_agregar_empleado.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Btn_agregar_empleado.ForeColor = System.Drawing.Color.White
-        Me.Btn_agregar_empleado.Location = New System.Drawing.Point(425, 587)
+        Me.Btn_agregar_empleado.Location = New System.Drawing.Point(450, 584)
         Me.Btn_agregar_empleado.Name = "Btn_agregar_empleado"
         Me.Btn_agregar_empleado.Size = New System.Drawing.Size(244, 47)
         Me.Btn_agregar_empleado.TabIndex = 24
@@ -427,6 +430,21 @@ Partial Class Agregar_empleados
         '
         Me.Abrir.FileName = "OpenFileDialog1"
         '
+        'Btn_agregar_tipo_empleado
+        '
+        Me.Btn_agregar_tipo_empleado.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Btn_agregar_tipo_empleado.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Btn_agregar_tipo_empleado.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Btn_agregar_tipo_empleado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Btn_agregar_tipo_empleado.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
+        Me.Btn_agregar_tipo_empleado.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Btn_agregar_tipo_empleado.ForeColor = System.Drawing.Color.White
+        Me.Btn_agregar_tipo_empleado.Location = New System.Drawing.Point(234, 569)
+        Me.Btn_agregar_tipo_empleado.Name = "Btn_agregar_tipo_empleado"
+        Me.Btn_agregar_tipo_empleado.Size = New System.Drawing.Size(180, 26)
+        Me.Btn_agregar_tipo_empleado.TabIndex = 34
+        Me.Btn_agregar_tipo_empleado.Text = "Agregar_tipo_empleado"
+        '
         'Agregar_empleados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -472,4 +490,5 @@ Partial Class Agregar_empleados
     Friend WithEvents CEDULA As MaskedTextBox
     Friend WithEvents NUMERO_CARNET As MaskedTextBox
     Friend WithEvents NUMERO_TELEFONO As MaskedTextBox
+    Friend WithEvents Btn_agregar_tipo_empleado As Guna.UI2.WinForms.Guna2Button
 End Class

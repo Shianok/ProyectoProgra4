@@ -88,7 +88,7 @@
                 estado_empleado = 0
             End If
         End If
-        SQL = "UPDATE EMPLEADO SET NOMBRE_COMPLETO='" & CONSULTA_NOMBRE_EMPLEADO.Text & "', CEDULA='" & CONSULTA_NUMERO_CARNET.Text & "', NUMERO_TELEFONO='" & CONSULTA_NUMERO_EMPLEADO.Text & "', LUGAR_RESIDENCIA='" & CONSULTA_RESIDENCIA_EMPLEADO.Text & "', CORREO='" & Correo_empleado.Text & "', ESTADO='" & estado_empleado & "' WHERE ID=" & ID & ""
+        SQL = "UPDATE EMPLEADO SET NOMBRE_COMPLETO='" & CONSULTA_NOMBRE_EMPLEADO.Text & "', CEDULA='" & CONSULTA_NUMERO_CARNET.Text & "', NUMERO_TELEFONO='" & CONSULTA_NUMERO_EMPLEADO.Text & "', LUGAR_RESIDENCIA='" & CONSULTA_RESIDENCIA_EMPLEADO.Text & "', CORREO='" & Correo_empleado.Text & "', ESTADO='" & estado_empleado & "', FOTO='" & IMG_CONSULTA_EMPLEADO.Tag & "' WHERE ID=" & ID & ""
         EJECUTAR(SQL)
         LIMPIAR()
         MsgBox("Informacion actualizada correctamente", vbInformation + vbOKOnly, "Guardando")
@@ -101,4 +101,12 @@
         MsgBox("Información eliminada satisfactoriamente.", vbInformation + vbOKOnly, "Eliminando")
     End Sub
 
+    Private Sub IMG_CONSULTA_EMPLEADO_Click(sender As Object, e As EventArgs) Handles IMG_CONSULTA_EMPLEADO.Click
+        If Abrir.ShowDialog = DialogResult.OK Then
+            IMG_CONSULTA_EMPLEADO.Image = Image.FromFile(Abrir.FileName)
+            IMG_CONSULTA_EMPLEADO.Tag = Abrir.FileName 'Almacena la ruta de la imagen
+        Else
+            IMG_CONSULTA_EMPLEADO.Tag = "."
+        End If
+    End Sub
 End Class
