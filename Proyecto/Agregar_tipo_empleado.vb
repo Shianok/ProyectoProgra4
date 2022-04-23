@@ -27,9 +27,9 @@
             SQL = "INSERT INTO TIPOS_EMPLEADOS (ID, TIPO_EMPLEADO) VALUES(" & PK("TIPOS_EMPLEADOS", "ID") & ", '" & TXT_TIPO_EMPLEADO.Text & "')"
             EJECUTAR(SQL)
             LIMPIAR()
-            MsgBox("Enfermedad registrada en el sistema", vbInformation + vbOKOnly, "Guardando")
+            MsgBox("Tipo de empleado registrado en el sistema", vbInformation + vbOKOnly, "Guardando")
         ElseIf Bandera = 0 Then
-            MsgBox("Esta enfermedad ya está registrada", vbInformation + vbOKOnly, "Verifique la información")
+            MsgBox("Este tipo de empleado ya está registrada", vbInformation + vbOKOnly, "Verifique la información")
         End If
 
     End Sub

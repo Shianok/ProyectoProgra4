@@ -8,7 +8,7 @@
     End Sub
 
     Friend Sub Validar()
-        If CEDULA.Text <> "" And RESIDENCIA.Text <> "" And NOMBRE_COMPLETO.Text <> "" And CONTRASENA.Text <> "" And NUMERO_TELEFONO.Text <> "" And COREO.Text <> "" And
+        If CEDULA.Text <> "  -    -" And RESIDENCIA.Text <> "" And NOMBRE_COMPLETO.Text <> "" And CONTRASENA.Text <> "" And NUMERO_TELEFONO.Text <> "" And COREO.Text <> "" And
         NUMERO_CARNET.Text <> "" Then
             Btn_agregar_empleado.Enabled = True
         End If

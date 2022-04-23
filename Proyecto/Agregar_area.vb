@@ -39,7 +39,7 @@
         Dim HoraInicial As DateTime = HORA_INICIO.Text + ":" + MINUTOS_INICIO.Text
         Dim HoraFinal As DateTime = HORA_FINAL.Text + ":" + MINUTOS_FINAL.Text
 
-        SQL = "INSERT INTO AREAS (ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO) VALUES(" & PK("AREAS", "ID") & ", '" & NOMBRE_AREA.Text & "', " & Convert.ToInt32(NIVEL.Text) & ", " & Convert.ToInt32(CANTIDAD_EMPLEADOS.Value) & ", '" & HoraInicial.ToString("HH:mm") & "', '" & HoraFinal.ToString("HH:mm") & "')"
+        SQL = "INSERT INTO AREAS (ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO) VALUES(" & PK("AREAS", "ID") & ", '" & NOMBRE_AREA.Text & "', " & Convert.ToInt32(NIVEL.Text) & ", " & Convert.ToInt32(CANTIDAD_EMPLEADOS.Value) & ", '" & HoraInicial.ToString("HH:mm") & "', '" & HoraFinal.ToString("HH:mm") & "', " & 1 & ")"
         EJECUTAR(SQL)
         BUSQUEDA(L_AREAS, "AREAS", "ID, NOMBRE_AREA, NIVEL, CANTIDAD_EMPLEADOS, HORA_ENTRADA, HORA_SALIDA, ESTADO", "NOMBRE_AREA", BUSQUEDA_AREA.Text, False, 0)
         LIMPIAR()

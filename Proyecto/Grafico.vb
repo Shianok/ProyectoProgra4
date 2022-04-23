@@ -188,7 +188,6 @@ Public Class Grafico
                 CantDiag.Add(T2.Tables(0).Rows(i).ItemArray(1))
             Next
 
-
             SaveFileDialog1.DefaultExt = "*.xlsx"
             SaveFileDialog1.FileName = "datos"
             SaveFileDialog1.Filter = "Libro de excel (*.xlsx) | *.xlsx"
@@ -225,7 +224,6 @@ Public Class Grafico
 
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
         CrearExcel()
-        ENVIAR_CORREO("Registro de sistema hospitalario", "Su reporte fue guardado y enviado con exito", Correo.Text, "C:\REPORTES\datos.xlsx", "SistemaHospitalario@outlook.es", "Sistema2022") 'Traemos el metodo del módulo de conexion para enviar la factura del pdf por correo
     End Sub
 
 End Class

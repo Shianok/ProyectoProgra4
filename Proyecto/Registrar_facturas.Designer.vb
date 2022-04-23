@@ -24,10 +24,10 @@ Partial Class Registrar_facturas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.Historial_Factura = New Guna.UI2.WinForms.Guna2Button()
         Me.MONTO = New System.Windows.Forms.MaskedTextBox()
         Me.Telefono = New System.Windows.Forms.MaskedTextBox()
         Me.Cedula = New System.Windows.Forms.MaskedTextBox()
-        Me.BORRAR_FILA = New Guna.UI2.WinForms.Guna2Button()
         Me.AGREGAR_LIST = New Guna.UI2.WinForms.Guna2Button()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -53,7 +53,6 @@ Partial Class Registrar_facturas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Btn_realizar_factura = New Guna.UI2.WinForms.Guna2Button()
-        Me.Historial_Factura = New Guna.UI2.WinForms.Guna2Button()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.CM_OPCIONES.SuspendLayout()
         Me.SuspendLayout()
@@ -64,7 +63,6 @@ Partial Class Registrar_facturas
         Me.Guna2GroupBox1.Controls.Add(Me.MONTO)
         Me.Guna2GroupBox1.Controls.Add(Me.Telefono)
         Me.Guna2GroupBox1.Controls.Add(Me.Cedula)
-        Me.Guna2GroupBox1.Controls.Add(Me.BORRAR_FILA)
         Me.Guna2GroupBox1.Controls.Add(Me.AGREGAR_LIST)
         Me.Guna2GroupBox1.Controls.Add(Me.Label11)
         Me.Guna2GroupBox1.Controls.Add(Me.Label10)
@@ -95,6 +93,21 @@ Partial Class Registrar_facturas
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(997, 688)
         Me.Guna2GroupBox1.TabIndex = 0
         '
+        'Historial_Factura
+        '
+        Me.Historial_Factura.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.Historial_Factura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.Historial_Factura.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.Historial_Factura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Historial_Factura.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
+        Me.Historial_Factura.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.Historial_Factura.ForeColor = System.Drawing.Color.Black
+        Me.Historial_Factura.Location = New System.Drawing.Point(833, 7)
+        Me.Historial_Factura.Name = "Historial_Factura"
+        Me.Historial_Factura.Size = New System.Drawing.Size(150, 26)
+        Me.Historial_Factura.TabIndex = 35
+        Me.Historial_Factura.Text = "Ver historial de facturas"
+        '
         'MONTO
         '
         Me.MONTO.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
@@ -123,21 +136,6 @@ Partial Class Registrar_facturas
         Me.Cedula.Name = "Cedula"
         Me.Cedula.Size = New System.Drawing.Size(211, 23)
         Me.Cedula.TabIndex = 32
-        '
-        'BORRAR_FILA
-        '
-        Me.BORRAR_FILA.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BORRAR_FILA.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BORRAR_FILA.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BORRAR_FILA.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BORRAR_FILA.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.BORRAR_FILA.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BORRAR_FILA.ForeColor = System.Drawing.Color.White
-        Me.BORRAR_FILA.Location = New System.Drawing.Point(599, 553)
-        Me.BORRAR_FILA.Name = "BORRAR_FILA"
-        Me.BORRAR_FILA.Size = New System.Drawing.Size(118, 38)
-        Me.BORRAR_FILA.TabIndex = 31
-        Me.BORRAR_FILA.Text = "Borrar última fila"
         '
         'AGREGAR_LIST
         '
@@ -461,6 +459,7 @@ Partial Class Registrar_facturas
         Me.Btn_realizar_factura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.Btn_realizar_factura.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Btn_realizar_factura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.Btn_realizar_factura.Enabled = False
         Me.Btn_realizar_factura.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Btn_realizar_factura.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Btn_realizar_factura.ForeColor = System.Drawing.Color.White
@@ -469,21 +468,6 @@ Partial Class Registrar_facturas
         Me.Btn_realizar_factura.Size = New System.Drawing.Size(267, 44)
         Me.Btn_realizar_factura.TabIndex = 0
         Me.Btn_realizar_factura.Text = "Realizar factura"
-        '
-        'Historial_Factura
-        '
-        Me.Historial_Factura.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.Historial_Factura.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.Historial_Factura.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.Historial_Factura.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.Historial_Factura.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
-        Me.Historial_Factura.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.Historial_Factura.ForeColor = System.Drawing.Color.Black
-        Me.Historial_Factura.Location = New System.Drawing.Point(833, 7)
-        Me.Historial_Factura.Name = "Historial_Factura"
-        Me.Historial_Factura.Size = New System.Drawing.Size(150, 26)
-        Me.Historial_Factura.TabIndex = 35
-        Me.Historial_Factura.Text = "Ver historial de facturas"
         '
         'Registrar_facturas
         '
@@ -527,7 +511,6 @@ Partial Class Registrar_facturas
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents AGREGAR As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents BORRAR_FILA As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Cedula As MaskedTextBox
     Friend WithEvents Telefono As MaskedTextBox
     Friend WithEvents MONTO As MaskedTextBox

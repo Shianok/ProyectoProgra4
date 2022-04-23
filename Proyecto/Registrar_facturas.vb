@@ -10,6 +10,12 @@ Public Class Registrar_facturas
         'cargarComboArea()
     End Sub
 
+    Friend Sub Verificar()
+        If Cedula.Text <> "  -    -" And Telefono.Text <> "" And Correo_usuario.Text <> "" And NOMBRE_PACIENTE.Text <> "" And Nombre_remitente.Text <> "" And MONTO_TOTAL.Text <> "" Then
+            Btn_realizar_factura.Enabled = True
+        End If
+    End Sub
+
     Friend Sub SUMA_TOTAL(ByVal Restar As Integer) 'Este metodo suma los montos de los medicamente agregados al listview
         'TOTAL_NETO = 0
         Dim Suma As Integer
@@ -138,17 +144,6 @@ False, 0, False, T1, 0, False, False)
         MONTO.Clear()
     End Sub
 
-    Private Sub BORRAR_FILA_Click(sender As Object, e As EventArgs) Handles BORRAR_FILA.Click
-        Dim Contador As Double
-
-        If L.Items.Count > 0 Then 'Aqui se remueve la última fila de los datos agregados al listview
-            L.Items.RemoveAt(Contador)
-
-            Contador = (Contador - 1)
-        End If
-
-    End Sub
-
     Friend Sub cargarComboArea()
         T4.Clear()
         SQL = "SELECT ID FROM AREAS"
@@ -183,5 +178,29 @@ False, 0, False, T1, 0, False, False)
 
     Private Sub Historial_Factura_Click(sender As Object, e As EventArgs) Handles Historial_Factura.Click
         REGISTRO_FACTURAS.Show()
+    End Sub
+
+    Private Sub Cedula_TextChanged(sender As Object, e As EventArgs) Handles Cedula.TextChanged
+        Verificar()
+    End Sub
+
+    Private Sub Telefono_TextChanged(sender As Object, e As EventArgs) Handles Telefono.TextChanged
+        Verificar()
+    End Sub
+
+    Private Sub Correo_usuario_TextChanged(sender As Object, e As EventArgs) Handles Correo_usuario.TextChanged
+        Verificar()
+    End Sub
+
+    Private Sub NOMBRE_PACIENTE_TextChanged(sender As Object, e As EventArgs) Handles NOMBRE_PACIENTE.TextChanged
+        Verificar()
+    End Sub
+
+    Private Sub MONTO_TOTAL_TextChanged(sender As Object, e As EventArgs) Handles MONTO_TOTAL.TextChanged
+        Verificar()
+    End Sub
+
+    Private Sub Nombre_remitente_TextChanged(sender As Object, e As EventArgs) Handles Nombre_remitente.TextChanged
+        Verificar()
     End Sub
 End Class

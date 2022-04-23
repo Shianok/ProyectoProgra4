@@ -24,7 +24,6 @@ Partial Class Agregar_atencion
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
-        Me.BTN_VER_CONSULTAS = New Guna.UI2.WinForms.Guna2Button()
         Me.AREA_GROUP = New Guna.UI2.WinForms.Guna2GroupBox()
         Me.RECETA_MEDICA = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -65,7 +64,6 @@ Partial Class Agregar_atencion
         '
         'Guna2GroupBox1
         '
-        Me.Guna2GroupBox1.Controls.Add(Me.BTN_VER_CONSULTAS)
         Me.Guna2GroupBox1.Controls.Add(Me.AREA_GROUP)
         Me.Guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
         Me.Guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(CType(CType(168, Byte), Integer), CType(CType(143, Byte), Integer), CType(CType(172, Byte), Integer))
@@ -76,23 +74,6 @@ Partial Class Agregar_atencion
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(996, 689)
         Me.Guna2GroupBox1.TabIndex = 3
         Me.Guna2GroupBox1.Text = "Consultas de pacientes"
-        '
-        'BTN_VER_CONSULTAS
-        '
-        Me.BTN_VER_CONSULTAS.BackColor = System.Drawing.Color.Transparent
-        Me.BTN_VER_CONSULTAS.BorderRadius = 5
-        Me.BTN_VER_CONSULTAS.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_VER_CONSULTAS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.BTN_VER_CONSULTAS.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.BTN_VER_CONSULTAS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.BTN_VER_CONSULTAS.FillColor = System.Drawing.Color.FromArgb(CType(CType(93, Byte), Integer), CType(CType(78, Byte), Integer), CType(CType(96, Byte), Integer))
-        Me.BTN_VER_CONSULTAS.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.BTN_VER_CONSULTAS.ForeColor = System.Drawing.Color.White
-        Me.BTN_VER_CONSULTAS.Location = New System.Drawing.Point(805, 46)
-        Me.BTN_VER_CONSULTAS.Name = "BTN_VER_CONSULTAS"
-        Me.BTN_VER_CONSULTAS.Size = New System.Drawing.Size(172, 42)
-        Me.BTN_VER_CONSULTAS.TabIndex = 26
-        Me.BTN_VER_CONSULTAS.Text = "Ver historial de consultas"
         '
         'AREA_GROUP
         '
@@ -576,7 +557,6 @@ Partial Class Agregar_atencion
     Friend WithEvents Label6 As Label
     Friend WithEvents CONSULTA_NOMBRE_PACIENTE As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents BTN_VER_CONSULTAS As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Label7 As Label
     Friend WithEvents FECHA As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents Label3 As Label
