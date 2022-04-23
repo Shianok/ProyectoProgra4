@@ -4,7 +4,6 @@ Imports System.IO
 Module reportes
     Public OWORD As New Word.Application
     Public DOCUMENTO As New Word.Document
-    Public DOCUMENTOEXCEL As New Excel.Workbook
     Public DIRECTORIO As String
     Public OTABLA As Word.Table
     Public REPORTE_DIRECCION_PDF As String = ""
