@@ -23,6 +23,7 @@ Partial Class Registrar_paciente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Guna2GroupBox1 = New Guna.UI2.WinForms.Guna2GroupBox()
+        Me.CEDULA_PACIENTE = New System.Windows.Forms.MaskedTextBox()
         Me.NACIMIENTO_PACIENTE = New System.Windows.Forms.DateTimePicker()
         Me.btnCerrarInterfaz = New Guna.UI2.WinForms.Guna2Button()
         Me.TXT_PADECIMIENTOS = New Guna.UI2.WinForms.Guna2TextBox()
@@ -38,7 +39,6 @@ Partial Class Registrar_paciente
         Me.NOMBRE_PACIENTE = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.CEDULA_PACIENTE = New System.Windows.Forms.MaskedTextBox()
         Me.Guna2GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,6 +73,15 @@ Partial Class Registrar_paciente
         Me.Guna2GroupBox1.Size = New System.Drawing.Size(994, 527)
         Me.Guna2GroupBox1.TabIndex = 1
         Me.Guna2GroupBox1.Text = "Agregar paciente"
+        '
+        'CEDULA_PACIENTE
+        '
+        Me.CEDULA_PACIENTE.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CEDULA_PACIENTE.Location = New System.Drawing.Point(676, 105)
+        Me.CEDULA_PACIENTE.Mask = "00-0000-0000"
+        Me.CEDULA_PACIENTE.Name = "CEDULA_PACIENTE"
+        Me.CEDULA_PACIENTE.Size = New System.Drawing.Size(211, 23)
+        Me.CEDULA_PACIENTE.TabIndex = 33
         '
         'NACIMIENTO_PACIENTE
         '
@@ -303,15 +312,6 @@ Partial Class Registrar_paciente
         Me.Label1.Size = New System.Drawing.Size(61, 21)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cédula:"
-        '
-        'CEDULA_PACIENTE
-        '
-        Me.CEDULA_PACIENTE.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.CEDULA_PACIENTE.Location = New System.Drawing.Point(676, 105)
-        Me.CEDULA_PACIENTE.Mask = "00-0000-0000"
-        Me.CEDULA_PACIENTE.Name = "CEDULA_PACIENTE"
-        Me.CEDULA_PACIENTE.Size = New System.Drawing.Size(211, 23)
-        Me.CEDULA_PACIENTE.TabIndex = 33
         '
         'Registrar_paciente
         '

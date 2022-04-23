@@ -212,8 +212,8 @@ Partial Class Consultar_paciente
         'CONSULTA_NUMERO_PACIENTE
         '
         Me.CONSULTA_NUMERO_PACIENTE.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(206, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.CONSULTA_NUMERO_PACIENTE.Enabled = False
         Me.CONSULTA_NUMERO_PACIENTE.Location = New System.Drawing.Point(208, 186)
-        Me.CONSULTA_NUMERO_PACIENTE.Mask = "99999999"
         Me.CONSULTA_NUMERO_PACIENTE.Name = "CONSULTA_NUMERO_PACIENTE"
         Me.CONSULTA_NUMERO_PACIENTE.Size = New System.Drawing.Size(211, 23)
         Me.CONSULTA_NUMERO_PACIENTE.TabIndex = 65

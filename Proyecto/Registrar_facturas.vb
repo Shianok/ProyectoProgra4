@@ -176,6 +176,7 @@ False, 0, False, T1, 0, False, False)
                 EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Enabled = True
             Else
                 EliminarLaEnfermedadDelDiagnosticoToolStripMenuItem.Enabled = False
+                MONTO_TOTAL.Text = "0"
             End If
         End If
     End Sub

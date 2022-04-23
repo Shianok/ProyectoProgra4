@@ -26,4 +26,5 @@ Public Class Registrar_paciente
         REGISTRAR_PACIENTE()
         Me.Close()
     End Sub
+
 End Class
